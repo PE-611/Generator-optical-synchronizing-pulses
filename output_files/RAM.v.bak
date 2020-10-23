@@ -1,0 +1,19 @@
+
+module RAM_code(output [7:0] out,
+				    input [7:0] in,
+					 input [3:0] addr,
+					 input RW, CS);
+
+reg [7:0] out;
+reg [7:0] DATA[15:0];
+always @(negedge CS)
+begin
+if(RW==1'b0) //READ
+out=DATA[addr];
+else
+if(RW==1'b1) //WRITE
+DATA[addr]=in;
+else
+out=8'bz;
+end
+endmodule
