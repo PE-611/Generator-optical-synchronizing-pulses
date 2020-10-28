@@ -68,7 +68,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "j",
+					"name" : "control_UART_clk",
+					"strict" : false
+				},
+				{
+					"name" : "WR_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WR_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WR_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RE_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RE_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RE_ADDR[2]",
 					"strict" : false
 				},
 				{

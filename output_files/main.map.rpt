@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Fri Oct 23 12:06:13 2020
+Wed Oct 28 11:17:02 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,11 +15,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: UART_Rx:comb_14
- 11. Port Connectivity Checks: "RAM:comb_15"
+ 10. Parameter Settings for User Entity Instance: UART_Rx:comb_143
+ 11. Port Connectivity Checks: "Pulse:PL1"
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,16 +46,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 23 12:06:13 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 28 11:17:02 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 58                                          ;
-;     Total combinational functions  ; 35                                          ;
-;     Dedicated logic registers      ; 47                                          ;
-; Total registers                    ; 47                                          ;
-; Total pins                         ; 22                                          ;
+; Total logic elements               ; 224                                         ;
+;     Total combinational functions  ; 213                                         ;
+;     Dedicated logic registers      ; 144                                         ;
+; Total registers                    ; 144                                         ;
+; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -175,6 +176,7 @@ refer to the applicable agreement for further details.
 ; main.v                           ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v             ;         ;
 ; UART_Rx.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v          ;         ;
 ; output_files/RAM.v               ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v ;         ;
+; Pulse1.v                         ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse1.v           ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
 
 
@@ -183,109 +185,53 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 58        ;
+; Estimated Total logic elements              ; 224       ;
 ;                                             ;           ;
-; Total combinational functions               ; 35        ;
+; Total combinational functions               ; 213       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 8         ;
-;     -- 3 input functions                    ; 3         ;
-;     -- <=2 input functions                  ; 24        ;
+;     -- 4 input functions                    ; 61        ;
+;     -- 3 input functions                    ; 98        ;
+;     -- <=2 input functions                  ; 54        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 20        ;
-;     -- arithmetic mode                      ; 15        ;
+;     -- normal mode                          ; 168       ;
+;     -- arithmetic mode                      ; 45        ;
 ;                                             ;           ;
-; Total registers                             ; 47        ;
-;     -- Dedicated logic registers            ; 47        ;
+; Total registers                             ; 144       ;
+;     -- Dedicated logic registers            ; 144       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 22        ;
+; I/O pins                                    ; 29        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 34        ;
-; Total fan-out                               ; 245       ;
-; Average fan-out                             ; 1.94      ;
+; Maximum fan-out                             ; 122       ;
+; Total fan-out                               ; 1000      ;
+; Average fan-out                             ; 2.41      ;
 +---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name   ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
-; |main                      ; 35 (0)              ; 47 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |main                 ; main        ; work         ;
-;    |RAM:comb_15|           ; 2 (2)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|RAM:comb_15     ; RAM         ; work         ;
-;    |UART_Rx:comb_14|       ; 33 (33)             ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|UART_Rx:comb_14 ; UART_Rx     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name    ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
+; |main                      ; 213 (72)            ; 144 (39)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 29   ; 0            ; 0          ; |main                  ; main        ; work         ;
+;    |RAM:comb_144|          ; 105 (105)           ; 72 (72)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|RAM:comb_144     ; RAM         ; work         ;
+;    |UART_Rx:comb_143|      ; 36 (36)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|UART_Rx:comb_143 ; UART_Rx     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; ADDR~reg0                              ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_15|DATA~8                     ; Lost fanout                            ;
-; RAM:comb_15|DATA~9                     ; Lost fanout                            ;
-; RAM:comb_15|DATA~10                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~11                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~12                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~13                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~14                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~15                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~16                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~17                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~18                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~19                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~20                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~21                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~22                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~23                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~24                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~25                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~26                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~27                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~28                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~29                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~30                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~31                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~32                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~33                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~34                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~35                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~36                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~37                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~38                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~39                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~40                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~41                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~42                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~43                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~44                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~45                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~46                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~47                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~48                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~49                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~50                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~51                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~52                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~53                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~54                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~55                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~56                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~57                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~58                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~59                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~60                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~61                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~62                    ; Lost fanout                            ;
-; RAM:comb_15|DATA~63                    ; Lost fanout                            ;
-; Total Number of Removed Registers = 57 ;                                        ;
-+----------------------------------------+----------------------------------------+
++---------------------------------------------------------------------+
+; Registers Removed During Synthesis                                  ;
++---------------------------------------+-----------------------------+
+; Register name                         ; Reason for Removal          ;
++---------------------------------------+-----------------------------+
+; ADDR_cnt_r[0]                         ; Merged with RE_ADDR[0]~reg0 ;
+; Total Number of Removed Registers = 1 ;                             ;
++---------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------+
@@ -293,35 +239,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 47    ;
+; Total registers                              ; 144   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx:comb_14 ;
-+----------------+-----------+---------------------------------+
-; Parameter Name ; Value     ; Type                            ;
-+----------------+-----------+---------------------------------+
-; Fclk           ; 100000000 ; Signed Integer                  ;
-; Fuart          ; 9600      ; Signed Integer                  ;
-; divider        ; 5207      ; Signed Integer                  ;
-+----------------+-----------+---------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_Rx:comb_143 ;
++----------------+-----------+----------------------------------+
+; Parameter Name ; Value     ; Type                             ;
++----------------+-----------+----------------------------------+
+; Fclk           ; 100000000 ; Signed Integer                   ;
+; Fuart          ; 9600      ; Signed Integer                   ;
+; divider        ; 5207      ; Signed Integer                   ;
++----------------+-----------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RAM:comb_15"                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; addr ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "addr[3..1]" will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Pulse:PL1"                                                                                                                                       ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; button   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; duration ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; led      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -329,22 +277,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 47                          ;
-;     ENA               ; 24                          ;
-;     plain             ; 23                          ;
-; cycloneiii_lcell_comb ; 36                          ;
-;     arith             ; 15                          ;
-;         2 data inputs ; 15                          ;
-;     normal            ; 21                          ;
+; boundary_port         ; 29                          ;
+; cycloneiii_ff         ; 144                         ;
+;     ENA               ; 16                          ;
+;     plain             ; 128                         ;
+; cycloneiii_lcell_comb ; 214                         ;
+;     arith             ; 45                          ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 169                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 8                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 97                          ;
+;         4 data inputs ; 61                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.20                        ;
-; Average LUT depth     ; 1.83                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -363,7 +312,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Oct 23 12:06:05 2020
+    Info: Processing started: Wed Oct 28 11:16:53 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -373,41 +322,44 @@ Warning (12019): Can't analyze file -- file output_files/UART_Rx.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file uart_rx.v
     Info (12023): Found entity 1: UART_Rx File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 9
 Warning (12019): Can't analyze file -- file mem.v is missing
-Warning (10229): Verilog HDL Expression warning at RAM.v(11): truncated literal to match 1 bits File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 11
-Warning (10229): Verilog HDL Expression warning at RAM.v(12): truncated literal to match 1 bits File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 12
-Warning (10229): Verilog HDL Expression warning at RAM.v(13): truncated literal to match 1 bits File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 13
-Warning (10229): Verilog HDL Expression warning at RAM.v(14): truncated literal to match 1 bits File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 14
-Warning (10229): Verilog HDL Expression warning at RAM.v(15): truncated literal to match 1 bits File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 15
-Warning (10229): Verilog HDL Expression warning at RAM.v(16): truncated literal to match 1 bits File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 16
-Warning (10229): Verilog HDL Expression warning at RAM.v(17): truncated literal to match 1 bits File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/ram.v
-    Info (12023): Found entity 1: RAM File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(45): instance has no name File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 45
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(47): instance has no name File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 47
+    Info (12023): Found entity 1: RAM File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file pulse1.v
+    Info (12023): Found entity 1: Pulse File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse1.v Line: 6
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(49): instance has no name File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(51): instance has no name File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 51
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at main.v(25): truncated value with size 4 to match size of target (1) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 25
-Warning (10230): Verilog HDL assignment warning at main.v(34): truncated value with size 4 to match size of target (1) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 34
-Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:comb_14" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 45
-Warning (10230): Verilog HDL assignment warning at UART_Rx.v(31): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 31
-Warning (10230): Verilog HDL assignment warning at UART_Rx.v(48): truncated value with size 9 to match size of target (8) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 48
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:comb_15" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 47
+Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:comb_143" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
+Warning (10230): Verilog HDL assignment warning at UART_Rx.v(28): truncated value with size 8 to match size of target (3) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 28
+Warning (10230): Verilog HDL assignment warning at UART_Rx.v(33): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 33
+Warning (10230): Verilog HDL assignment warning at UART_Rx.v(50): truncated value with size 9 to match size of target (8) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 50
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:comb_144" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 51
+Info (12128): Elaborating entity "Pulse" for hierarchy "Pulse:PL1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 53
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276013): RAM logic "RAM:comb_15|DATA" is uninferred because MIF is not supported for the selected family File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 7
+    Info (276004): RAM logic "RAM:comb_144|DATA" is uninferred due to inappropriate RAM size File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 16
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "ADDR" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+    Warning (13410): Pin "CSR" is stuck at VCC File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 15
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 56 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/main.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 58 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4769 megabytes
-    Info: Processing ended: Fri Oct 23 12:06:13 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "button" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 9
+Info (21057): Implemented 316 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 287 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Wed Oct 28 11:17:02 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/main.map.smsg.
 
 
