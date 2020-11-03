@@ -6,42 +6,46 @@
 // Start design : 28.10.2020 										//
 // Last revision : 28.10.2020 									//
 ///////////////////////////////////////////////////////////
-
-module Pulse( input clk_Pulse, button, 
-				  input [7:0] duration,
-				  output reg led
+module Pulse( input clk_Pulse, start,
+				  input [31:0] duration, 
+				  output reg out, 
+				  output reg [2:0] Read_pl, 
+				  output reg RW_PL
 				);
 				
-reg [29:0] cnt;
-initial cnt <= 30'd0;
-initial led <= 1'b0;
+reg [31:0] cnt1;
+initial cnt1 <= 30'd0;
+initial out <= 1'b0;
 
-reg f;
-initial f <= 1'b0;
+reg [1:0] cnt_addr_pl;
+initial cnt_addr_pl <= 2'd0;
 
 
 always @(posedge clk_Pulse) begin
 		
 		
-		if (button < 1'b1) begin
-			f <= 1'b1;
-		end
-			
-			
-		if (f == 1'b1) begin
-			led <= 1'b1;
-			cnt <= cnt + 1'b1;
-		end	
-			
-			
-		if (cnt == duration) begin		   
-			cnt <= cnt - duration;
-			f <= f - 1'b1;
-			led <= 1'b0;	
-		end		
-			
 		
-	end
+		if (start == 1'b1) begin
+			cnt1 <= cnt1 + 1'b1;
+			out <= 1'b1;
+		end
+		
+		if (cnt1 >= duration) begin
+			out <= 1'b0;
+		end	
+		
+		if (start == 1'b0) begin
+			cnt1 <= 1'b0;	
+		end
+	
+end
+
+
+
 
 endmodule
+
+
+
+
 
