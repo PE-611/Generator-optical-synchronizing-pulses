@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Tue Nov 03 10:03:23 2020
+Tue Nov 03 15:59:36 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,16 +14,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: UART_Rx:comb_121
- 12. Parameter Settings for Inferred Entity Instance: RAM:comb_122|lpm_mult:Mult0
- 13. Parameter Settings for Inferred Entity Instance: RAM:comb_122|lpm_mult:Mult1
- 14. Parameter Settings for Inferred Entity Instance: RAM:comb_122|lpm_mult:Mult2
- 15. lpm_mult Parameter Settings by Entity Instance
- 16. Port Connectivity Checks: "Pulse:PL1"
- 17. Port Connectivity Checks: "RAM:comb_122"
- 18. Port Connectivity Checks: "UART_Rx:comb_121"
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: UART_Rx:comb_164
+ 13. Parameter Settings for Inferred Entity Instance: RAM:comb_165|lpm_mult:Mult0
+ 14. Parameter Settings for Inferred Entity Instance: RAM:comb_165|lpm_mult:Mult1
+ 15. Parameter Settings for Inferred Entity Instance: RAM:comb_165|lpm_mult:Mult2
+ 16. lpm_mult Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "Pulse:PL1"
+ 18. Port Connectivity Checks: "RAM:comb_165"
  19. Post-Synthesis Netlist Statistics for Top Partition
  20. Elapsed Time Per Partition
  21. Analysis & Synthesis Messages
@@ -53,16 +53,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 03 10:03:23 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 03 15:59:36 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 228                                         ;
-;     Total combinational functions  ; 202                                         ;
-;     Dedicated logic registers      ; 162                                         ;
-; Total registers                    ; 162                                         ;
-; Total pins                         ; 90                                          ;
+; Total logic elements               ; 240                                         ;
+;     Total combinational functions  ; 214                                         ;
+;     Dedicated logic registers      ; 170                                         ;
+; Total registers                    ; 170                                         ;
+; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 6                                           ;
@@ -171,8 +171,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -202,30 +201,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 228       ;
+; Estimated Total logic elements              ; 240       ;
 ;                                             ;           ;
-; Total combinational functions               ; 202       ;
+; Total combinational functions               ; 214       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 21        ;
-;     -- 3 input functions                    ; 78        ;
-;     -- <=2 input functions                  ; 103       ;
+;     -- 4 input functions                    ; 45        ;
+;     -- 3 input functions                    ; 67        ;
+;     -- <=2 input functions                  ; 102       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 81        ;
-;     -- arithmetic mode                      ; 121       ;
+;     -- normal mode                          ; 86        ;
+;     -- arithmetic mode                      ; 128       ;
 ;                                             ;           ;
-; Total registers                             ; 162       ;
-;     -- Dedicated logic registers            ; 162       ;
+; Total registers                             ; 170       ;
+;     -- Dedicated logic registers            ; 170       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 90        ;
+; I/O pins                                    ; 13        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 6         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 147       ;
-; Total fan-out                               ; 1075      ;
-; Average fan-out                             ; 1.95      ;
+; Maximum fan-out                             ; 148       ;
+; Total fan-out                               ; 1087      ;
+; Average fan-out                             ; 2.60      ;
 +---------------------------------------------+-----------+
 
 
@@ -234,16 +233,16 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                       ; Entity Name ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+-------------+--------------+
-; |main                              ; 202 (52)            ; 162 (33)                  ; 0           ; 0          ; 6            ; 2       ; 2         ; 90   ; 0            ; 0          ; |main                                                     ; main        ; work         ;
+; |main                              ; 214 (45)            ; 170 (34)                  ; 0           ; 0          ; 6            ; 2       ; 2         ; 13   ; 0            ; 0          ; |main                                                     ; main        ; work         ;
 ;    |Pulse:PL1|                     ; 65 (65)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL1                                           ; Pulse       ; work         ;
-;    |RAM:comb_122|                  ; 50 (50)             ; 64 (64)                   ; 0           ; 0          ; 6            ; 2       ; 2         ; 0    ; 0            ; 0          ; |main|RAM:comb_122                                        ; RAM         ; work         ;
-;       |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|RAM:comb_122|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
-;          |mult_0ls:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|RAM:comb_122|lpm_mult:Mult0|mult_0ls:auto_generated ; mult_0ls    ; work         ;
-;       |lpm_mult:Mult1|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_122|lpm_mult:Mult1                         ; lpm_mult    ; work         ;
-;          |mult_fms:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_122|lpm_mult:Mult1|mult_fms:auto_generated ; mult_fms    ; work         ;
-;       |lpm_mult:Mult2|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 3            ; 1       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_122|lpm_mult:Mult2                         ; lpm_mult    ; work         ;
-;          |mult_cms:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 3            ; 1       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_122|lpm_mult:Mult2|mult_cms:auto_generated ; mult_cms    ; work         ;
-;    |UART_Rx:comb_121|              ; 35 (35)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|UART_Rx:comb_121                                    ; UART_Rx     ; work         ;
+;    |RAM:comb_165|                  ; 51 (51)             ; 64 (64)                   ; 0           ; 0          ; 6            ; 2       ; 2         ; 0    ; 0            ; 0          ; |main|RAM:comb_165                                        ; RAM         ; work         ;
+;       |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|RAM:comb_165|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
+;          |mult_0ls:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|RAM:comb_165|lpm_mult:Mult0|mult_0ls:auto_generated ; mult_0ls    ; work         ;
+;       |lpm_mult:Mult1|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_165|lpm_mult:Mult1                         ; lpm_mult    ; work         ;
+;          |mult_fms:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_165|lpm_mult:Mult1|mult_fms:auto_generated ; mult_fms    ; work         ;
+;       |lpm_mult:Mult2|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 3            ; 1       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_165|lpm_mult:Mult2                         ; lpm_mult    ; work         ;
+;          |mult_cms:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 3            ; 1       ; 1         ; 0    ; 0            ; 0          ; |main|RAM:comb_165|lpm_mult:Mult2|mult_cms:auto_generated ; mult_cms    ; work         ;
+;    |UART_Rx:comb_164|              ; 53 (53)             ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|UART_Rx:comb_164                                    ; UART_Rx     ; work         ;
 +------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -266,65 +265,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; RAM:comb_122|out[0..31]                ; Stuck at GND due to stuck port clock_enable ;
-; RAM:comb_122|DATA[4][0]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[4][1]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[4][2]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[4][3]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[4][4]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[4][5]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[4][6]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[4][7]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][0]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][1]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][2]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][3]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][4]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][5]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][6]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[5][7]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][0]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][1]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][2]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][3]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][4]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][5]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][6]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[6][7]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][0]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][1]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][2]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][3]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][4]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][5]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][6]                ; Lost fanout                                 ;
-; RAM:comb_122|DATA[7][7]                ; Lost fanout                                 ;
-; Total Number of Removed Registers = 64 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 162   ;
-; Number of registers using Synchronous Clear  ; 32    ;
+; Total registers                              ; 170   ;
+; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; UART_Rx:comb_164|re                    ; 33      ;
+; UART_Rx:comb_164|wr_addr[3]            ; 3       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |main|UART_Rx:comb_164|wr_addr[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
 +---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_Rx:comb_121 ;
+; Parameter Settings for User Entity Instance: UART_Rx:comb_164 ;
 +----------------+-----------+----------------------------------+
 ; Parameter Name ; Value     ; Type                             ;
 +----------------+-----------+----------------------------------+
@@ -336,7 +313,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: RAM:comb_122|lpm_mult:Mult0    ;
+; Parameter Settings for Inferred Entity Instance: RAM:comb_165|lpm_mult:Mult0    ;
 +------------------------------------------------+----------+---------------------+
 ; Parameter Name                                 ; Value    ; Type                ;
 +------------------------------------------------+----------+---------------------+
@@ -371,7 +348,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: RAM:comb_122|lpm_mult:Mult1    ;
+; Parameter Settings for Inferred Entity Instance: RAM:comb_165|lpm_mult:Mult1    ;
 +------------------------------------------------+----------+---------------------+
 ; Parameter Name                                 ; Value    ; Type                ;
 +------------------------------------------------+----------+---------------------+
@@ -406,7 +383,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: RAM:comb_122|lpm_mult:Mult2    ;
+; Parameter Settings for Inferred Entity Instance: RAM:comb_165|lpm_mult:Mult2    ;
 +------------------------------------------------+----------+---------------------+
 ; Parameter Name                                 ; Value    ; Type                ;
 +------------------------------------------------+----------+---------------------+
@@ -446,7 +423,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value                       ;
 +---------------------------------------+-----------------------------+
 ; Number of entity instances            ; 3                           ;
-; Entity Instance                       ; RAM:comb_122|lpm_mult:Mult0 ;
+; Entity Instance                       ; RAM:comb_165|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 8                           ;
 ;     -- LPM_WIDTHB                     ; 8                           ;
 ;     -- LPM_WIDTHP                     ; 16                          ;
@@ -457,7 +434,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                        ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                          ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                          ;
-; Entity Instance                       ; RAM:comb_122|lpm_mult:Mult1 ;
+; Entity Instance                       ; RAM:comb_165|lpm_mult:Mult1 ;
 ;     -- LPM_WIDTHA                     ; 16                          ;
 ;     -- LPM_WIDTHB                     ; 8                           ;
 ;     -- LPM_WIDTHP                     ; 24                          ;
@@ -468,7 +445,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                        ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                          ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                          ;
-; Entity Instance                       ; RAM:comb_122|lpm_mult:Mult2 ;
+; Entity Instance                       ; RAM:comb_165|lpm_mult:Mult2 ;
 ;     -- LPM_WIDTHA                     ; 24                          ;
 ;     -- LPM_WIDTHB                     ; 8                           ;
 ;     -- LPM_WIDTHP                     ; 32                          ;
@@ -492,22 +469,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RAM:comb_122"                                                                                                                                   ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                        ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; r_addr ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "r_addr[2..1]" will be connected to GND. ;
-+--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UART_Rx:comb_121"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; wr   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RAM:comb_165"                                                                                                                                    ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                        ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; out    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (8 bits) it drives; bit(s) "out[31..8]" have no fanouts                       ;
+; out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                            ;
+; r_addr ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "r_addr[7..1]" will be connected to GND. ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -515,26 +485,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 90                          ;
-; cycloneiii_ff         ; 162                         ;
-;     ENA               ; 8                           ;
-;     SCLR              ; 32                          ;
-;     plain             ; 122                         ;
-; cycloneiii_lcell_comb ; 203                         ;
-;     arith             ; 121                         ;
-;         2 data inputs ; 82                          ;
-;         3 data inputs ; 39                          ;
-;     normal            ; 82                          ;
+; boundary_port         ; 13                          ;
+; cycloneiii_ff         ; 170                         ;
+;     ENA               ; 40                          ;
+;     SCLR              ; 64                          ;
+;     plain             ; 66                          ;
+; cycloneiii_lcell_comb ; 215                         ;
+;     arith             ; 128                         ;
+;         2 data inputs ; 88                          ;
+;         3 data inputs ; 40                          ;
+;     normal            ; 87                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 39                          ;
-;         4 data inputs ; 21                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 27                          ;
+;         4 data inputs ; 45                          ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 2.29                        ;
+; Average LUT depth     ; 2.38                        ;
 +-----------------------+-----------------------------+
 
 
@@ -553,10 +523,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 03 10:03:14 2020
+    Info: Processing started: Tue Nov 03 15:59:27 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (10090): Verilog HDL syntax warning at main.v(92): extra block comment delimiter characters /* within block comment File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 92
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
     Info (12023): Found entity 1: main File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 9
 Warning (12019): Can't analyze file -- file output_files/UART_Rx.v is missing
@@ -567,29 +538,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file output_
     Info (12023): Found entity 1: RAM File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file pulse1.v
     Info (12023): Found entity 1: Pulse File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse1.v Line: 9
-Warning (10236): Verilog HDL Implicit Net warning at main.v(53): created implicit net for "write" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at main.v(55): created implicit net for "RE" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 55
-Warning (10236): Verilog HDL Implicit Net warning at main.v(55): created implicit net for "wr" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 55
-Warning (10236): Verilog HDL Implicit Net warning at main.v(55): created implicit net for "RE_ADDR" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at main.v(58): created implicit net for "RE_ADDR" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 58
 Critical Warning (10846): Verilog HDL Instantiation warning at main.v(53): instance has no name File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 53
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(55): instance has no name File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 55
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(58): instance has no name File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 58
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "WRITE" at main.v(17) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 17
-Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:comb_121" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 53
-Warning (10230): Verilog HDL assignment warning at UART_Rx.v(28): truncated value with size 8 to match size of target (3) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 28
-Warning (10230): Verilog HDL assignment warning at UART_Rx.v(33): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 33
-Warning (10230): Verilog HDL assignment warning at UART_Rx.v(50): truncated value with size 9 to match size of target (8) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 50
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:comb_122" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 55
-Info (12128): Elaborating entity "Pulse" for hierarchy "Pulse:PL1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 57
+Warning (10034): Output port "led[7..1]" at main.v(13) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:comb_164" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 53
+Warning (10230): Verilog HDL assignment warning at UART_Rx.v(36): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 36
+Warning (10230): Verilog HDL assignment warning at UART_Rx.v(54): truncated value with size 9 to match size of target (8) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 54
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:comb_165" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 58
+Warning (10855): Verilog HDL warning at RAM.v(21): initial value for variable DATA should be constant File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 21
+Warning (10034): Output port "out" at RAM.v(9) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 9
+Info (12128): Elaborating entity "Pulse" for hierarchy "Pulse:PL1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 61
 Warning (10036): Verilog HDL or VHDL warning at Pulse1.v(20): object "cnt_addr_pl" assigned a value but never read File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse1.v Line: 20
 Warning (10034): Output port "Read_pl" at Pulse1.v(12) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse1.v Line: 12
 Warning (10034): Output port "RW_PL" at Pulse1.v(14) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse1.v Line: 14
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAM:comb_122|Mult0" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAM:comb_122|Mult1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAM:comb_122|Mult2" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
-Info (12130): Elaborated megafunction instantiation "RAM:comb_122|lpm_mult:Mult0" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
-Info (12133): Instantiated megafunction "RAM:comb_122|lpm_mult:Mult0" with the following parameter: File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAM:comb_165|Mult0" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAM:comb_165|Mult1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAM:comb_165|Mult2" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+Info (12130): Elaborated megafunction instantiation "RAM:comb_165|lpm_mult:Mult0" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+Info (12133): Instantiated megafunction "RAM:comb_165|lpm_mult:Mult0" with the following parameter: File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "16"
@@ -601,8 +570,8 @@ Info (12133): Instantiated megafunction "RAM:comb_122|lpm_mult:Mult0" with the f
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0ls.tdf
     Info (12023): Found entity 1: mult_0ls File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/db/mult_0ls.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "RAM:comb_122|lpm_mult:Mult1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
-Info (12133): Instantiated megafunction "RAM:comb_122|lpm_mult:Mult1" with the following parameter: File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+Info (12130): Elaborated megafunction instantiation "RAM:comb_165|lpm_mult:Mult1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+Info (12133): Instantiated megafunction "RAM:comb_165|lpm_mult:Mult1" with the following parameter: File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "24"
@@ -614,8 +583,8 @@ Info (12133): Instantiated megafunction "RAM:comb_122|lpm_mult:Mult1" with the f
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_fms.tdf
     Info (12023): Found entity 1: mult_fms File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/db/mult_fms.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "RAM:comb_122|lpm_mult:Mult2" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
-Info (12133): Instantiated megafunction "RAM:comb_122|lpm_mult:Mult2" with the following parameter: File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+Info (12130): Elaborated megafunction instantiation "RAM:comb_165|lpm_mult:Mult2" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
+Info (12133): Instantiated megafunction "RAM:comb_165|lpm_mult:Mult2" with the following parameter: File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/RAM.v Line: 42
     Info (12134): Parameter "LPM_WIDTHA" = "24"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -631,56 +600,27 @@ Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity
 Info (13014): Ignored 22 buffer(s)
     Info (13019): Ignored 22 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data[0]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[1]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[2]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[3]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[4]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[5]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[6]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[7]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[8]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[9]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[10]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[11]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[12]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[13]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[14]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[15]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[16]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[17]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[18]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[19]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[20]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[21]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[22]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[23]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[24]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[25]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[26]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[27]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[28]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[29]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[30]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "data[31]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 12
-    Warning (13410): Pin "WRITE" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 17
+    Warning (13410): Pin "led[1]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+    Warning (13410): Pin "led[2]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+    Warning (13410): Pin "led[3]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+    Warning (13410): Pin "led[4]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+    Warning (13410): Pin "led[5]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+    Warning (13410): Pin "led[6]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
+    Warning (13410): Pin "led[7]" is stuck at GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/main.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "button" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 9
-Info (21057): Implemented 356 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 291 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 87 output pins
-    Info (21061): Implemented 260 logic cells
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 272 logic cells
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Tue Nov 03 10:03:23 2020
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Tue Nov 03 15:59:36 2020
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+

@@ -4,83 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "d[0]",
-					"strict" : false
-				},
-				{
-					"name" : "d[1]",
-					"strict" : false
-				},
-				{
-					"name" : "d[2]",
-					"strict" : false
-				},
-				{
-					"name" : "d[3]",
-					"strict" : false
-				},
-				{
-					"name" : "d[4]",
-					"strict" : false
-				},
-				{
-					"name" : "d[5]",
-					"strict" : false
-				},
-				{
-					"name" : "d[6]",
-					"strict" : false
-				},
-				{
-					"name" : "d[7]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[0]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[1]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[2]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[3]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[4]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[5]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[6]",
-					"strict" : false
-				},
-				{
-					"name" : "d_src[7]",
-					"strict" : false
-				},
-				{
 					"name" : "control_UART_clk",
-					"strict" : false
-				},
-				{
-					"name" : "WR_ADDR[0]",
-					"strict" : false
-				},
-				{
-					"name" : "WR_ADDR[1]",
-					"strict" : false
-				},
-				{
-					"name" : "WR_ADDR[2]",
 					"strict" : false
 				},
 				{
@@ -88,143 +12,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "PL",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[7]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[8]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[9]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[10]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[11]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[12]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[13]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[14]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[15]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[16]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[17]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[18]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[19]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[20]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[21]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[22]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[23]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[24]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[25]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[26]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[27]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[28]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[29]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[30]",
-					"strict" : false
-				},
-				{
-					"name" : "DRT[31]",
-					"strict" : false
-				},
-				{
-					"name" : "Rx",
+					"name" : "led[0]",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "button",
+					"strict" : false
+				},
+				{
+					"name" : "Rx",
 					"strict" : false
 				}
 			]
