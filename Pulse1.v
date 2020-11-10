@@ -8,10 +8,8 @@
 ///////////////////////////////////////////////////////////
 module Pulse( input clk_Pulse, start,
 				  input [31:0] duration, 
-				  output reg out, 
-				  output reg [2:0] Read_pl, 
-				  output reg RW_PL
-				);
+				  output reg out 
+				 );
 				
 reg [31:0] cnt1;
 initial cnt1 <= 30'd0;

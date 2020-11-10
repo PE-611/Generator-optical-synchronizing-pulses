@@ -1,5 +1,5 @@
 Fitter report for main
-Tue Nov 03 15:59:42 2020
+Mon Nov 09 16:44:13 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Nov 03 15:59:42 2020       ;
+; Fitter Status                      ; Successful - Mon Nov 09 16:44:13 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
@@ -160,8 +160,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.4%      ;
-;     Processors 3-4         ;   3.4%      ;
+;     Processor 2            ;   3.2%      ;
+;     Processors 3-4         ;   3.2%      ;
 +----------------------------+-------------+
 
 
@@ -1067,7 +1067,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X21_Y0 to location X31_Y12
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1076,8 +1076,8 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/main.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5557 megabytes
-    Info: Processing ended: Tue Nov 03 15:59:42 2020
+    Info: Peak virtual memory: 5559 megabytes
+    Info: Processing ended: Mon Nov 09 16:44:14 2020
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 

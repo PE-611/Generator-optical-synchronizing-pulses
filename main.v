@@ -39,7 +39,7 @@ always @(posedge clk) begin
 	end
 	
 	if (start_flag == 1'b1) begin
-		cnt <= cnt + 1'b1;
+		cnt <= cnt + 1'b1;						// << anti bounce and MAX duration light pulse
 		o <= 1'b1;
 	end
 	
