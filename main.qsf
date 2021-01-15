@@ -75,4 +75,11 @@ set_location_assignment PIN_80 -to led[1]
 set_location_assignment PIN_118 -to led[0]
 set_location_assignment PIN_25 -to button
 set_location_assignment PIN_88 -to led[7]
+set_global_assignment -name VERILOG_FILE Delay.v
+set_location_assignment PIN_90 -to control_UART_clk
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name VERILOG_FILE Start.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

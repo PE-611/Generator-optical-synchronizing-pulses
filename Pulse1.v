@@ -15,13 +15,9 @@ reg [31:0] cnt1;
 initial cnt1 <= 30'd0;
 initial out <= 1'b0;
 
-reg [1:0] cnt_addr_pl;
-initial cnt_addr_pl <= 2'd0;
-
 
 always @(posedge clk_Pulse) begin
-		
-		
+				
 		
 		if (start == 1'b1) begin
 			cnt1 <= cnt1 + 1'b1;

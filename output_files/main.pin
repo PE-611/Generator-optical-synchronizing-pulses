@@ -95,7 +95,7 @@ VCCIO1B                      : 23        : power  :                   : 2.5V    
 RESERVED_INPUT               : 24        :        :                   :         : 1B        :                
 button                       : 25        : input  : 2.5 V             :         : 1B        : Y              
 clk                          : 26        : input  : 2.5 V             :         : 2         : Y              
-control_UART_clk             : 27        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT               : 27        :        :                   :         : 2         :                
 RESERVED_INPUT               : 28        :        :                   :         : 2         :                
 RESERVED_INPUT               : 29        :        :                   :         : 2         :                
 RESERVED_INPUT               : 30        :        :                   :         : 2         :                
@@ -158,7 +158,7 @@ led[5]                       : 86        : output : 2.5 V             :         
 led[6]                       : 87        : output : 2.5 V             :         : 5         : Y              
 led[7]                       : 88        : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : 89        :        :                   :         : 6         :                
-RESERVED_INPUT               : 90        :        :                   :         : 6         :                
+control_UART_clk             : 90        : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT               : 91        :        :                   :         : 6         :                
 RESERVED_INPUT               : 92        :        :                   :         : 6         :                
 RESERVED_INPUT               : 93        :        :                   :         : 6         :                
