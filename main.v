@@ -7,9 +7,9 @@
 // Last revision : 28.10.2020 									//
 ///////////////////////////////////////////////////////////
 module main (input clk, Rx, button,
-				 output control_UART_clk,				
+				 output control_UART_clk, DL1_LAUNCH_PL2, PL1_LAUNCH_DL1,				
 				 output o,						// STUFF 
-				 output [7:0] led
+				 output [7:0] ex
 				 );
 				 
 				 
@@ -17,7 +17,21 @@ module main (input clk, Rx, button,
 wire [7:0] WR_ADDR;								// address for WRITE in RAM
 wire WRITE;											// Write flag readiness byte to write on memory 	
 			 
-wire [31:0] DRT;									// duration light pulse
+wire [35:0] PL1_DRT;									// duration light pulse
+//wire PL1_LAUNCH_DL1;
+wire [35:0] DL1_DEL;
+//wire DL1_LAUNCH_PL2;
+wire [3:0] CH1TS;
+
+wire [35:0] PL2_DRT;									// duration light pulse
+wire PL2_LAUNCH_DL2;
+wire [35:0] DL2_DEL;
+wire DL2_LAUNCH_PL3;
+wire [3:0] CH2TS;
+
+
+
+
 
 wire [7:0] data_from_RAM;
 
@@ -34,12 +48,21 @@ Start (.st_clk(clk), .st_button(button), .st_o(o));
 UART_Rx (.clk_Rx(clk), .Rx_in(Rx), .data_out(d), .UART_clk(control_UART_clk), .wr(WRITE), .wr_addr(WR_ADDR));
 
 
-RAM (.in(d_src), .out(data_from_RAM), .clk_RAM(clk), .write(WRITE), .w_addr(WR_ADDR), .drt(DRT));
+RAM (.in(d_src), .out(data_from_RAM), .clk_RAM(clk), .write(WRITE), .w_addr(WR_ADDR), 
+
+.PL1_drt(PL1_DRT), .DL1_del(DL1_DEL), .ch1_type_start(CH1TS),
+.PL2_drt(PL2_DRT), .DL2_del(DL2_DEL), .ch2_type_start(CH2TS)
+);
 
 
-Pulse PL1(.clk_Pulse(clk), .duration(DRT), .out(led[0]), .start(o));
+
+Pulse_CH1 (.clk_Pulse(clk), .duration(PL1_DRT), .PL_out(ex[0]), .PL_start(o), .launch_DL(PL1_LAUNCH_DL1), .CHTS(CH1TS));
+Delay_CH1 (.clk_Delay(clk), .delay(DL1_DEL), .DL_launch(PL1_LAUNCH_DL1), .DL_out(ex[1]), .launch_PL(DL1_LAUNCH_PL2)); 
 
 
+
+Pulse_CH2(.clk_Pulse(clk), .duration(PL2_DRT), .PL_out(ex[2]), .PL_start(o), .PL_launch(DL1_LAUNCH_PL2),  .launch_DL(PL2_LAUNCH_DL2), .CHTS(CH2TS));
+Delay_CH2 (.clk_Delay(clk), .delay(DL2_DEL), .DL_launch(PL2_LAUNCH_DL2), .DL_out(ex[3]), .launch_PL(DL2_LAUNCH_PL3)); 
 
 
 

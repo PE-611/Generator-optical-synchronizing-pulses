@@ -65,21 +65,27 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_location_assignment PIN_97 -to o
-set_location_assignment PIN_81 -to led[2]
-set_location_assignment PIN_84 -to led[3]
-set_location_assignment PIN_85 -to led[4]
-set_location_assignment PIN_86 -to led[5]
-set_location_assignment PIN_87 -to led[6]
-set_location_assignment PIN_80 -to led[1]
-set_location_assignment PIN_118 -to led[0]
+set_location_assignment PIN_87 -to o
 set_location_assignment PIN_25 -to button
-set_location_assignment PIN_88 -to led[7]
 set_global_assignment -name VERILOG_FILE Delay.v
-set_location_assignment PIN_90 -to control_UART_clk
+set_location_assignment PIN_84 -to control_UART_clk
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name VERILOG_FILE Start.v
+set_location_assignment PIN_111 -to ex[2]
+set_location_assignment PIN_92 -to ex[3]
+set_location_assignment PIN_85 -to ex[4]
+set_location_assignment PIN_86 -to ex[5]
+set_location_assignment PIN_97 -to ex[6]
+set_location_assignment PIN_90 -to ex[1]
+set_location_assignment PIN_118 -to ex[0]
+set_location_assignment PIN_88 -to ex[7]
+set_location_assignment PIN_80 -to PL1_LAUNCH_DL1
+set_location_assignment PIN_79 -to DL1_LAUNCH_PL2
+set_global_assignment -name VERILOG_FILE st_Pulse.v
+set_global_assignment -name VERILOG_FILE st_Delay.v
+set_global_assignment -name VERILOG_FILE Pulse_CH2.v
+set_global_assignment -name VERILOG_FILE Delay_CH2.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp

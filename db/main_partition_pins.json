@@ -8,11 +8,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "DL1_LAUNCH_PL2",
+					"strict" : false
+				},
+				{
+					"name" : "PL1_LAUNCH_DL1",
+					"strict" : false
+				},
+				{
 					"name" : "o",
 					"strict" : false
 				},
 				{
-					"name" : "led[0]",
+					"name" : "ex[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ex[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ex[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ex[3]",
 					"strict" : false
 				},
 				{

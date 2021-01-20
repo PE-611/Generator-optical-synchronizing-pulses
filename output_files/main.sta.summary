@@ -3,72 +3,72 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -3.788
-TNS   : -222.222
+Slack : -9.965
+TNS   : -2130.823
 
 Type  : Slow 1200mV 85C Model Setup 'UART_Rx:comb_12|UART_clk'
-Slack : -2.325
-TNS   : -25.986
+Slack : -2.538
+TNS   : -31.129
 
 Type  : Slow 1200mV 85C Model Hold 'UART_Rx:comb_12|UART_clk'
 Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.361
+Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -139.804
+TNS   : -642.410
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_Rx:comb_12|UART_clk'
 Slack : -1.487
 TNS   : -31.227
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.525
-TNS   : -201.349
+Slack : -9.350
+TNS   : -1977.739
 
 Type  : Slow 1200mV 0C Model Setup 'UART_Rx:comb_12|UART_clk'
-Slack : -2.175
-TNS   : -23.303
+Slack : -2.405
+TNS   : -28.295
 
 Type  : Slow 1200mV 0C Model Hold 'UART_Rx:comb_12|UART_clk'
-Slack : 0.323
+Slack : 0.322
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.323
+Slack : 0.322
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -139.804
+TNS   : -642.410
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_Rx:comb_12|UART_clk'
 Slack : -1.487
 TNS   : -31.227
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.865
-TNS   : -34.168
+Slack : -3.182
+TNS   : -575.716
 
 Type  : Fast 1200mV 0C Model Setup 'UART_Rx:comb_12|UART_clk'
-Slack : -0.317
-TNS   : -2.182
+Slack : -0.394
+TNS   : -2.850
 
 Type  : Fast 1200mV 0C Model Hold 'UART_Rx:comb_12|UART_clk'
 Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.152
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -97.685
+TNS   : -447.817
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_Rx:comb_12|UART_clk'
 Slack : -1.000

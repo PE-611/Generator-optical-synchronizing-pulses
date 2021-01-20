@@ -6,32 +6,35 @@
 // Start design : 28.10.2020 												//
 // Last revision : 28.10.2020 											//
 /////////////////////////////////////////////////////////////////
-/*
-module Delay( input clk_Delay, trig,
-				  input [31:0] duration, 
-				  output reg out 
+
+module Delay_CH1( input clk_Delay, DL_launch,
+				  input [50:0] delay, 
+				  output reg DL_out, launch_PL 
 				 );
 				
-reg [31:0] cnt1;
-initial cnt1 <= 30'd0;
-initial out <= 1'b0;
+reg [50:0] cnt1;
+initial cnt1 <= 50'd0;
+initial DL_out <= 1'b0;
+initial launch_PL <= 1'b0;
 
 
 always @(posedge clk_Delay) begin
 		
 		
 		
-		if (trig == 1'b1) begin
+		if (DL_launch == 1'b1) begin
 			cnt1 <= cnt1 + 1'b1;
-			out <= 1'b1;
+			DL_out <= 1'b1;
 		end
 		
-		if (cnt1 >= duration) begin
-			out <= 1'b0;
+		if (cnt1 >= delay) begin
+			DL_out <= 1'b0;
+			launch_PL <= 1'b1;
 		end	
 		
-		if (start == 1'b0) begin
-			cnt1 <= 1'b0;	
+		if (DL_launch == 1'b0) begin
+			cnt1 <= 1'b0;
+		   launch_PL <= 1'b0;	
 		end
 	
 end
@@ -40,7 +43,7 @@ end
 
 
 endmodule
-*/
+
 
 
 

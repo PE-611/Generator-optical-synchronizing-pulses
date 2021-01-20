@@ -1,5 +1,5 @@
 Power Analyzer report for main
-Fri Jan 15 16:44:11 2021
+Wed Jan 20 09:53:39 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,29 +52,29 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.52        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   2.6%      ;
+;     Processors 2-4         ;  17.5%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Fri Jan 15 16:44:11 2021            ;
+; Power Analyzer Status                  ; Successful - Wed Jan 20 09:53:39 2021            ;
 ; Quartus Prime Version                  ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition      ;
 ; Revision Name                          ; main                                             ;
 ; Top-level Entity Name                  ; main                                             ;
 ; Family                                 ; MAX 10                                           ;
 ; Device                                 ; 10M08SAE144C8G                                   ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 116.33 mW                                        ;
+; Total Thermal Power Dissipation        ; 116.34 mW                                        ;
 ; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
 ; Core Static Thermal Power Dissipation  ; 110.61 mW                                        ;
-; I/O Thermal Power Dissipation          ; 5.72 mW                                          ;
+; I/O Thermal Power Dissipation          ; 5.73 mW                                          ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
@@ -155,24 +155,107 @@ refer to the applicable agreement for further details.
 ; Combinational cell  ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Clock control block ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Register cell       ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; I/O                 ; 0.09 mW                           ; 0.00 mW                     ; 0.09 mW                        ; 0.00 mW                       ;    0.000                                                  ;
+; I/O                 ; 0.10 mW                           ; 0.00 mW                     ; 0.10 mW                        ; 0.00 mW                       ;    0.000                                                  ;
 ; Voltage Regulator   ; 0.00 mW                           ; 0.00 mW                     ; 0.00 mW                        ; --                            ; --                                                        ;
 +---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                      ;
-+-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------+
-; Compilation Hierarchy Node          ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                  ;
-+-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------+
-; |main                               ; 0.09 mW (0.09 mW)                    ; 0.00 mW (0.00 mW)               ; 0.09 mW (0.09 mW)                 ; 0.00 mW (0.00 mW)                 ; |main                                ;
-;     |Pulse:PL1                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|Pulse:PL1                      ;
-;     |hard_block:auto_generated_inst ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|hard_block:auto_generated_inst ;
-;     |Start:comb_11                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|Start:comb_11                  ;
-;     |UART_Rx:comb_12                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|UART_Rx:comb_12                ;
-;     |RAM:comb_13                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13                    ;
-+-------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                               ;
++---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                              ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                       ;
++---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; |main                                                   ; 0.10 mW (0.10 mW)                    ; 0.00 mW (0.00 mW)               ; 0.10 mW (0.10 mW)                 ; 0.00 mW (0.00 mW)                 ; |main                                                                                                                                     ;
+;     |hard_block:auto_generated_inst                     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|hard_block:auto_generated_inst                                                                                                      ;
+;     |Start:comb_11                                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|Start:comb_11                                                                                                                       ;
+;     |UART_Rx:comb_12                                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|UART_Rx:comb_12                                                                                                                     ;
+;     |RAM:comb_13                                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13                                                                                                                         ;
+;         |lpm_mult:Mult1                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1                                                                                                          ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core                                                                                       ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                       ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated                       ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_arg:auto_generated                       ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ;
+;                             |add_sub_erg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_erg:auto_generated  ;
+;         |lpm_mult:Mult2                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2                                                                                                          ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core                                                                                       ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                                       ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated                       ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_brg:auto_generated                       ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ;
+;                             |add_sub_frg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_frg:auto_generated  ;
+;         |lpm_mult:Mult4                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4                                                                                                          ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core                                                                                       ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder                                                                       ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated                       ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_arg:auto_generated                       ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ;
+;                             |add_sub_erg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_erg:auto_generated  ;
+;         |lpm_mult:Mult5                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5                                                                                                          ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core                                                                                       ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder                                                                       ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated                       ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_brg:auto_generated                       ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ;
+;                             |add_sub_frg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_frg:auto_generated  ;
+;         |lpm_mult:Mult7                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7                                                                                                          ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core                                                                                       ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder                                                                       ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated                       ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_arg:auto_generated                       ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ;
+;                             |add_sub_erg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_erg:auto_generated  ;
+;         |lpm_mult:Mult8                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8                                                                                                          ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core                                                                                       ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder                                                                       ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                  ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated                       ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                  ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_brg:auto_generated                       ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                  ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                             ;
+;                             |add_sub_frg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_frg:auto_generated  ;
+;         |lpm_mult:Mult10                                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10                                                                                                         ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core                                                                                      ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder                                                                      ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_arg:auto_generated                      ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                 ;
+;                         |add_sub_arg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_arg:auto_generated                      ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;
+;                             |add_sub_erg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult10|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_erg:auto_generated ;
+;         |lpm_mult:Mult11                                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11                                                                                                         ;
+;             |multcore:mult_core                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core                                                                                      ;
+;                 |mpar_add:padder                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder                                                                      ;
+;                     |lpm_add_sub:adder[0]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_brg:auto_generated                      ;
+;                     |lpm_add_sub:adder[1]               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]                                                 ;
+;                         |add_sub_brg:auto_generated     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]|add_sub_brg:auto_generated                      ;
+;                     |mpar_add:sub_par_add               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;
+;                         |lpm_add_sub:adder[0]           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;
+;                             |add_sub_frg:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|RAM:comb_13|lpm_mult:Mult11|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_frg:auto_generated ;
+;     |Pulse_CH1:comb_14                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|Pulse_CH1:comb_14                                                                                                                   ;
+;     |Delay_CH1:comb_15                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|Delay_CH1:comb_15                                                                                                                   ;
+;     |Pulse_CH2:comb_16                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|Pulse_CH2:comb_16                                                                                                                   ;
+;     |Delay_CH2:comb_17                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |main|Delay_CH2:comb_17                                                                                                                   ;
++---------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
 (2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
@@ -212,7 +295,7 @@ refer to the applicable agreement for further details.
 ; 4        ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
 ; 5        ; 2.5V          ; 0.27 mA             ; 0.00 mA               ; 0.27 mA              ;
 ; 6        ; 2.5V          ; 0.26 mA             ; 0.00 mA               ; 0.26 mA              ;
-; 7        ; 2.5V          ; 0.25 mA             ; 0.00 mA               ; 0.25 mA              ;
+; 7        ; 2.5V          ; 0.26 mA             ; 0.00 mA               ; 0.26 mA              ;
 ; 8        ; 2.5V          ; 0.26 mA             ; 0.00 mA               ; 0.26 mA              ;
 +----------+---------------+---------------------+-----------------------+----------------------+
 
@@ -228,31 +311,31 @@ refer to the applicable agreement for further details.
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Confidence Metric Details                                                                                                                        ;
-+----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
-; Data Source                                                                            ; Total       ; Pin        ; Registered   ; Combinational ;
-+----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
-; Simulation (from file)                                                                 ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;                                                                                        ;             ;            ;              ;               ;
-; Node, entity or clock assignment                                                       ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.5%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 2 (0.8%)      ;
-;                                                                                        ;             ;            ;              ;               ;
-; Vectorless estimation                                                                  ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 375 (97.4%) ; 11 (52.4%) ; 113 (100.0%) ; 251 (100.0%)  ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 21 (5.5%)   ; 8 (38.1%)  ; 0 (0.0%)     ; 13 (5.2%)     ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 373 (96.9%) ; 11 (52.4%) ; 113 (100.0%) ; 249 (99.2%)   ;
-;                                                                                        ;             ;            ;              ;               ;
-; Default assignment                                                                     ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 10 (2.6%)   ; 10 (47.6%) ; 0 (0.0%)     ; 0 (0.0%)      ;
-;                                                                                        ;             ;            ;              ;               ;
-; Assumed 0                                                                              ;             ;            ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 10 (2.6%)   ; 10 (47.6%) ; 0 (0.0%)     ; 0 (0.0%)      ;
-+----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                         ;
++----------------------------------------------------------------------------------------+--------------+------------+--------------+---------------+
+; Data Source                                                                            ; Total        ; Pin        ; Registered   ; Combinational ;
++----------------------------------------------------------------------------------------+--------------+------------+--------------+---------------+
+; Simulation (from file)                                                                 ;              ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;              ;            ;              ;               ;
+; Node, entity or clock assignment                                                       ;              ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.1%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 2 (0.1%)      ;
+;                                                                                        ;              ;            ;              ;               ;
+; Vectorless estimation                                                                  ;              ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 2274 (99.6%) ; 13 (56.5%) ; 451 (100.0%) ; 1810 (100.0%) ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 16 (0.7%)    ; 5 (21.7%)  ; 0 (0.0%)     ; 11 (0.6%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 2272 (99.5%) ; 13 (56.5%) ; 451 (100.0%) ; 1808 (99.9%)  ;
+;                                                                                        ;              ;            ;              ;               ;
+; Default assignment                                                                     ;              ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 10 (0.4%)    ; 10 (43.5%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;              ;            ;              ;               ;
+; Assumed 0                                                                              ;              ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 10 (0.4%)    ; 10 (43.5%) ; 0 (0.0%)     ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+--------------+------------+--------------+---------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -269,16 +352,16 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Jan 15 16:44:10 2021
+    Info: Processing started: Wed Jan 20 09:53:37 2021
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'main.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register Start:comb_11|cnt[0] is being clocked by clk
+    Info (13166): Register Delay_CH1:comb_15|launch_PL is being clocked by clk
 Warning (332060): Node: UART_Rx:comb_12|UART_clk was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register UART_Rx:comb_12|wr_addr[7] is being clocked by UART_Rx:comb_12|UART_clk
+    Info (13166): Register UART_Rx:comb_12|wr_addr[6] is being clocked by UART_Rx:comb_12|UART_clk
 Warning (332068): No clocks defined in design.
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
@@ -288,11 +371,11 @@ Warning (215044): No board thermal model was selected.  Analyzing without board 
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 116.33 mW
+Info (215031): Total thermal power estimate for the design is 116.34 mW
 Info: Quartus Prime Power Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Fri Jan 15 16:44:12 2021
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Wed Jan 20 09:53:39 2021
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
