@@ -7,13 +7,13 @@
 // Last revision : 28.10.2020 											//
 /////////////////////////////////////////////////////////////////
 
-module Delay_CH1( input clk_Delay, DL_launch,
-				  input [50:0] delay, 
+module Delay (input clk_Delay, DL_launch,
+				  input [34:0] delay, 
 				  output reg DL_out, launch_PL 
 				 );
 				
-reg [50:0] cnt1;
-initial cnt1 <= 50'd0;
+reg [34:0] cnt1;
+initial cnt1 <= 35'd0;
 initial DL_out <= 1'b0;
 initial launch_PL <= 1'b0;
 
