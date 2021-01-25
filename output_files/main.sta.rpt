@@ -1,5 +1,5 @@
 Timing Analyzer report for main
-Thu Jan 21 09:41:45 2021
+Mon Jan 25 16:12:26 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -91,55 +91,124 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.94        ;
+; Average used               ; 1.59        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  33.1%      ;
-;     Processors 3-4         ;  30.3%      ;
+;     Processor 2            ;  20.7%      ;
+;     Processor 3            ;  19.4%      ;
+;     Processor 4            ;  19.4%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                             ;
-+--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
-; Clock Name               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                      ;
-+--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
-; clk                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                      ;
-; UART_Rx:comb_12|UART_clk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { UART_Rx:comb_12|UART_clk } ;
-+--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                                          ;
++------------------------------------------------------+-----------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
+; Clock Name                                           ; Type      ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                                 ; Targets                                                  ;
++------------------------------------------------------+-----------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
+; clk                                                  ; Base      ; 10.000 ; 100.0 MHz  ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { clk }                                                  ;
+; Delay:DL1|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL1|div_clk }                                    ;
+; Delay:DL2|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL2|div_clk }                                    ;
+; Delay:DL3|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL3|div_clk }                                    ;
+; Delay:DL4|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL4|div_clk }                                    ;
+; Delay:DL5|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL5|div_clk }                                    ;
+; Delay:DL6|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL6|div_clk }                                    ;
+; Delay:DL7|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL7|div_clk }                                    ;
+; Delay:DL8|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Delay:DL8|div_clk }                                    ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; 5.000  ; 200.0 MHz  ; 0.000 ; 2.500 ; 50.00      ; 1         ; 2           ;       ;        ;           ;            ; false    ; clk    ; pll_inst|altpll_component|auto_generated|pll1|inclk[0] ; { pll_inst|altpll_component|auto_generated|pll1|clk[0] } ;
+; Pulse:PL1|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL1|div_clk }                                    ;
+; Pulse:PL2|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL2|div_clk }                                    ;
+; Pulse:PL3|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL3|div_clk }                                    ;
+; Pulse:PL4|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL4|div_clk }                                    ;
+; Pulse:PL5|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL5|div_clk }                                    ;
+; Pulse:PL6|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL6|div_clk }                                    ;
+; Pulse:PL7|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL7|div_clk }                                    ;
+; Pulse:PL8|div_clk                                    ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { Pulse:PL8|div_clk }                                    ;
+; UART_Rx:comb_12|UART_clk                             ; Base      ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                        ; { UART_Rx:comb_12|UART_clk }                             ;
++------------------------------------------------------+-----------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------------------------------------------------------+----------------------------------------------------------+
 
 
-+----------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                             ;
-+------------+-----------------+--------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
-+------------+-----------------+--------------------------+------+
-; 108.34 MHz ; 108.34 MHz      ; clk                      ;      ;
-; 269.54 MHz ; 269.54 MHz      ; UART_Rx:comb_12|UART_clk ;      ;
-+------------+-----------------+--------------------------+------+
++--------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                         ;
++------------+-----------------+------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                           ; Note ;
++------------+-----------------+------------------------------------------------------+------+
+; 154.97 MHz ; 154.97 MHz      ; Pulse:PL4|div_clk                                    ;      ;
+; 160.69 MHz ; 160.69 MHz      ; Pulse:PL5|div_clk                                    ;      ;
+; 162.28 MHz ; 162.28 MHz      ; Pulse:PL3|div_clk                                    ;      ;
+; 162.34 MHz ; 162.34 MHz      ; clk                                                  ;      ;
+; 163.83 MHz ; 163.83 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
+; 166.36 MHz ; 166.36 MHz      ; Pulse:PL7|div_clk                                    ;      ;
+; 168.01 MHz ; 168.01 MHz      ; Pulse:PL8|div_clk                                    ;      ;
+; 174.58 MHz ; 174.58 MHz      ; Pulse:PL6|div_clk                                    ;      ;
+; 177.05 MHz ; 177.05 MHz      ; Pulse:PL2|div_clk                                    ;      ;
+; 196.16 MHz ; 196.16 MHz      ; Delay:DL3|div_clk                                    ;      ;
+; 207.08 MHz ; 207.08 MHz      ; Pulse:PL1|div_clk                                    ;      ;
+; 222.87 MHz ; 222.87 MHz      ; Delay:DL2|div_clk                                    ;      ;
+; 232.83 MHz ; 232.83 MHz      ; Delay:DL6|div_clk                                    ;      ;
+; 253.81 MHz ; 253.81 MHz      ; Delay:DL4|div_clk                                    ;      ;
+; 256.87 MHz ; 256.87 MHz      ; Delay:DL8|div_clk                                    ;      ;
+; 258.87 MHz ; 258.87 MHz      ; Delay:DL7|div_clk                                    ;      ;
+; 260.82 MHz ; 260.82 MHz      ; Delay:DL5|div_clk                                    ;      ;
+; 271.15 MHz ; 271.15 MHz      ; Delay:DL1|div_clk                                    ;      ;
+; 303.58 MHz ; 303.58 MHz      ; UART_Rx:comb_12|UART_clk                             ;      ;
++------------+-----------------+------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+----------------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary                ;
-+--------------------------+---------+---------------+
-; Clock                    ; Slack   ; End Point TNS ;
-+--------------------------+---------+---------------+
-; clk                      ; -10.475 ; -7784.535     ;
-; UART_Rx:comb_12|UART_clk ; -2.710  ; -44.394       ;
-+--------------------------+---------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                           ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; Pulse:PL4|div_clk                                    ; -5.453 ; -134.099      ;
+; Pulse:PL5|div_clk                                    ; -5.223 ; -119.774      ;
+; Pulse:PL3|div_clk                                    ; -5.162 ; -148.112      ;
+; Pulse:PL7|div_clk                                    ; -5.011 ; -136.042      ;
+; Pulse:PL8|div_clk                                    ; -4.952 ; -138.043      ;
+; Delay:DL2|div_clk                                    ; -4.830 ; -106.470      ;
+; Delay:DL3|div_clk                                    ; -4.795 ; -90.588       ;
+; Pulse:PL6|div_clk                                    ; -4.728 ; -137.030      ;
+; Pulse:PL2|div_clk                                    ; -4.648 ; -116.141      ;
+; Delay:DL4|div_clk                                    ; -4.203 ; -96.482       ;
+; Delay:DL6|div_clk                                    ; -4.134 ; -87.195       ;
+; Delay:DL8|div_clk                                    ; -4.119 ; -113.138      ;
+; Delay:DL5|div_clk                                    ; -4.087 ; -116.357      ;
+; Delay:DL7|div_clk                                    ; -4.033 ; -107.054      ;
+; Pulse:PL1|div_clk                                    ; -3.829 ; -77.941       ;
+; Delay:DL1|div_clk                                    ; -3.755 ; -118.135      ;
+; clk                                                  ; -2.782 ; -803.859      ;
+; UART_Rx:comb_12|UART_clk                             ; -2.294 ; -28.851       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -1.104 ; -188.117      ;
++------------------------------------------------------+--------+---------------+
 
 
-+--------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary               ;
-+--------------------------+-------+---------------+
-; Clock                    ; Slack ; End Point TNS ;
-+--------------------------+-------+---------------+
-; clk                      ; 0.360 ; 0.000         ;
-; UART_Rx:comb_12|UART_clk ; 0.361 ; 0.000         ;
-+--------------------------+-------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                            ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.517 ; -7.721        ;
+; Pulse:PL1|div_clk                                    ; 0.360  ; 0.000         ;
+; Pulse:PL2|div_clk                                    ; 0.360  ; 0.000         ;
+; Pulse:PL3|div_clk                                    ; 0.360  ; 0.000         ;
+; Pulse:PL4|div_clk                                    ; 0.360  ; 0.000         ;
+; Pulse:PL6|div_clk                                    ; 0.360  ; 0.000         ;
+; Pulse:PL7|div_clk                                    ; 0.360  ; 0.000         ;
+; Pulse:PL5|div_clk                                    ; 0.361  ; 0.000         ;
+; clk                                                  ; 0.361  ; 0.000         ;
+; Pulse:PL8|div_clk                                    ; 0.362  ; 0.000         ;
+; Delay:DL2|div_clk                                    ; 0.394  ; 0.000         ;
+; Delay:DL3|div_clk                                    ; 0.394  ; 0.000         ;
+; Delay:DL4|div_clk                                    ; 0.394  ; 0.000         ;
+; Delay:DL5|div_clk                                    ; 0.394  ; 0.000         ;
+; Delay:DL7|div_clk                                    ; 0.394  ; 0.000         ;
+; UART_Rx:comb_12|UART_clk                             ; 0.394  ; 0.000         ;
+; Delay:DL8|div_clk                                    ; 0.412  ; 0.000         ;
+; Delay:DL1|div_clk                                    ; 0.462  ; 0.000         ;
+; Delay:DL6|div_clk                                    ; 0.497  ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -154,14 +223,31 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
-+--------------------------+--------+---------------+
-; Clock                    ; Slack  ; End Point TNS ;
-+--------------------------+--------+---------------+
-; clk                      ; -3.000 ; -2176.994     ;
-; UART_Rx:comb_12|UART_clk ; -1.487 ; -31.227       ;
-+--------------------------+--------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                             ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; Pulse:PL1|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL2|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL3|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL4|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL5|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL6|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL7|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL8|div_clk                                    ; -1.487 ; -55.019       ;
+; Delay:DL1|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL2|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL3|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL4|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL5|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL6|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL7|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL8|div_clk                                    ; -1.487 ; -53.532       ;
+; UART_Rx:comb_12|UART_clk                             ; -1.487 ; -31.227       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.206  ; 0.000         ;
+; clk                                                  ; 4.744  ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -170,35 +256,86 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                              ;
-+------------+-----------------+--------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
-+------------+-----------------+--------------------------+------+
-; 116.09 MHz ; 116.09 MHz      ; clk                      ;      ;
-; 289.6 MHz  ; 289.6 MHz       ; UART_Rx:comb_12|UART_clk ;      ;
-+------------+-----------------+--------------------------+------+
++--------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                          ;
++------------+-----------------+------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                           ; Note ;
++------------+-----------------+------------------------------------------------------+------+
+; 167.5 MHz  ; 167.5 MHz       ; Pulse:PL4|div_clk                                    ;      ;
+; 170.5 MHz  ; 170.5 MHz       ; clk                                                  ;      ;
+; 173.25 MHz ; 173.25 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
+; 173.85 MHz ; 173.85 MHz      ; Pulse:PL5|div_clk                                    ;      ;
+; 174.64 MHz ; 174.64 MHz      ; Pulse:PL3|div_clk                                    ;      ;
+; 180.54 MHz ; 180.54 MHz      ; Pulse:PL7|div_clk                                    ;      ;
+; 181.03 MHz ; 181.03 MHz      ; Pulse:PL8|div_clk                                    ;      ;
+; 189.04 MHz ; 189.04 MHz      ; Pulse:PL6|div_clk                                    ;      ;
+; 192.79 MHz ; 192.79 MHz      ; Pulse:PL2|div_clk                                    ;      ;
+; 212.68 MHz ; 212.68 MHz      ; Delay:DL3|div_clk                                    ;      ;
+; 225.38 MHz ; 225.38 MHz      ; Pulse:PL1|div_clk                                    ;      ;
+; 240.33 MHz ; 240.33 MHz      ; Delay:DL2|div_clk                                    ;      ;
+; 254.65 MHz ; 254.65 MHz      ; Delay:DL6|div_clk                                    ;      ;
+; 274.95 MHz ; 274.95 MHz      ; Delay:DL4|div_clk                                    ;      ;
+; 277.93 MHz ; 277.93 MHz      ; Delay:DL5|div_clk                                    ;      ;
+; 278.63 MHz ; 278.63 MHz      ; Delay:DL7|div_clk                                    ;      ;
+; 279.17 MHz ; 279.17 MHz      ; Delay:DL8|div_clk                                    ;      ;
+; 298.06 MHz ; 298.06 MHz      ; Delay:DL1|div_clk                                    ;      ;
+; 318.07 MHz ; 318.07 MHz      ; UART_Rx:comb_12|UART_clk                             ;      ;
++------------+-----------------+------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+---------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                ;
-+--------------------------+--------+---------------+
-; Clock                    ; Slack  ; End Point TNS ;
-+--------------------------+--------+---------------+
-; clk                      ; -9.709 ; -7258.445     ;
-; UART_Rx:comb_12|UART_clk ; -2.453 ; -40.923       ;
-+--------------------------+--------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                            ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; Pulse:PL4|div_clk                                    ; -4.970 ; -124.751      ;
+; Pulse:PL5|div_clk                                    ; -4.752 ; -110.984      ;
+; Pulse:PL3|div_clk                                    ; -4.726 ; -138.395      ;
+; Pulse:PL7|div_clk                                    ; -4.539 ; -126.127      ;
+; Pulse:PL8|div_clk                                    ; -4.524 ; -129.670      ;
+; Delay:DL2|div_clk                                    ; -4.466 ; -95.500       ;
+; Delay:DL3|div_clk                                    ; -4.377 ; -79.397       ;
+; Pulse:PL6|div_clk                                    ; -4.290 ; -127.481      ;
+; Pulse:PL2|div_clk                                    ; -4.187 ; -107.852      ;
+; Delay:DL4|div_clk                                    ; -3.795 ; -85.578       ;
+; Delay:DL8|div_clk                                    ; -3.715 ; -101.428      ;
+; Delay:DL6|div_clk                                    ; -3.693 ; -76.062       ;
+; Delay:DL5|div_clk                                    ; -3.653 ; -104.892      ;
+; Delay:DL7|div_clk                                    ; -3.634 ; -95.428       ;
+; Pulse:PL1|div_clk                                    ; -3.437 ; -67.105       ;
+; Delay:DL1|div_clk                                    ; -3.325 ; -106.700      ;
+; clk                                                  ; -2.696 ; -772.589      ;
+; UART_Rx:comb_12|UART_clk                             ; -2.144 ; -26.244       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.772 ; -35.962       ;
++------------------------------------------------------+--------+---------------+
 
 
-+--------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                ;
-+--------------------------+-------+---------------+
-; Clock                    ; Slack ; End Point TNS ;
-+--------------------------+-------+---------------+
-; clk                      ; 0.322 ; 0.000         ;
-; UART_Rx:comb_12|UART_clk ; 0.323 ; 0.000         ;
-+--------------------------+-------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                             ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.549 ; -8.235        ;
+; Pulse:PL3|div_clk                                    ; 0.322  ; 0.000         ;
+; Pulse:PL4|div_clk                                    ; 0.322  ; 0.000         ;
+; Pulse:PL6|div_clk                                    ; 0.322  ; 0.000         ;
+; Pulse:PL7|div_clk                                    ; 0.322  ; 0.000         ;
+; Pulse:PL1|div_clk                                    ; 0.323  ; 0.000         ;
+; Pulse:PL2|div_clk                                    ; 0.323  ; 0.000         ;
+; Pulse:PL5|div_clk                                    ; 0.323  ; 0.000         ;
+; clk                                                  ; 0.323  ; 0.000         ;
+; Pulse:PL8|div_clk                                    ; 0.325  ; 0.000         ;
+; Delay:DL2|div_clk                                    ; 0.352  ; 0.000         ;
+; Delay:DL3|div_clk                                    ; 0.352  ; 0.000         ;
+; Delay:DL4|div_clk                                    ; 0.352  ; 0.000         ;
+; Delay:DL5|div_clk                                    ; 0.352  ; 0.000         ;
+; Delay:DL7|div_clk                                    ; 0.352  ; 0.000         ;
+; UART_Rx:comb_12|UART_clk                             ; 0.352  ; 0.000         ;
+; Delay:DL8|div_clk                                    ; 0.368  ; 0.000         ;
+; Delay:DL1|div_clk                                    ; 0.383  ; 0.000         ;
+; Delay:DL6|div_clk                                    ; 0.467  ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -213,14 +350,31 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary  ;
-+--------------------------+--------+---------------+
-; Clock                    ; Slack  ; End Point TNS ;
-+--------------------------+--------+---------------+
-; clk                      ; -3.000 ; -2176.994     ;
-; UART_Rx:comb_12|UART_clk ; -1.487 ; -31.227       ;
-+--------------------------+--------+---------------+
++-------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                              ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; Pulse:PL1|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL2|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL3|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL4|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL5|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL6|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL7|div_clk                                    ; -1.487 ; -55.019       ;
+; Pulse:PL8|div_clk                                    ; -1.487 ; -55.019       ;
+; Delay:DL1|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL2|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL3|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL4|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL5|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL6|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL7|div_clk                                    ; -1.487 ; -53.532       ;
+; Delay:DL8|div_clk                                    ; -1.487 ; -53.532       ;
+; UART_Rx:comb_12|UART_clk                             ; -1.487 ; -31.227       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.189  ; 0.000         ;
+; clk                                                  ; 4.761  ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -229,24 +383,58 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary                ;
-+--------------------------+--------+---------------+
-; Clock                    ; Slack  ; End Point TNS ;
-+--------------------------+--------+---------------+
-; clk                      ; -3.404 ; -2250.444     ;
-; UART_Rx:comb_12|UART_clk ; -0.481 ; -6.245        ;
-+--------------------------+--------+---------------+
++-------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                            ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; Pulse:PL4|div_clk                                    ; -1.471 ; -33.228       ;
+; Delay:DL2|div_clk                                    ; -1.363 ; -24.548       ;
+; Delay:DL3|div_clk                                    ; -1.353 ; -16.793       ;
+; Pulse:PL5|div_clk                                    ; -1.331 ; -23.894       ;
+; Pulse:PL3|div_clk                                    ; -1.271 ; -35.976       ;
+; Pulse:PL7|div_clk                                    ; -1.238 ; -33.619       ;
+; Pulse:PL8|div_clk                                    ; -1.222 ; -35.543       ;
+; Pulse:PL6|div_clk                                    ; -1.187 ; -33.544       ;
+; Pulse:PL2|div_clk                                    ; -1.140 ; -25.520       ;
+; Delay:DL5|div_clk                                    ; -1.108 ; -30.159       ;
+; Delay:DL8|div_clk                                    ; -1.106 ; -28.224       ;
+; Delay:DL6|div_clk                                    ; -1.101 ; -17.165       ;
+; Delay:DL4|div_clk                                    ; -1.058 ; -20.987       ;
+; Delay:DL7|div_clk                                    ; -0.990 ; -28.614       ;
+; Delay:DL1|div_clk                                    ; -0.922 ; -30.655       ;
+; Pulse:PL1|div_clk                                    ; -0.821 ; -8.267        ;
+; clk                                                  ; -0.469 ; -53.818       ;
+; UART_Rx:comb_12|UART_clk                             ; -0.187 ; -1.339        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.136  ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
-+--------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                ;
-+--------------------------+-------+---------------+
-; Clock                    ; Slack ; End Point TNS ;
-+--------------------------+-------+---------------+
-; clk                      ; 0.150 ; 0.000         ;
-; UART_Rx:comb_12|UART_clk ; 0.151 ; 0.000         ;
-+--------------------------+-------+---------------+
++-------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                             ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.320 ; -4.648        ;
+; clk                                                  ; 0.117  ; 0.000         ;
+; Pulse:PL4|div_clk                                    ; 0.143  ; 0.000         ;
+; Pulse:PL1|div_clk                                    ; 0.151  ; 0.000         ;
+; Pulse:PL2|div_clk                                    ; 0.151  ; 0.000         ;
+; Pulse:PL3|div_clk                                    ; 0.151  ; 0.000         ;
+; Pulse:PL5|div_clk                                    ; 0.151  ; 0.000         ;
+; Pulse:PL6|div_clk                                    ; 0.151  ; 0.000         ;
+; Pulse:PL7|div_clk                                    ; 0.151  ; 0.000         ;
+; Pulse:PL8|div_clk                                    ; 0.152  ; 0.000         ;
+; Delay:DL2|div_clk                                    ; 0.166  ; 0.000         ;
+; Delay:DL3|div_clk                                    ; 0.166  ; 0.000         ;
+; Delay:DL4|div_clk                                    ; 0.166  ; 0.000         ;
+; Delay:DL5|div_clk                                    ; 0.166  ; 0.000         ;
+; Delay:DL7|div_clk                                    ; 0.166  ; 0.000         ;
+; UART_Rx:comb_12|UART_clk                             ; 0.166  ; 0.000         ;
+; Delay:DL8|div_clk                                    ; 0.170  ; 0.000         ;
+; Delay:DL1|div_clk                                    ; 0.175  ; 0.000         ;
+; Delay:DL6|div_clk                                    ; 0.181  ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -261,14 +449,31 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary  ;
-+--------------------------+--------+---------------+
-; Clock                    ; Slack  ; End Point TNS ;
-+--------------------------+--------+---------------+
-; clk                      ; -3.000 ; -1519.976     ;
-; UART_Rx:comb_12|UART_clk ; -1.000 ; -21.000       ;
-+--------------------------+--------+---------------+
++-------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                              ;
++------------------------------------------------------+--------+---------------+
+; Clock                                                ; Slack  ; End Point TNS ;
++------------------------------------------------------+--------+---------------+
+; Pulse:PL1|div_clk                                    ; -1.000 ; -37.000       ;
+; Pulse:PL2|div_clk                                    ; -1.000 ; -37.000       ;
+; Pulse:PL3|div_clk                                    ; -1.000 ; -37.000       ;
+; Pulse:PL4|div_clk                                    ; -1.000 ; -37.000       ;
+; Pulse:PL5|div_clk                                    ; -1.000 ; -37.000       ;
+; Pulse:PL6|div_clk                                    ; -1.000 ; -37.000       ;
+; Pulse:PL7|div_clk                                    ; -1.000 ; -37.000       ;
+; Pulse:PL8|div_clk                                    ; -1.000 ; -37.000       ;
+; Delay:DL1|div_clk                                    ; -1.000 ; -36.000       ;
+; Delay:DL2|div_clk                                    ; -1.000 ; -36.000       ;
+; Delay:DL3|div_clk                                    ; -1.000 ; -36.000       ;
+; Delay:DL4|div_clk                                    ; -1.000 ; -36.000       ;
+; Delay:DL5|div_clk                                    ; -1.000 ; -36.000       ;
+; Delay:DL6|div_clk                                    ; -1.000 ; -36.000       ;
+; Delay:DL7|div_clk                                    ; -1.000 ; -36.000       ;
+; Delay:DL8|div_clk                                    ; -1.000 ; -36.000       ;
+; UART_Rx:comb_12|UART_clk                             ; -1.000 ; -21.000       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.254  ; 0.000         ;
+; clk                                                  ; 4.464  ; 0.000         ;
++------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -277,18 +482,52 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                      ;
-+---------------------------+-----------+-------+----------+---------+---------------------+
-; Clock                     ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack          ; -10.475   ; 0.150 ; N/A      ; N/A     ; -3.000              ;
-;  UART_Rx:comb_12|UART_clk ; -2.710    ; 0.151 ; N/A      ; N/A     ; -1.487              ;
-;  clk                      ; -10.475   ; 0.150 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS           ; -7828.929 ; 0.0   ; 0.0      ; 0.0     ; -2208.221           ;
-;  UART_Rx:comb_12|UART_clk ; -44.394   ; 0.000 ; N/A      ; N/A     ; -31.227             ;
-;  clk                      ; -7784.535 ; 0.000 ; N/A      ; N/A     ; -2176.994           ;
-+---------------------------+-----------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                   ;
++-------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Clock                                                 ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                      ; -5.453    ; -0.549 ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL1|div_clk                                    ; -3.755    ; 0.175  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL2|div_clk                                    ; -4.830    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL3|div_clk                                    ; -4.795    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL4|div_clk                                    ; -4.203    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL5|div_clk                                    ; -4.087    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL6|div_clk                                    ; -4.134    ; 0.181  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL7|div_clk                                    ; -4.033    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL8|div_clk                                    ; -4.119    ; 0.170  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL1|div_clk                                    ; -3.829    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL2|div_clk                                    ; -4.648    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL3|div_clk                                    ; -5.162    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL4|div_clk                                    ; -5.453    ; 0.143  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL5|div_clk                                    ; -5.223    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL6|div_clk                                    ; -4.728    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL7|div_clk                                    ; -5.011    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL8|div_clk                                    ; -4.952    ; 0.152  ; N/A      ; N/A     ; -1.487              ;
+;  UART_Rx:comb_12|UART_clk                             ; -2.294    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  clk                                                  ; -2.782    ; 0.117  ; N/A      ; N/A     ; 4.464               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -1.104    ; -0.549 ; N/A      ; N/A     ; 2.189               ;
+; Design-wide TNS                                       ; -2863.428 ; -8.235 ; 0.0      ; 0.0     ; -899.635            ;
+;  Delay:DL1|div_clk                                    ; -118.135  ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Delay:DL2|div_clk                                    ; -106.470  ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Delay:DL3|div_clk                                    ; -90.588   ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Delay:DL4|div_clk                                    ; -96.482   ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Delay:DL5|div_clk                                    ; -116.357  ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Delay:DL6|div_clk                                    ; -87.195   ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Delay:DL7|div_clk                                    ; -107.054  ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Delay:DL8|div_clk                                    ; -113.138  ; 0.000  ; N/A      ; N/A     ; -53.532             ;
+;  Pulse:PL1|div_clk                                    ; -77.941   ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  Pulse:PL2|div_clk                                    ; -116.141  ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  Pulse:PL3|div_clk                                    ; -148.112  ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  Pulse:PL4|div_clk                                    ; -134.099  ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  Pulse:PL5|div_clk                                    ; -119.774  ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  Pulse:PL6|div_clk                                    ; -137.030  ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  Pulse:PL7|div_clk                                    ; -136.042  ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  Pulse:PL8|div_clk                                    ; -138.043  ; 0.000  ; N/A      ; N/A     ; -55.019             ;
+;  UART_Rx:comb_12|UART_clk                             ; -28.851   ; 0.000  ; N/A      ; N/A     ; -31.227             ;
+;  clk                                                  ; -803.859  ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -188.117  ; -8.235 ; N/A      ; N/A     ; 0.000               ;
++-------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -381,27 +620,159 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                 ;
-+--------------------------+--------------------------+----------+----------+----------+----------+
-; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------------------+--------------------------+----------+----------+----------+----------+
-; clk                      ; clk                      ; 342279   ; 0        ; 0        ; 0        ;
-; UART_Rx:comb_12|UART_clk ; clk                      ; 2644256  ; 1        ; 0        ; 0        ;
-; UART_Rx:comb_12|UART_clk ; UART_Rx:comb_12|UART_clk ; 264      ; 0        ; 0        ; 0        ;
-+--------------------------+--------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                         ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                  ; clk                                                  ; 2101     ; 0        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; clk                                                  ; 1        ; 0        ; 0        ; 0        ;
+; UART_Rx:comb_12|UART_clk                             ; clk                                                  ; 3681     ; 1        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL1|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL2|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL3|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL4|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL5|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL6|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL7|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL8|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 35       ; 0        ; 0        ; 0        ;
+; clk                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 608      ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 42336    ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL1|div_clk                                    ; 369      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Pulse:PL1|div_clk                                    ; 702      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL2|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Pulse:PL2|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Pulse:PL2|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL3|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Pulse:PL3|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Pulse:PL3|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL4|div_clk                                    ; 385      ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Pulse:PL4|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Pulse:PL4|div_clk                                    ; 738      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL5|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Pulse:PL5|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Pulse:PL5|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL6|div_clk                                    ; 385      ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Pulse:PL6|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Pulse:PL6|div_clk                                    ; 738      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL7|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Pulse:PL7|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Pulse:PL7|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL8|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Pulse:PL8|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Pulse:PL8|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
+; UART_Rx:comb_12|UART_clk                             ; UART_Rx:comb_12|UART_clk                             ; 176      ; 0        ; 0        ; 0        ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                  ;
-+--------------------------+--------------------------+----------+----------+----------+----------+
-; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------------------+--------------------------+----------+----------+----------+----------+
-; clk                      ; clk                      ; 342279   ; 0        ; 0        ; 0        ;
-; UART_Rx:comb_12|UART_clk ; clk                      ; 2644256  ; 1        ; 0        ; 0        ;
-; UART_Rx:comb_12|UART_clk ; UART_Rx:comb_12|UART_clk ; 264      ; 0        ; 0        ; 0        ;
-+--------------------------+--------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                          ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                           ; To Clock                                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                  ; clk                                                  ; 2101     ; 0        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; clk                                                  ; 1        ; 0        ; 0        ; 0        ;
+; UART_Rx:comb_12|UART_clk                             ; clk                                                  ; 3681     ; 1        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL1|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL2|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL3|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL4|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL5|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL6|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL7|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; clk                                                  ; Delay:DL8|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 35       ; 0        ; 0        ; 0        ;
+; clk                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 608      ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 42336    ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL1|div_clk                                    ; 369      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Pulse:PL1|div_clk                                    ; 702      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL2|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Pulse:PL2|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Pulse:PL2|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL3|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Pulse:PL3|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Pulse:PL3|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL4|div_clk                                    ; 385      ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Pulse:PL4|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Pulse:PL4|div_clk                                    ; 738      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL5|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Pulse:PL5|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Pulse:PL5|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL6|div_clk                                    ; 385      ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Pulse:PL6|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Pulse:PL6|div_clk                                    ; 738      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL7|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Pulse:PL7|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Pulse:PL7|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL8|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Pulse:PL8|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Pulse:PL8|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
+; UART_Rx:comb_12|UART_clk                             ; UART_Rx:comb_12|UART_clk                             ; 176      ; 0        ; 0        ; 0        ;
++------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -431,14 +802,31 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 
 
-+--------------------------------------------------------------------------+
-; Clock Status Summary                                                     ;
-+--------------------------+--------------------------+------+-------------+
-; Target                   ; Clock                    ; Type ; Status      ;
-+--------------------------+--------------------------+------+-------------+
-; UART_Rx:comb_12|UART_clk ; UART_Rx:comb_12|UART_clk ; Base ; Constrained ;
-; clk                      ; clk                      ; Base ; Constrained ;
-+--------------------------+--------------------------+------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                  ;
++------------------------------------------------------+------------------------------------------------------+-----------+-------------+
+; Target                                               ; Clock                                                ; Type      ; Status      ;
++------------------------------------------------------+------------------------------------------------------+-----------+-------------+
+; Delay:DL1|div_clk                                    ; Delay:DL1|div_clk                                    ; Base      ; Constrained ;
+; Delay:DL2|div_clk                                    ; Delay:DL2|div_clk                                    ; Base      ; Constrained ;
+; Delay:DL3|div_clk                                    ; Delay:DL3|div_clk                                    ; Base      ; Constrained ;
+; Delay:DL4|div_clk                                    ; Delay:DL4|div_clk                                    ; Base      ; Constrained ;
+; Delay:DL5|div_clk                                    ; Delay:DL5|div_clk                                    ; Base      ; Constrained ;
+; Delay:DL6|div_clk                                    ; Delay:DL6|div_clk                                    ; Base      ; Constrained ;
+; Delay:DL7|div_clk                                    ; Delay:DL7|div_clk                                    ; Base      ; Constrained ;
+; Delay:DL8|div_clk                                    ; Delay:DL8|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL1|div_clk                                    ; Pulse:PL1|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL2|div_clk                                    ; Pulse:PL2|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL3|div_clk                                    ; Pulse:PL3|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL4|div_clk                                    ; Pulse:PL4|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL5|div_clk                                    ; Pulse:PL5|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL6|div_clk                                    ; Pulse:PL6|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL7|div_clk                                    ; Pulse:PL7|div_clk                                    ; Base      ; Constrained ;
+; Pulse:PL8|div_clk                                    ; Pulse:PL8|div_clk                                    ; Base      ; Constrained ;
+; UART_Rx:comb_12|UART_clk                             ; UART_Rx:comb_12|UART_clk                             ; Base      ; Constrained ;
+; clk                                                  ; clk                                                  ; Base      ; Constrained ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; Constrained ;
++------------------------------------------------------+------------------------------------------------------+-----------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -501,7 +889,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 21 09:41:40 2021
+    Info: Processing started: Mon Jan 25 16:12:23 2021
 Info: Command: quartus_sta main -c main
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -509,81 +897,253 @@ Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'main.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 10.000 -waveform {0.000 5.000} -name clk clk
+    Info (332110): create_generated_clock -source {pll_inst|altpll_component|auto_generated|pll1|inclk[0]} -multiply_by 2 -duty_cycle 50.00 -name {pll_inst|altpll_component|auto_generated|pll1|clk[0]} {pll_inst|altpll_component|auto_generated|pll1|clk[0]}
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL1|div_clk Pulse:PL1|div_clk
     Info (332105): create_clock -period 1.000 -name UART_Rx:comb_12|UART_clk UART_Rx:comb_12|UART_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL8|div_clk Delay:DL8|div_clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL8|div_clk Pulse:PL8|div_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL7|div_clk Delay:DL7|div_clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL7|div_clk Pulse:PL7|div_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL6|div_clk Delay:DL6|div_clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL6|div_clk Pulse:PL6|div_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL5|div_clk Delay:DL5|div_clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL5|div_clk Pulse:PL5|div_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL4|div_clk Delay:DL4|div_clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL4|div_clk Pulse:PL4|div_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL3|div_clk Delay:DL3|div_clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL3|div_clk Pulse:PL3|div_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL2|div_clk Delay:DL2|div_clk
+    Info (332105): create_clock -period 1.000 -name Pulse:PL2|div_clk Pulse:PL2|div_clk
+    Info (332105): create_clock -period 1.000 -name Delay:DL1|div_clk Delay:DL1|div_clk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.475
+Info (332146): Worst-case setup slack is -5.453
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.475           -7784.535 clk 
-    Info (332119):    -2.710             -44.394 UART_Rx:comb_12|UART_clk 
-Info (332146): Worst-case hold slack is 0.360
+    Info (332119):    -5.453            -134.099 Pulse:PL4|div_clk 
+    Info (332119):    -5.223            -119.774 Pulse:PL5|div_clk 
+    Info (332119):    -5.162            -148.112 Pulse:PL3|div_clk 
+    Info (332119):    -5.011            -136.042 Pulse:PL7|div_clk 
+    Info (332119):    -4.952            -138.043 Pulse:PL8|div_clk 
+    Info (332119):    -4.830            -106.470 Delay:DL2|div_clk 
+    Info (332119):    -4.795             -90.588 Delay:DL3|div_clk 
+    Info (332119):    -4.728            -137.030 Pulse:PL6|div_clk 
+    Info (332119):    -4.648            -116.141 Pulse:PL2|div_clk 
+    Info (332119):    -4.203             -96.482 Delay:DL4|div_clk 
+    Info (332119):    -4.134             -87.195 Delay:DL6|div_clk 
+    Info (332119):    -4.119            -113.138 Delay:DL8|div_clk 
+    Info (332119):    -4.087            -116.357 Delay:DL5|div_clk 
+    Info (332119):    -4.033            -107.054 Delay:DL7|div_clk 
+    Info (332119):    -3.829             -77.941 Pulse:PL1|div_clk 
+    Info (332119):    -3.755            -118.135 Delay:DL1|div_clk 
+    Info (332119):    -2.782            -803.859 clk 
+    Info (332119):    -2.294             -28.851 UART_Rx:comb_12|UART_clk 
+    Info (332119):    -1.104            -188.117 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.517
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.360               0.000 clk 
-    Info (332119):     0.361               0.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):    -0.517              -7.721 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.360               0.000 Pulse:PL1|div_clk 
+    Info (332119):     0.360               0.000 Pulse:PL2|div_clk 
+    Info (332119):     0.360               0.000 Pulse:PL3|div_clk 
+    Info (332119):     0.360               0.000 Pulse:PL4|div_clk 
+    Info (332119):     0.360               0.000 Pulse:PL6|div_clk 
+    Info (332119):     0.360               0.000 Pulse:PL7|div_clk 
+    Info (332119):     0.361               0.000 Pulse:PL5|div_clk 
+    Info (332119):     0.361               0.000 clk 
+    Info (332119):     0.362               0.000 Pulse:PL8|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL2|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL3|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL4|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL5|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL7|div_clk 
+    Info (332119):     0.394               0.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):     0.412               0.000 Delay:DL8|div_clk 
+    Info (332119):     0.462               0.000 Delay:DL1|div_clk 
+    Info (332119):     0.497               0.000 Delay:DL6|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
+Info (332146): Worst-case minimum pulse width slack is -1.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000           -2176.994 clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL1|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL2|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL3|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL4|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL5|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL6|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL7|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL8|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL1|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL2|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL3|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL4|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL5|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL6|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL7|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL8|div_clk 
     Info (332119):    -1.487             -31.227 UART_Rx:comb_12|UART_clk 
+    Info (332119):     2.206               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.744               0.000 clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -9.709
+Info (332146): Worst-case setup slack is -4.970
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.709           -7258.445 clk 
-    Info (332119):    -2.453             -40.923 UART_Rx:comb_12|UART_clk 
-Info (332146): Worst-case hold slack is 0.322
+    Info (332119):    -4.970            -124.751 Pulse:PL4|div_clk 
+    Info (332119):    -4.752            -110.984 Pulse:PL5|div_clk 
+    Info (332119):    -4.726            -138.395 Pulse:PL3|div_clk 
+    Info (332119):    -4.539            -126.127 Pulse:PL7|div_clk 
+    Info (332119):    -4.524            -129.670 Pulse:PL8|div_clk 
+    Info (332119):    -4.466             -95.500 Delay:DL2|div_clk 
+    Info (332119):    -4.377             -79.397 Delay:DL3|div_clk 
+    Info (332119):    -4.290            -127.481 Pulse:PL6|div_clk 
+    Info (332119):    -4.187            -107.852 Pulse:PL2|div_clk 
+    Info (332119):    -3.795             -85.578 Delay:DL4|div_clk 
+    Info (332119):    -3.715            -101.428 Delay:DL8|div_clk 
+    Info (332119):    -3.693             -76.062 Delay:DL6|div_clk 
+    Info (332119):    -3.653            -104.892 Delay:DL5|div_clk 
+    Info (332119):    -3.634             -95.428 Delay:DL7|div_clk 
+    Info (332119):    -3.437             -67.105 Pulse:PL1|div_clk 
+    Info (332119):    -3.325            -106.700 Delay:DL1|div_clk 
+    Info (332119):    -2.696            -772.589 clk 
+    Info (332119):    -2.144             -26.244 UART_Rx:comb_12|UART_clk 
+    Info (332119):    -0.772             -35.962 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.549
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.322               0.000 clk 
-    Info (332119):     0.323               0.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):    -0.549              -8.235 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.322               0.000 Pulse:PL3|div_clk 
+    Info (332119):     0.322               0.000 Pulse:PL4|div_clk 
+    Info (332119):     0.322               0.000 Pulse:PL6|div_clk 
+    Info (332119):     0.322               0.000 Pulse:PL7|div_clk 
+    Info (332119):     0.323               0.000 Pulse:PL1|div_clk 
+    Info (332119):     0.323               0.000 Pulse:PL2|div_clk 
+    Info (332119):     0.323               0.000 Pulse:PL5|div_clk 
+    Info (332119):     0.323               0.000 clk 
+    Info (332119):     0.325               0.000 Pulse:PL8|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL2|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL3|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL4|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL5|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL7|div_clk 
+    Info (332119):     0.352               0.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):     0.368               0.000 Delay:DL8|div_clk 
+    Info (332119):     0.383               0.000 Delay:DL1|div_clk 
+    Info (332119):     0.467               0.000 Delay:DL6|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
+Info (332146): Worst-case minimum pulse width slack is -1.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000           -2176.994 clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL1|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL2|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL3|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL4|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL5|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL6|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL7|div_clk 
+    Info (332119):    -1.487             -55.019 Pulse:PL8|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL1|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL2|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL3|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL4|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL5|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL6|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL7|div_clk 
+    Info (332119):    -1.487             -53.532 Delay:DL8|div_clk 
     Info (332119):    -1.487             -31.227 UART_Rx:comb_12|UART_clk 
+    Info (332119):     2.189               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.761               0.000 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.404
+Info (332146): Worst-case setup slack is -1.471
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.404           -2250.444 clk 
-    Info (332119):    -0.481              -6.245 UART_Rx:comb_12|UART_clk 
-Info (332146): Worst-case hold slack is 0.150
+    Info (332119):    -1.471             -33.228 Pulse:PL4|div_clk 
+    Info (332119):    -1.363             -24.548 Delay:DL2|div_clk 
+    Info (332119):    -1.353             -16.793 Delay:DL3|div_clk 
+    Info (332119):    -1.331             -23.894 Pulse:PL5|div_clk 
+    Info (332119):    -1.271             -35.976 Pulse:PL3|div_clk 
+    Info (332119):    -1.238             -33.619 Pulse:PL7|div_clk 
+    Info (332119):    -1.222             -35.543 Pulse:PL8|div_clk 
+    Info (332119):    -1.187             -33.544 Pulse:PL6|div_clk 
+    Info (332119):    -1.140             -25.520 Pulse:PL2|div_clk 
+    Info (332119):    -1.108             -30.159 Delay:DL5|div_clk 
+    Info (332119):    -1.106             -28.224 Delay:DL8|div_clk 
+    Info (332119):    -1.101             -17.165 Delay:DL6|div_clk 
+    Info (332119):    -1.058             -20.987 Delay:DL4|div_clk 
+    Info (332119):    -0.990             -28.614 Delay:DL7|div_clk 
+    Info (332119):    -0.922             -30.655 Delay:DL1|div_clk 
+    Info (332119):    -0.821              -8.267 Pulse:PL1|div_clk 
+    Info (332119):    -0.469             -53.818 clk 
+    Info (332119):    -0.187              -1.339 UART_Rx:comb_12|UART_clk 
+    Info (332119):     0.136               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.320
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.150               0.000 clk 
-    Info (332119):     0.151               0.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):    -0.320              -4.648 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.117               0.000 clk 
+    Info (332119):     0.143               0.000 Pulse:PL4|div_clk 
+    Info (332119):     0.151               0.000 Pulse:PL1|div_clk 
+    Info (332119):     0.151               0.000 Pulse:PL2|div_clk 
+    Info (332119):     0.151               0.000 Pulse:PL3|div_clk 
+    Info (332119):     0.151               0.000 Pulse:PL5|div_clk 
+    Info (332119):     0.151               0.000 Pulse:PL6|div_clk 
+    Info (332119):     0.151               0.000 Pulse:PL7|div_clk 
+    Info (332119):     0.152               0.000 Pulse:PL8|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL2|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL3|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL4|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL5|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL7|div_clk 
+    Info (332119):     0.166               0.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):     0.170               0.000 Delay:DL8|div_clk 
+    Info (332119):     0.175               0.000 Delay:DL1|div_clk 
+    Info (332119):     0.181               0.000 Delay:DL6|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
+Info (332146): Worst-case minimum pulse width slack is -1.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000           -1519.976 clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL1|div_clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL2|div_clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL3|div_clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL4|div_clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL5|div_clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL6|div_clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL7|div_clk 
+    Info (332119):    -1.000             -37.000 Pulse:PL8|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL1|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL2|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL3|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL4|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL5|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL6|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL7|div_clk 
+    Info (332119):    -1.000             -36.000 Delay:DL8|div_clk 
     Info (332119):    -1.000             -21.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):     2.254               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.464               0.000 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Thu Jan 21 09:41:45 2021
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Mon Jan 25 16:12:26 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:05
 
 

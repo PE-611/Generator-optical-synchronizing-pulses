@@ -11,11 +11,13 @@ module UART_Rx (input clk_Rx, Rx_in,
 					 output reg UART_clk,	//for generation and checking UART_clk
 					 output reg wr,				// Readiness byte to write on memory
 					 output reg [7:0] wr_addr
+					 //output reg PC_start
+					 
 
 					 );
 					 
 parameter Fclk = 100 * 1000000;			// Input clk [Hz]
-parameter Fuart = 115200;						// recomended 230400, 115200, 57600, 38400, 33600, 28800, 19200, 14400, 9600, 1200.   		 	
+parameter Fuart = 100000;						// recomended 230400, 115200, 57600, 38400, 33600, 28800, 19200, 14400, 9600, 1200.   		 	
 parameter divider	= (Fclk / (Fuart *2)) - 1; 		
 
 initial wr <= 1'b1;
@@ -25,7 +27,9 @@ initial data_out <= 8'b00000000;
 initial UART_clk <= 1'b0;	
 										
 reg [15:0]	cnt;
-initial cnt <= 16'd0;				
+initial cnt <= 16'd0;	
+
+//initial PC_start <= 1'b0;			
 
 
 
