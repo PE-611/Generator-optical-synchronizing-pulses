@@ -1,21 +1,5 @@
 module Start (input st_clk, st_button, end_flg, pc_start, 
-				  input [4:0] MPL1,
-				  input [4:0] MPL2,
-				  input [4:0] MPL3,
-				  input [4:0] MPL4,
-				  input [4:0] MPL5,
-				  input [4:0] MPL6,	
-				  input [4:0] MPL7,	
-				  input [4:0] MPL8,
-				  input [4:0] MPL9,
-				  input [4:0] MPL10,	
-				  input [4:0] MPL11,	
-				  input [4:0] MPL12,
-				  input [4:0] MPL13,
-				  input [4:0] MPL14,
-				  input [4:0] MPL15,
-				  input [4:0] MPL16,				  
-				  output reg st_o
+			  	  output reg st_o
 				  
 				  );
 

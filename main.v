@@ -174,17 +174,8 @@ assign d_src = {d[0], d[1], d[2], d[3], d[4], d[5], d[6], d[7]}; //for inversion
 
 PLL pll_inst (.inclk0(clk), .c0(CLK));	
 
-Start (.st_clk(clk), .st_button(button), .st_o(o), .end_flg(END_FLG), .pc_start(PC_START), //.ready_to_start(READY_TO_START),
-.MPL1(MULT_PL1), .MPL2(MULT_PL2), .MPL3(MULT_PL3), .MPL4(MULT_PL4),
-.MPL5(MULT_PL5), .MPL6(MULT_PL6), .MPL7(MULT_PL7), .MPL8(MULT_PL8),
-.MPL9(MULT_PL9), .MPL10(MULT_PL10), .MPL11(MULT_PL11), .MPL12(MULT_PL12),
-.MPL13(MULT_PL13), .MPL14(MULT_PL14), .MPL15(MULT_PL15), .MPL16(MULT_PL16));
-/*
-.MDL1(MULT_DL1), .MDL2(MULT_DL2), .MDL3(MULT_DL3), .MDL4(MULT_DL4),
-.MDL5(MULT_DL5), .MDL6(MULT_DL6), .MDL7(MULT_DL7), .MDL8(MULT_DL8),
-.MDL9(MULT_DL9), .MDL10(MULT_DL10), .MDL11(MULT_DL11), .MDL12(MULT_DL12),
-.MDL13(MULT_DL13), .MDL14(MULT_DL14), .MDL15(MULT_DL15), .MDL16(MULT_DL16));
-*/
+Start (.st_clk(clk), .st_button(button), .st_o(o), .end_flg(END_FLG), .pc_start(PC_START)); //.ready_to_start(READY_TO_START),
+
 
 UART_Rx (.clk_Rx(clk), .Rx_in(Rx), .data_out(d), .UART_clk(control_UART_clk), .wr(WRITE), .wr_addr(WR_ADDR));//, .PC_start(PC_START));
 
