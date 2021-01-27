@@ -27,8 +27,7 @@ module main (input clk, Rx, button,
 				 //output CLK, DIV_CLK//
 				 );
 				 
-
-//wire PC_START;
+wire PC_START;
 wire CLK;
 wire END_FLG;		
 wire DIN;
@@ -174,13 +173,13 @@ assign d_src = {d[0], d[1], d[2], d[3], d[4], d[5], d[6], d[7]}; //for inversion
 
 PLL pll_inst (.inclk0(clk), .c0(CLK));	
 
-Start (.st_clk(clk), .st_button(button), .st_o(o), .end_flg(END_FLG), .pc_start(PC_START)); //.ready_to_start(READY_TO_START),
+Start (.st_clk(clk), .st_button(button), .st_o(o), .end_flg(END_FLG), .PC_start(PC_START)); //.ready_to_start(READY_TO_START),
 
 
 UART_Rx (.clk_Rx(clk), .Rx_in(Rx), .data_out(d), .UART_clk(control_UART_clk), .wr(WRITE), .wr_addr(WR_ADDR));//, .PC_start(PC_START));
 
 
-RAM (.in(d_src), .clk_RAM(clk), .write(WRITE), .w_addr(WR_ADDR), //.out(data_from_RAM), 
+RAM (.in(d_src), .clk_RAM(clk), .write(WRITE), .w_addr(WR_ADDR), .pc_start(PC_START), //.out(data_from_RAM), 
 
 .PL1_drt(PL1_DRT), .DL1_del(DL1_DEL), .ch1_type_start(CH1TS), .Mult_PL1(MULT_PL1), .Mult_DL1(MULT_DL1), 
 .PL2_drt(PL2_DRT), .DL2_del(DL2_DEL), .ch2_type_start(CH2TS), .Mult_PL2(MULT_PL2), .Mult_DL2(MULT_DL2),
@@ -237,7 +236,9 @@ Delay DL7 (.clk_Delay(CLK), .delay(DL7_DEL), .DL_launch(PL7_LAUNCH_DL7),  .launc
 Pulse PL8 (.clk_Pulse(CLK), .duration(PL8_DRT), .PL_out(ex_8), .PL_start(o), .PL_launch(DL7_LAUNCH_PL8),  .launch_DL(PL8_LAUNCH_DL8), .CHTS(CH8TS), .pl_mlt(MULT_PL8));
 Delay DL8 (.clk_Delay(CLK), .delay(DL8_DEL), .DL_launch(PL8_LAUNCH_DL8),  .launch_PL(DL8_LAUNCH_PL9), .dl_mlt(MULT_DL8), .End_Flg (DIN)); // .DL_out(ex[]),
 
-DLST (.clk_dlst(clk), .din(DIN), .dout(END_FLG));
+DLST ST1(.clk_dlst(clk), .din(DIN), .dout(END_FLG));
+
+
 
 endmodule					
 

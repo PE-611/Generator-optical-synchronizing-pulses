@@ -105,6 +105,8 @@ module RAM(//output reg [31:0] out,
 			  output reg [4:0] Mult_PL16,
 			  output reg [4:0] Mult_DL16,
 			  
+			  output reg pc_start,
+			  
 								
 			  input clk_RAM,
 			  input [7:0] in,
@@ -115,12 +117,9 @@ module RAM(//output reg [31:0] out,
 
 reg read;
 initial read <= 1'b1;			  
-reg [7:0] DATA [111:0]; 
+reg [7:0] DATA [112:0]; 
 
-
-initial begin
-
-end
+initial pc_start <= 1'b0;
 
 
 
@@ -184,6 +183,19 @@ always @(posedge clk_RAM) begin
 			DL8_del  <= {DATA[58], DATA[59]};
 			Mult_DL8 <= DATA[57];
 		   ch8_type_start <= DATA[56];
+			
+			
+			
+			
+			
+			if (DATA[0] > 1'b0) begin
+				pc_start <= 1'b1;
+			end
+			
+			if (pc_start == 1'b1) begin
+				DATA[0] <= 1'b0;
+				pc_start <= 1'b0;
+			end
 	
 		
 		

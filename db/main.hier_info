@@ -2,15 +2,15 @@
 clk => clk.IN5
 Rx => Rx.IN1
 button => button.IN1
-o <= o.DB_MAX_OUTPUT_PORT_TYPE
-ex_1 <= Pulse:PL1.PL_out
-ex_2 <= Pulse:PL2.PL_out
-ex_3 <= Pulse:PL3.PL_out
-ex_4 <= Pulse:PL4.PL_out
-ex_5 <= Pulse:PL5.PL_out
-ex_6 <= Pulse:PL6.PL_out
-ex_7 <= Pulse:PL7.PL_out
-ex_8 <= Pulse:PL8.PL_out
+o << o.DB_MAX_OUTPUT_PORT_TYPE
+ex_1 << Pulse:PL1.PL_out
+ex_2 << Pulse:PL2.PL_out
+ex_3 << Pulse:PL3.PL_out
+ex_4 << Pulse:PL4.PL_out
+ex_5 << Pulse:PL5.PL_out
+ex_6 << Pulse:PL6.PL_out
+ex_7 << Pulse:PL7.PL_out
+ex_8 << Pulse:PL8.PL_out
 
 
 |main|PLL:pll_inst
@@ -97,7 +97,7 @@ locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 st_clk => st_o~reg0.CLK
 st_button => LessThan0.IN2
 end_flg => st_o.OUTPUTSELECT
-pc_start => ~NO_FANOUT~
+PC_start => st_o.OUTPUTSELECT
 st_o <= st_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -911,6 +911,8 @@ Mult_DL16[1] <= <GND>
 Mult_DL16[2] <= <GND>
 Mult_DL16[3] <= <GND>
 Mult_DL16[4] <= <GND>
+pc_start <= pc_start~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_RAM => pc_start~reg0.CLK
 clk_RAM => ch8_type_start[0]~reg0.CLK
 clk_RAM => ch8_type_start[1]~reg0.CLK
 clk_RAM => ch8_type_start[2]~reg0.CLK
@@ -1295,6 +1297,14 @@ clk_RAM => PL1_drt[13]~reg0.CLK
 clk_RAM => PL1_drt[14]~reg0.CLK
 clk_RAM => PL1_drt[15]~reg0.CLK
 clk_RAM => PL1_drt[16]~reg0.CLK
+clk_RAM => DATA[0][0].CLK
+clk_RAM => DATA[0][1].CLK
+clk_RAM => DATA[0][2].CLK
+clk_RAM => DATA[0][3].CLK
+clk_RAM => DATA[0][4].CLK
+clk_RAM => DATA[0][5].CLK
+clk_RAM => DATA[0][6].CLK
+clk_RAM => DATA[0][7].CLK
 clk_RAM => DATA[56][0].CLK
 clk_RAM => DATA[56][1].CLK
 clk_RAM => DATA[56][2].CLK
@@ -1719,6 +1729,8 @@ in[0] => DATA.DATAB
 in[0] => DATA.DATAB
 in[0] => DATA.DATAB
 in[0] => DATA.DATAB
+in[0] => DATA.DATAB
+in[1] => DATA.DATAB
 in[1] => DATA.DATAB
 in[1] => DATA.DATAB
 in[1] => DATA.DATAB
@@ -1831,6 +1843,7 @@ in[2] => DATA.DATAB
 in[2] => DATA.DATAB
 in[2] => DATA.DATAB
 in[2] => DATA.DATAB
+in[2] => DATA.DATAB
 in[3] => DATA.DATAB
 in[3] => DATA.DATAB
 in[3] => DATA.DATAB
@@ -1887,6 +1900,8 @@ in[3] => DATA.DATAB
 in[3] => DATA.DATAB
 in[3] => DATA.DATAB
 in[3] => DATA.DATAB
+in[3] => DATA.DATAB
+in[4] => DATA.DATAB
 in[4] => DATA.DATAB
 in[4] => DATA.DATAB
 in[4] => DATA.DATAB
@@ -1967,6 +1982,7 @@ in[5] => DATA.DATAB
 in[5] => DATA.DATAB
 in[5] => DATA.DATAB
 in[5] => DATA.DATAB
+in[5] => DATA.DATAB
 in[6] => DATA.DATAB
 in[6] => DATA.DATAB
 in[6] => DATA.DATAB
@@ -1999,6 +2015,8 @@ in[6] => DATA.DATAB
 in[6] => DATA.DATAB
 in[6] => DATA.DATAB
 in[6] => DATA.DATAB
+in[6] => DATA.DATAB
+in[7] => DATA.DATAB
 in[7] => DATA.DATAB
 in[7] => DATA.DATAB
 in[7] => DATA.DATAB
@@ -2039,6 +2057,14 @@ w_addr[4] => Decoder0.IN2
 w_addr[5] => Decoder0.IN1
 w_addr[6] => Decoder0.IN0
 w_addr[7] => LessThan0.IN2
+write => DATA.OUTPUTSELECT
+write => DATA.OUTPUTSELECT
+write => DATA.OUTPUTSELECT
+write => DATA.OUTPUTSELECT
+write => DATA.OUTPUTSELECT
+write => DATA.OUTPUTSELECT
+write => DATA.OUTPUTSELECT
+write => DATA.OUTPUTSELECT
 write => DATA.OUTPUTSELECT
 write => DATA.OUTPUTSELECT
 write => DATA.OUTPUTSELECT
@@ -5945,7 +5971,7 @@ launch_PL <= launch_PL~reg0.DB_MAX_OUTPUT_PORT_TYPE
 End_Flg <= End_Flg~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|DLST:comb_14
+|main|DLST:ST1
 clk_dlst => dout~reg0.CLK
 clk_dlst => cnt1[0].CLK
 clk_dlst => cnt1[1].CLK
