@@ -34,7 +34,7 @@ wire DIN;
 wire [7:0] WR_ADDR;								// address for WRITE in RAM
 wire WRITE;											// Write flag readiness byte to write on memory 	
 			 
-wire [16:0] PL1_DRT;								
+wire [17:0] PL1_DRT;								
 wire PL1_LAUNCH_DL1;
 wire [16:0] DL1_DEL;
 wire DL1_LAUNCH_PL2;

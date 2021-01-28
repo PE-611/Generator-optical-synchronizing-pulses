@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M08SAE144) Path("C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/") File("main.pof") MfrSpec(OpMask(7) Child_OpMask(2 7 7));
+		Device PartName(10M08SAE144) Path("C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/") File("main.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

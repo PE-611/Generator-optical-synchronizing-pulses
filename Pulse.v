@@ -13,16 +13,16 @@ module Pulse (input clk_Pulse, PL_start, PL_launch,
 				  output reg PL_out, launch_DL, div_clk
 				 );
 				
-reg [34:0] cnt1;
-initial cnt1 <= 35'd0;
+reg [25:0] cnt1;
+initial cnt1 <= 20'd0;
 initial PL_out <= 1'b0;
 initial launch_DL <= 1'b0;
 
-reg [34:0] div_cnt;
+reg [25:0] div_cnt;            
 initial div_cnt <= 1'b0;
 //reg div_clk;
 initial div_clk <= 1'b0;
-reg [34:0] divider;
+reg [25:0] divider;			    
 initial divider <= 1'b0;
 
 
@@ -31,15 +31,15 @@ always @(posedge clk_Pulse) begin
 	div_cnt <= div_cnt + 1'b1;
 	
 	if (pl_mlt == 4'd1) begin
-		divider <= 1'b1;
+		divider <= 1'b0;
 	end
 
 	if (pl_mlt == 4'd2) begin
-		divider <= 8'd100;
+		divider <= 8'd100 - 1;
 	end
 	
 	if (pl_mlt == 4'd3) begin
-		divider <= 20'd100000;
+		divider <= 20'd100000 - 1;
 	end
 	
 	
@@ -59,7 +59,7 @@ always @(posedge div_clk) begin
 				
 	if (CHTS == 3'd1) begin
 	
-		if (PL_start == 7'd1) begin
+		if (PL_start == 1'd1) begin
 			cnt1 <= cnt1 + 1'b1;
 			PL_out <= 1'b1;
 		end
@@ -71,7 +71,8 @@ always @(posedge div_clk) begin
 		
 		if (PL_start == 1'b0) begin
 			cnt1 <= 1'b0;
-		   launch_DL <= 1'b0;		
+		   launch_DL <= 1'b0;	
+		   PL_out <= 1'b0;	
 		end
 	
 	end
@@ -90,7 +91,8 @@ always @(posedge div_clk) begin
 		
 		if (PL_launch == 1'b0) begin
 			cnt1 <= 1'b0;
-		   launch_DL <= 1'b0;		
+		   launch_DL <= 1'b0;	
+			PL_out <= 1'b0;		
 		end
 	
 	end

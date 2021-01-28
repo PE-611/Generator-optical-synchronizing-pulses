@@ -1,5 +1,5 @@
 Flow report for main
-Tue Jan 26 16:19:16 2021
+Thu Jan 28 11:47:26 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jan 26 16:19:12 2021       ;
+; Flow Status                        ; Successful - Thu Jan 28 11:47:22 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08SAE144C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,298 / 8,064 ( 28 % )                      ;
-;     Total combinational functions  ; 2,165 / 8,064 ( 27 % )                      ;
-;     Dedicated logic registers      ; 1,677 / 8,064 ( 21 % )                      ;
-; Total registers                    ; 1677                                        ;
+; Total logic elements               ; 1,983 / 8,064 ( 25 % )                      ;
+;     Total combinational functions  ; 1,850 / 8,064 ( 23 % )                      ;
+;     Dedicated logic registers      ; 1,373 / 8,064 ( 17 % )                      ;
+; Total registers                    ; 1373                                        ;
 ; Total pins                         ; 12 / 101 ( 12 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 387,072 ( 0 % )                         ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/26/2021 16:18:40 ;
+; Start date & time ; 01/28/2021 11:46:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main                ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ refer to the applicable agreement for further details.
 ; ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION            ; On                                     ; Off           ; --          ; --         ;
 ; ALLOW_ANY_ROM_SIZE_FOR_RECOGNITION            ; On                                     ; Off           ; --          ; --         ;
 ; ALLOW_ANY_SHIFT_REGISTER_SIZE_FOR_RECOGNITION ; On                                     ; Off           ; --          ; --         ;
-; COMPILER_SIGNATURE_ID                         ; 10995770589198.161166712013924         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                         ; 10995770589198.161182361111936         ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                              ; On                                     ; --            ; --          ; --         ;
 ; FLOW_ENABLE_POWER_ANALYZER                    ; On                                     ; Off           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                        ; 85                                     ; --            ; --          ; --         ;
@@ -109,12 +109,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4802 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:13     ; 1.3                     ; 5599 MB             ; 00:00:22                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4685 MB             ; 00:00:01                           ;
-; Power Analyzer       ; 00:00:03     ; 1.6                     ; 4835 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.6                     ; 4804 MB             ; 00:00:04                           ;
-; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:52                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4811 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:13     ; 1.3                     ; 5589 MB             ; 00:00:23                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4687 MB             ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:03     ; 1.6                     ; 4831 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.5                     ; 4801 MB             ; 00:00:04                           ;
+; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

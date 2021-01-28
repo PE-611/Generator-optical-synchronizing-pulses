@@ -1,5 +1,5 @@
 Timing Analyzer report for main
-Tue Jan 26 16:19:16 2021
+Thu Jan 28 11:47:26 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -91,14 +91,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.57        ;
+; Average used               ; 1.54        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  19.4%      ;
-;     Processor 3            ;  18.7%      ;
-;     Processor 4            ;  18.6%      ;
+;     Processor 2            ;  18.8%      ;
+;     Processor 3            ;  17.8%      ;
+;     Processor 4            ;  17.8%      ;
 +----------------------------+-------------+
 
 
@@ -134,25 +134,25 @@ refer to the applicable agreement for further details.
 +------------+-----------------+------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                           ; Note ;
 +------------+-----------------+------------------------------------------------------+------+
-; 152.84 MHz ; 152.84 MHz      ; clk                                                  ;      ;
-; 154.61 MHz ; 154.61 MHz      ; Pulse:PL7|div_clk                                    ;      ;
-; 156.08 MHz ; 156.08 MHz      ; Pulse:PL6|div_clk                                    ;      ;
-; 161.47 MHz ; 161.47 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
-; 162.81 MHz ; 162.81 MHz      ; Pulse:PL8|div_clk                                    ;      ;
-; 168.69 MHz ; 168.69 MHz      ; Pulse:PL5|div_clk                                    ;      ;
-; 183.62 MHz ; 183.62 MHz      ; Pulse:PL2|div_clk                                    ;      ;
-; 198.93 MHz ; 198.93 MHz      ; Pulse:PL1|div_clk                                    ;      ;
-; 204.25 MHz ; 204.25 MHz      ; Pulse:PL3|div_clk                                    ;      ;
-; 214.73 MHz ; 214.73 MHz      ; Delay:DL6|div_clk                                    ;      ;
-; 216.87 MHz ; 216.87 MHz      ; Delay:DL1|div_clk                                    ;      ;
-; 216.87 MHz ; 216.87 MHz      ; Pulse:PL4|div_clk                                    ;      ;
-; 238.32 MHz ; 238.32 MHz      ; Delay:DL3|div_clk                                    ;      ;
-; 245.94 MHz ; 245.94 MHz      ; Delay:DL7|div_clk                                    ;      ;
-; 254.84 MHz ; 254.84 MHz      ; Delay:DL2|div_clk                                    ;      ;
-; 258.87 MHz ; 258.87 MHz      ; Delay:DL8|div_clk                                    ;      ;
-; 259.4 MHz  ; 259.4 MHz       ; Delay:DL4|div_clk                                    ;      ;
-; 277.93 MHz ; 277.93 MHz      ; Delay:DL5|div_clk                                    ;      ;
-; 286.2 MHz  ; 286.2 MHz       ; UART_Rx:comb_12|UART_clk                             ;      ;
+; 154.82 MHz ; 154.82 MHz      ; Pulse:PL2|div_clk                                    ;      ;
+; 156.99 MHz ; 156.99 MHz      ; clk                                                  ;      ;
+; 161.73 MHz ; 161.73 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
+; 161.81 MHz ; 161.81 MHz      ; Pulse:PL4|div_clk                                    ;      ;
+; 165.02 MHz ; 165.02 MHz      ; Pulse:PL8|div_clk                                    ;      ;
+; 165.59 MHz ; 165.59 MHz      ; Pulse:PL7|div_clk                                    ;      ;
+; 182.15 MHz ; 182.15 MHz      ; Pulse:PL6|div_clk                                    ;      ;
+; 203.92 MHz ; 203.92 MHz      ; Delay:DL2|div_clk                                    ;      ;
+; 214.0 MHz  ; 214.0 MHz       ; Pulse:PL3|div_clk                                    ;      ;
+; 218.82 MHz ; 218.82 MHz      ; Pulse:PL1|div_clk                                    ;      ;
+; 227.53 MHz ; 227.53 MHz      ; Pulse:PL5|div_clk                                    ;      ;
+; 232.61 MHz ; 232.61 MHz      ; Delay:DL5|div_clk                                    ;      ;
+; 249.88 MHz ; 249.88 MHz      ; Delay:DL3|div_clk                                    ;      ;
+; 261.99 MHz ; 261.99 MHz      ; Delay:DL4|div_clk                                    ;      ;
+; 263.64 MHz ; 263.64 MHz      ; Delay:DL8|div_clk                                    ;      ;
+; 263.71 MHz ; 263.71 MHz      ; Delay:DL1|div_clk                                    ;      ;
+; 278.09 MHz ; 278.09 MHz      ; Delay:DL7|div_clk                                    ;      ;
+; 281.85 MHz ; 281.85 MHz      ; Delay:DL6|div_clk                                    ;      ;
+; 309.79 MHz ; 309.79 MHz      ; UART_Rx:comb_12|UART_clk                             ;      ;
 +------------+-----------------+------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -162,25 +162,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; Pulse:PL7|div_clk                                    ; -5.468 ; -133.816      ;
-; Pulse:PL6|div_clk                                    ; -5.407 ; -132.412      ;
-; Pulse:PL8|div_clk                                    ; -5.142 ; -123.041      ;
-; Pulse:PL5|div_clk                                    ; -4.928 ; -107.348      ;
-; Delay:DL1|div_clk                                    ; -4.742 ; -118.112      ;
-; Pulse:PL2|div_clk                                    ; -4.446 ; -120.615      ;
-; Delay:DL4|div_clk                                    ; -4.445 ; -121.330      ;
-; Delay:DL6|div_clk                                    ; -4.279 ; -80.168       ;
-; Delay:DL2|div_clk                                    ; -4.143 ; -116.343      ;
-; Delay:DL8|div_clk                                    ; -4.109 ; -112.119      ;
-; Pulse:PL1|div_clk                                    ; -4.027 ; -83.980       ;
-; Pulse:PL3|div_clk                                    ; -3.896 ; -120.125      ;
-; Delay:DL5|div_clk                                    ; -3.881 ; -128.082      ;
-; Delay:DL7|div_clk                                    ; -3.744 ; -109.105      ;
-; Pulse:PL4|div_clk                                    ; -3.611 ; -112.386      ;
-; Delay:DL3|div_clk                                    ; -3.480 ; -113.805      ;
-; clk                                                  ; -2.681 ; -754.742      ;
-; UART_Rx:comb_12|UART_clk                             ; -2.494 ; -29.084       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -1.193 ; -178.367      ;
+; Pulse:PL2|div_clk                                    ; -5.459 ; -99.057       ;
+; Pulse:PL4|div_clk                                    ; -5.180 ; -103.209      ;
+; Pulse:PL8|div_clk                                    ; -5.060 ; -76.596       ;
+; Pulse:PL7|div_clk                                    ; -5.039 ; -99.118       ;
+; Delay:DL2|div_clk                                    ; -4.637 ; -75.942       ;
+; Pulse:PL6|div_clk                                    ; -4.490 ; -66.705       ;
+; Delay:DL3|div_clk                                    ; -4.392 ; -74.621       ;
+; Delay:DL8|div_clk                                    ; -4.343 ; -85.502       ;
+; Delay:DL1|div_clk                                    ; -4.330 ; -84.124       ;
+; Delay:DL4|div_clk                                    ; -4.291 ; -80.978       ;
+; Delay:DL7|div_clk                                    ; -4.143 ; -77.749       ;
+; Delay:DL6|div_clk                                    ; -3.856 ; -92.230       ;
+; Pulse:PL3|div_clk                                    ; -3.673 ; -91.796       ;
+; Pulse:PL1|div_clk                                    ; -3.570 ; -58.299       ;
+; Pulse:PL5|div_clk                                    ; -3.395 ; -80.197       ;
+; Delay:DL5|div_clk                                    ; -3.299 ; -61.172       ;
+; clk                                                  ; -2.678 ; -838.873      ;
+; UART_Rx:comb_12|UART_clk                             ; -2.228 ; -22.252       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -1.183 ; -142.589      ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -189,25 +189,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.518 ; -7.794        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.515 ; -7.371        ;
 ; Pulse:PL1|div_clk                                    ; 0.360  ; 0.000         ;
 ; Pulse:PL2|div_clk                                    ; 0.360  ; 0.000         ;
-; Pulse:PL4|div_clk                                    ; 0.360  ; 0.000         ;
-; Pulse:PL5|div_clk                                    ; 0.360  ; 0.000         ;
-; Pulse:PL7|div_clk                                    ; 0.360  ; 0.000         ;
+; Pulse:PL6|div_clk                                    ; 0.360  ; 0.000         ;
 ; Pulse:PL8|div_clk                                    ; 0.360  ; 0.000         ;
-; clk                                                  ; 0.361  ; 0.000         ;
-; Pulse:PL3|div_clk                                    ; 0.362  ; 0.000         ;
-; Pulse:PL6|div_clk                                    ; 0.362  ; 0.000         ;
-; Delay:DL3|div_clk                                    ; 0.377  ; 0.000         ;
+; clk                                                  ; 0.360  ; 0.000         ;
+; Pulse:PL4|div_clk                                    ; 0.362  ; 0.000         ;
+; Pulse:PL7|div_clk                                    ; 0.362  ; 0.000         ;
+; Delay:DL1|div_clk                                    ; 0.394  ; 0.000         ;
 ; Delay:DL2|div_clk                                    ; 0.394  ; 0.000         ;
+; Delay:DL3|div_clk                                    ; 0.394  ; 0.000         ;
+; Delay:DL4|div_clk                                    ; 0.394  ; 0.000         ;
+; Delay:DL5|div_clk                                    ; 0.394  ; 0.000         ;
 ; Delay:DL6|div_clk                                    ; 0.394  ; 0.000         ;
 ; Delay:DL7|div_clk                                    ; 0.394  ; 0.000         ;
 ; UART_Rx:comb_12|UART_clk                             ; 0.394  ; 0.000         ;
 ; Delay:DL8|div_clk                                    ; 0.412  ; 0.000         ;
-; Delay:DL5|div_clk                                    ; 0.480  ; 0.000         ;
-; Delay:DL4|div_clk                                    ; 0.485  ; 0.000         ;
-; Delay:DL1|div_clk                                    ; 0.497  ; 0.000         ;
+; Pulse:PL5|div_clk                                    ; 0.461  ; 0.000         ;
+; Pulse:PL3|div_clk                                    ; 0.462  ; 0.000         ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -228,25 +228,25 @@ No paths to report.
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; Pulse:PL1|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL2|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL3|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL4|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL5|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL6|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL7|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL8|div_clk                                    ; -1.487 ; -55.019       ;
-; Delay:DL1|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL2|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL3|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL4|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL5|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL6|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL7|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL8|div_clk                                    ; -1.487 ; -53.532       ;
+; Pulse:PL1|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL2|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL3|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL4|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL5|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL6|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL7|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL8|div_clk                                    ; -1.487 ; -41.636       ;
+; Delay:DL1|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL2|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL3|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL4|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL5|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL6|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL7|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL8|div_clk                                    ; -1.487 ; -40.149       ;
 ; UART_Rx:comb_12|UART_clk                             ; -1.487 ; -31.227       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.210  ; 0.000         ;
-; clk                                                  ; 4.744  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.213  ; 0.000         ;
+; clk                                                  ; 4.743  ; 0.000         ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -261,25 +261,25 @@ No synchronizer chains to report.
 +------------+-----------------+------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                           ; Note ;
 +------------+-----------------+------------------------------------------------------+------+
-; 158.55 MHz ; 158.55 MHz      ; clk                                                  ;      ;
-; 167.76 MHz ; 167.76 MHz      ; Pulse:PL7|div_clk                                    ;      ;
-; 168.78 MHz ; 168.78 MHz      ; Pulse:PL6|div_clk                                    ;      ;
-; 169.09 MHz ; 169.09 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
-; 175.07 MHz ; 175.07 MHz      ; Pulse:PL8|div_clk                                    ;      ;
-; 178.25 MHz ; 178.25 MHz      ; Pulse:PL5|div_clk                                    ;      ;
-; 198.49 MHz ; 198.49 MHz      ; Pulse:PL2|div_clk                                    ;      ;
-; 214.78 MHz ; 214.78 MHz      ; Pulse:PL1|div_clk                                    ;      ;
-; 220.65 MHz ; 220.65 MHz      ; Pulse:PL3|div_clk                                    ;      ;
-; 233.43 MHz ; 233.43 MHz      ; Delay:DL6|div_clk                                    ;      ;
-; 233.75 MHz ; 233.75 MHz      ; Delay:DL1|div_clk                                    ;      ;
-; 236.29 MHz ; 236.29 MHz      ; Pulse:PL4|div_clk                                    ;      ;
-; 246.49 MHz ; 246.49 MHz      ; Delay:DL3|div_clk                                    ;      ;
-; 263.5 MHz  ; 263.5 MHz       ; Delay:DL7|div_clk                                    ;      ;
-; 264.13 MHz ; 264.13 MHz      ; Delay:DL2|div_clk                                    ;      ;
-; 278.32 MHz ; 278.32 MHz      ; Delay:DL8|div_clk                                    ;      ;
-; 282.25 MHz ; 282.25 MHz      ; Delay:DL4|div_clk                                    ;      ;
-; 303.95 MHz ; 303.95 MHz      ; Delay:DL5|div_clk                                    ;      ;
-; 305.62 MHz ; 305.62 MHz      ; UART_Rx:comb_12|UART_clk                             ;      ;
+; 164.88 MHz ; 164.88 MHz      ; Pulse:PL2|div_clk                                    ;      ;
+; 165.15 MHz ; 165.15 MHz      ; clk                                                  ;      ;
+; 167.81 MHz ; 167.81 MHz      ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
+; 173.64 MHz ; 173.64 MHz      ; Pulse:PL4|div_clk                                    ;      ;
+; 176.99 MHz ; 176.99 MHz      ; Pulse:PL7|div_clk                                    ;      ;
+; 177.56 MHz ; 177.56 MHz      ; Pulse:PL8|div_clk                                    ;      ;
+; 197.75 MHz ; 197.75 MHz      ; Pulse:PL6|div_clk                                    ;      ;
+; 220.07 MHz ; 220.07 MHz      ; Delay:DL2|div_clk                                    ;      ;
+; 230.1 MHz  ; 230.1 MHz       ; Pulse:PL3|div_clk                                    ;      ;
+; 238.72 MHz ; 238.72 MHz      ; Pulse:PL1|div_clk                                    ;      ;
+; 247.46 MHz ; 247.46 MHz      ; Pulse:PL5|div_clk                                    ;      ;
+; 255.49 MHz ; 255.49 MHz      ; Delay:DL5|div_clk                                    ;      ;
+; 273.67 MHz ; 273.67 MHz      ; Delay:DL3|div_clk                                    ;      ;
+; 275.71 MHz ; 275.71 MHz      ; Delay:DL4|div_clk                                    ;      ;
+; 281.21 MHz ; 281.21 MHz      ; Delay:DL8|div_clk                                    ;      ;
+; 286.7 MHz  ; 286.7 MHz       ; Delay:DL1|div_clk                                    ;      ;
+; 305.44 MHz ; 305.44 MHz      ; Delay:DL7|div_clk                                    ;      ;
+; 314.56 MHz ; 314.56 MHz      ; Delay:DL6|div_clk                                    ;      ;
+; 329.82 MHz ; 329.82 MHz      ; UART_Rx:comb_12|UART_clk                             ;      ;
 +------------+-----------------+------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -289,25 +289,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; Pulse:PL7|div_clk                                    ; -4.961 ; -125.070      ;
-; Pulse:PL6|div_clk                                    ; -4.925 ; -123.313      ;
-; Pulse:PL8|div_clk                                    ; -4.712 ; -116.227      ;
-; Pulse:PL5|div_clk                                    ; -4.610 ; -98.169       ;
-; Delay:DL1|div_clk                                    ; -4.307 ; -106.463      ;
-; Pulse:PL2|div_clk                                    ; -4.038 ; -112.984      ;
-; Delay:DL4|div_clk                                    ; -4.021 ; -109.318      ;
-; Delay:DL6|div_clk                                    ; -3.843 ; -69.397       ;
-; Delay:DL2|div_clk                                    ; -3.740 ; -104.062      ;
-; Delay:DL8|div_clk                                    ; -3.669 ; -101.373      ;
-; Pulse:PL1|div_clk                                    ; -3.656 ; -72.615       ;
-; Delay:DL5|div_clk                                    ; -3.537 ; -115.862      ;
-; Pulse:PL3|div_clk                                    ; -3.532 ; -110.636      ;
-; Delay:DL7|div_clk                                    ; -3.322 ; -97.061       ;
-; Pulse:PL4|div_clk                                    ; -3.282 ; -104.494      ;
-; Delay:DL3|div_clk                                    ; -3.151 ; -102.760      ;
-; clk                                                  ; -2.594 ; -727.163      ;
-; UART_Rx:comb_12|UART_clk                             ; -2.272 ; -26.525       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.914 ; -41.720       ;
+; Pulse:PL2|div_clk                                    ; -5.065 ; -92.038       ;
+; Pulse:PL4|div_clk                                    ; -4.759 ; -97.637       ;
+; Pulse:PL7|div_clk                                    ; -4.650 ; -92.724       ;
+; Pulse:PL8|div_clk                                    ; -4.632 ; -70.630       ;
+; Delay:DL2|div_clk                                    ; -4.270 ; -68.061       ;
+; Pulse:PL6|div_clk                                    ; -4.057 ; -60.788       ;
+; Delay:DL3|div_clk                                    ; -3.958 ; -66.280       ;
+; Delay:DL8|div_clk                                    ; -3.912 ; -76.907       ;
+; Delay:DL1|div_clk                                    ; -3.892 ; -75.418       ;
+; Delay:DL4|div_clk                                    ; -3.858 ; -72.238       ;
+; Delay:DL7|div_clk                                    ; -3.709 ; -68.800       ;
+; Delay:DL6|div_clk                                    ; -3.449 ; -82.827       ;
+; Pulse:PL3|div_clk                                    ; -3.346 ; -85.632       ;
+; Pulse:PL1|div_clk                                    ; -3.189 ; -51.045       ;
+; Pulse:PL5|div_clk                                    ; -3.041 ; -73.741       ;
+; Delay:DL5|div_clk                                    ; -2.914 ; -53.071       ;
+; clk                                                  ; -2.602 ; -815.563      ;
+; UART_Rx:comb_12|UART_clk                             ; -2.032 ; -19.670       ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.959 ; -52.142       ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -316,25 +316,25 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.549 ; -8.303        ;
-; Delay:DL3|div_clk                                    ; 0.304  ; 0.000         ;
-; Pulse:PL7|div_clk                                    ; 0.322  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.547 ; -7.914        ;
+; Pulse:PL6|div_clk                                    ; 0.322  ; 0.000         ;
 ; Pulse:PL8|div_clk                                    ; 0.322  ; 0.000         ;
 ; Pulse:PL1|div_clk                                    ; 0.323  ; 0.000         ;
 ; Pulse:PL2|div_clk                                    ; 0.323  ; 0.000         ;
-; Pulse:PL4|div_clk                                    ; 0.323  ; 0.000         ;
-; Pulse:PL5|div_clk                                    ; 0.323  ; 0.000         ;
 ; clk                                                  ; 0.323  ; 0.000         ;
-; Pulse:PL3|div_clk                                    ; 0.324  ; 0.000         ;
-; Pulse:PL6|div_clk                                    ; 0.324  ; 0.000         ;
+; Pulse:PL4|div_clk                                    ; 0.325  ; 0.000         ;
+; Pulse:PL7|div_clk                                    ; 0.325  ; 0.000         ;
+; Delay:DL1|div_clk                                    ; 0.352  ; 0.000         ;
 ; Delay:DL2|div_clk                                    ; 0.352  ; 0.000         ;
+; Delay:DL3|div_clk                                    ; 0.352  ; 0.000         ;
+; Delay:DL4|div_clk                                    ; 0.352  ; 0.000         ;
+; Delay:DL5|div_clk                                    ; 0.352  ; 0.000         ;
 ; Delay:DL6|div_clk                                    ; 0.352  ; 0.000         ;
 ; Delay:DL7|div_clk                                    ; 0.352  ; 0.000         ;
 ; UART_Rx:comb_12|UART_clk                             ; 0.352  ; 0.000         ;
 ; Delay:DL8|div_clk                                    ; 0.368  ; 0.000         ;
-; Delay:DL5|div_clk                                    ; 0.398  ; 0.000         ;
-; Delay:DL4|div_clk                                    ; 0.409  ; 0.000         ;
-; Delay:DL1|div_clk                                    ; 0.467  ; 0.000         ;
+; Pulse:PL5|div_clk                                    ; 0.437  ; 0.000         ;
+; Pulse:PL3|div_clk                                    ; 0.438  ; 0.000         ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -355,25 +355,25 @@ No paths to report.
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; Pulse:PL1|div_clk                                    ; -1.487 ; -55.232       ;
-; Pulse:PL2|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL3|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL4|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL5|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL6|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL7|div_clk                                    ; -1.487 ; -55.019       ;
-; Pulse:PL8|div_clk                                    ; -1.487 ; -55.019       ;
-; Delay:DL1|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL2|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL3|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL4|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL5|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL6|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL7|div_clk                                    ; -1.487 ; -53.532       ;
-; Delay:DL8|div_clk                                    ; -1.487 ; -53.532       ;
+; Pulse:PL1|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL2|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL3|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL4|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL5|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL6|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL7|div_clk                                    ; -1.487 ; -41.636       ;
+; Pulse:PL8|div_clk                                    ; -1.487 ; -41.636       ;
+; Delay:DL5|div_clk                                    ; -1.487 ; -40.786       ;
+; Delay:DL1|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL2|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL3|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL4|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL6|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL7|div_clk                                    ; -1.487 ; -40.149       ;
+; Delay:DL8|div_clk                                    ; -1.487 ; -40.149       ;
 ; UART_Rx:comb_12|UART_clk                             ; -1.487 ; -31.227       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.187  ; 0.000         ;
-; clk                                                  ; 4.761  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.183  ; 0.000         ;
+; clk                                                  ; 4.760  ; 0.000         ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -388,25 +388,25 @@ No synchronizer chains to report.
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; Pulse:PL7|div_clk                                    ; -1.475 ; -31.727       ;
-; Pulse:PL6|div_clk                                    ; -1.411 ; -29.782       ;
-; Pulse:PL8|div_clk                                    ; -1.345 ; -28.108       ;
-; Delay:DL1|div_clk                                    ; -1.315 ; -29.850       ;
-; Pulse:PL5|div_clk                                    ; -1.313 ; -21.827       ;
-; Delay:DL6|div_clk                                    ; -1.134 ; -10.206       ;
-; Delay:DL4|div_clk                                    ; -1.125 ; -31.963       ;
-; Pulse:PL2|div_clk                                    ; -1.112 ; -26.314       ;
-; Delay:DL5|div_clk                                    ; -1.068 ; -34.839       ;
-; Delay:DL8|div_clk                                    ; -1.063 ; -27.314       ;
-; Delay:DL2|div_clk                                    ; -1.043 ; -29.805       ;
-; Pulse:PL3|div_clk                                    ; -0.947 ; -29.089       ;
-; Pulse:PL1|div_clk                                    ; -0.936 ; -9.671        ;
-; Delay:DL7|div_clk                                    ; -0.918 ; -27.177       ;
-; Delay:DL3|div_clk                                    ; -0.913 ; -28.129       ;
-; Pulse:PL4|div_clk                                    ; -0.740 ; -22.097       ;
-; clk                                                  ; -0.365 ; -31.077       ;
-; UART_Rx:comb_12|UART_clk                             ; -0.309 ; -1.889        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.131  ; 0.000         ;
+; Pulse:PL2|div_clk                                    ; -1.411 ; -23.422       ;
+; Pulse:PL4|div_clk                                    ; -1.336 ; -24.535       ;
+; Delay:DL2|div_clk                                    ; -1.272 ; -16.651       ;
+; Pulse:PL8|div_clk                                    ; -1.263 ; -13.388       ;
+; Pulse:PL7|div_clk                                    ; -1.241 ; -21.843       ;
+; Delay:DL8|div_clk                                    ; -1.200 ; -21.376       ;
+; Delay:DL1|div_clk                                    ; -1.158 ; -21.217       ;
+; Delay:DL4|div_clk                                    ; -1.145 ; -19.527       ;
+; Delay:DL3|div_clk                                    ; -1.132 ; -16.849       ;
+; Pulse:PL6|div_clk                                    ; -1.053 ; -10.374       ;
+; Delay:DL7|div_clk                                    ; -1.043 ; -18.827       ;
+; Delay:DL6|div_clk                                    ; -0.999 ; -24.178       ;
+; Pulse:PL3|div_clk                                    ; -0.805 ; -19.908       ;
+; Delay:DL5|div_clk                                    ; -0.710 ; -11.786       ;
+; Pulse:PL1|div_clk                                    ; -0.707 ; -5.969        ;
+; Pulse:PL5|div_clk                                    ; -0.680 ; -15.032       ;
+; clk                                                  ; -0.381 ; -56.211       ;
+; UART_Rx:comb_12|UART_clk                             ; -0.163 ; -1.006        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 0.130  ; 0.000         ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -415,25 +415,25 @@ No synchronizer chains to report.
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.320 ; -4.676        ;
-; Delay:DL3|div_clk                                    ; 0.140  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -0.317 ; -4.471        ;
+; Pulse:PL8|div_clk                                    ; 0.150  ; 0.000         ;
 ; Pulse:PL1|div_clk                                    ; 0.151  ; 0.000         ;
 ; Pulse:PL2|div_clk                                    ; 0.151  ; 0.000         ;
 ; Pulse:PL4|div_clk                                    ; 0.151  ; 0.000         ;
-; Pulse:PL5|div_clk                                    ; 0.151  ; 0.000         ;
 ; Pulse:PL6|div_clk                                    ; 0.151  ; 0.000         ;
-; Pulse:PL7|div_clk                                    ; 0.151  ; 0.000         ;
-; Pulse:PL8|div_clk                                    ; 0.151  ; 0.000         ;
-; Pulse:PL3|div_clk                                    ; 0.152  ; 0.000         ;
-; clk                                                  ; 0.152  ; 0.000         ;
+; clk                                                  ; 0.151  ; 0.000         ;
+; Pulse:PL7|div_clk                                    ; 0.153  ; 0.000         ;
+; Pulse:PL5|div_clk                                    ; 0.165  ; 0.000         ;
+; Delay:DL1|div_clk                                    ; 0.166  ; 0.000         ;
 ; Delay:DL2|div_clk                                    ; 0.166  ; 0.000         ;
+; Delay:DL3|div_clk                                    ; 0.166  ; 0.000         ;
+; Delay:DL4|div_clk                                    ; 0.166  ; 0.000         ;
+; Delay:DL5|div_clk                                    ; 0.166  ; 0.000         ;
 ; Delay:DL6|div_clk                                    ; 0.166  ; 0.000         ;
 ; Delay:DL7|div_clk                                    ; 0.166  ; 0.000         ;
 ; UART_Rx:comb_12|UART_clk                             ; 0.166  ; 0.000         ;
+; Pulse:PL3|div_clk                                    ; 0.167  ; 0.000         ;
 ; Delay:DL8|div_clk                                    ; 0.170  ; 0.000         ;
-; Delay:DL4|div_clk                                    ; 0.174  ; 0.000         ;
-; Delay:DL5|div_clk                                    ; 0.176  ; 0.000         ;
-; Delay:DL1|div_clk                                    ; 0.181  ; 0.000         ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -454,25 +454,25 @@ No paths to report.
 +------------------------------------------------------+--------+---------------+
 ; Clock                                                ; Slack  ; End Point TNS ;
 +------------------------------------------------------+--------+---------------+
-; Pulse:PL1|div_clk                                    ; -1.000 ; -37.000       ;
-; Pulse:PL2|div_clk                                    ; -1.000 ; -37.000       ;
-; Pulse:PL3|div_clk                                    ; -1.000 ; -37.000       ;
-; Pulse:PL4|div_clk                                    ; -1.000 ; -37.000       ;
-; Pulse:PL5|div_clk                                    ; -1.000 ; -37.000       ;
-; Pulse:PL6|div_clk                                    ; -1.000 ; -37.000       ;
-; Pulse:PL7|div_clk                                    ; -1.000 ; -37.000       ;
-; Pulse:PL8|div_clk                                    ; -1.000 ; -37.000       ;
-; Delay:DL1|div_clk                                    ; -1.000 ; -36.000       ;
-; Delay:DL2|div_clk                                    ; -1.000 ; -36.000       ;
-; Delay:DL3|div_clk                                    ; -1.000 ; -36.000       ;
-; Delay:DL4|div_clk                                    ; -1.000 ; -36.000       ;
-; Delay:DL5|div_clk                                    ; -1.000 ; -36.000       ;
-; Delay:DL6|div_clk                                    ; -1.000 ; -36.000       ;
-; Delay:DL7|div_clk                                    ; -1.000 ; -36.000       ;
-; Delay:DL8|div_clk                                    ; -1.000 ; -36.000       ;
+; Pulse:PL1|div_clk                                    ; -1.000 ; -28.000       ;
+; Pulse:PL2|div_clk                                    ; -1.000 ; -28.000       ;
+; Pulse:PL3|div_clk                                    ; -1.000 ; -28.000       ;
+; Pulse:PL4|div_clk                                    ; -1.000 ; -28.000       ;
+; Pulse:PL5|div_clk                                    ; -1.000 ; -28.000       ;
+; Pulse:PL6|div_clk                                    ; -1.000 ; -28.000       ;
+; Pulse:PL7|div_clk                                    ; -1.000 ; -28.000       ;
+; Pulse:PL8|div_clk                                    ; -1.000 ; -28.000       ;
+; Delay:DL1|div_clk                                    ; -1.000 ; -27.000       ;
+; Delay:DL2|div_clk                                    ; -1.000 ; -27.000       ;
+; Delay:DL3|div_clk                                    ; -1.000 ; -27.000       ;
+; Delay:DL4|div_clk                                    ; -1.000 ; -27.000       ;
+; Delay:DL5|div_clk                                    ; -1.000 ; -27.000       ;
+; Delay:DL6|div_clk                                    ; -1.000 ; -27.000       ;
+; Delay:DL7|div_clk                                    ; -1.000 ; -27.000       ;
+; Delay:DL8|div_clk                                    ; -1.000 ; -27.000       ;
 ; UART_Rx:comb_12|UART_clk                             ; -1.000 ; -21.000       ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.256  ; 0.000         ;
-; clk                                                  ; 4.464  ; 0.000         ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 2.255  ; 0.000         ;
+; clk                                                  ; 4.463  ; 0.000         ;
 +------------------------------------------------------+--------+---------------+
 
 
@@ -482,52 +482,52 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                  ;
-+-------------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                                                 ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                      ; -5.468   ; -0.549 ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL1|div_clk                                    ; -4.742   ; 0.181  ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL2|div_clk                                    ; -4.143   ; 0.166  ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL3|div_clk                                    ; -3.480   ; 0.140  ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL4|div_clk                                    ; -4.445   ; 0.174  ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL5|div_clk                                    ; -3.881   ; 0.176  ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL6|div_clk                                    ; -4.279   ; 0.166  ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL7|div_clk                                    ; -3.744   ; 0.166  ; N/A      ; N/A     ; -1.487              ;
-;  Delay:DL8|div_clk                                    ; -4.109   ; 0.170  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL1|div_clk                                    ; -4.027   ; 0.151  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL2|div_clk                                    ; -4.446   ; 0.151  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL3|div_clk                                    ; -3.896   ; 0.152  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL4|div_clk                                    ; -3.611   ; 0.151  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL5|div_clk                                    ; -4.928   ; 0.151  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL6|div_clk                                    ; -5.407   ; 0.151  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL7|div_clk                                    ; -5.468   ; 0.151  ; N/A      ; N/A     ; -1.487              ;
-;  Pulse:PL8|div_clk                                    ; -5.142   ; 0.151  ; N/A      ; N/A     ; -1.487              ;
-;  UART_Rx:comb_12|UART_clk                             ; -2.494   ; 0.166  ; N/A      ; N/A     ; -1.487              ;
-;  clk                                                  ; -2.681   ; 0.152  ; N/A      ; N/A     ; 4.464               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -1.193   ; -0.549 ; N/A      ; N/A     ; 2.187               ;
-; Design-wide TNS                                       ; -2794.98 ; -8.303 ; 0.0      ; 0.0     ; -899.848            ;
-;  Delay:DL1|div_clk                                    ; -118.112 ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Delay:DL2|div_clk                                    ; -116.343 ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Delay:DL3|div_clk                                    ; -113.805 ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Delay:DL4|div_clk                                    ; -121.330 ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Delay:DL5|div_clk                                    ; -128.082 ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Delay:DL6|div_clk                                    ; -80.168  ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Delay:DL7|div_clk                                    ; -109.105 ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Delay:DL8|div_clk                                    ; -112.119 ; 0.000  ; N/A      ; N/A     ; -53.532             ;
-;  Pulse:PL1|div_clk                                    ; -83.980  ; 0.000  ; N/A      ; N/A     ; -55.232             ;
-;  Pulse:PL2|div_clk                                    ; -120.615 ; 0.000  ; N/A      ; N/A     ; -55.019             ;
-;  Pulse:PL3|div_clk                                    ; -120.125 ; 0.000  ; N/A      ; N/A     ; -55.019             ;
-;  Pulse:PL4|div_clk                                    ; -112.386 ; 0.000  ; N/A      ; N/A     ; -55.019             ;
-;  Pulse:PL5|div_clk                                    ; -107.348 ; 0.000  ; N/A      ; N/A     ; -55.019             ;
-;  Pulse:PL6|div_clk                                    ; -132.412 ; 0.000  ; N/A      ; N/A     ; -55.019             ;
-;  Pulse:PL7|div_clk                                    ; -133.816 ; 0.000  ; N/A      ; N/A     ; -55.019             ;
-;  Pulse:PL8|div_clk                                    ; -123.041 ; 0.000  ; N/A      ; N/A     ; -55.019             ;
-;  UART_Rx:comb_12|UART_clk                             ; -29.084  ; 0.000  ; N/A      ; N/A     ; -31.227             ;
-;  clk                                                  ; -754.742 ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -178.367 ; -8.303 ; N/A      ; N/A     ; 0.000               ;
-+-------------------------------------------------------+----------+--------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                   ;
++-------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Clock                                                 ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                      ; -5.459    ; -0.547 ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL1|div_clk                                    ; -4.330    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL2|div_clk                                    ; -4.637    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL3|div_clk                                    ; -4.392    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL4|div_clk                                    ; -4.291    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL5|div_clk                                    ; -3.299    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL6|div_clk                                    ; -3.856    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL7|div_clk                                    ; -4.143    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  Delay:DL8|div_clk                                    ; -4.343    ; 0.170  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL1|div_clk                                    ; -3.570    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL2|div_clk                                    ; -5.459    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL3|div_clk                                    ; -3.673    ; 0.167  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL4|div_clk                                    ; -5.180    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL5|div_clk                                    ; -3.395    ; 0.165  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL6|div_clk                                    ; -4.490    ; 0.151  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL7|div_clk                                    ; -5.039    ; 0.153  ; N/A      ; N/A     ; -1.487              ;
+;  Pulse:PL8|div_clk                                    ; -5.060    ; 0.150  ; N/A      ; N/A     ; -1.487              ;
+;  UART_Rx:comb_12|UART_clk                             ; -2.228    ; 0.166  ; N/A      ; N/A     ; -1.487              ;
+;  clk                                                  ; -2.678    ; 0.151  ; N/A      ; N/A     ; 4.463               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -1.183    ; -0.547 ; N/A      ; N/A     ; 2.183               ;
+; Design-wide TNS                                       ; -2311.009 ; -7.914 ; 0.0      ; 0.0     ; -686.144            ;
+;  Delay:DL1|div_clk                                    ; -84.124   ; 0.000  ; N/A      ; N/A     ; -40.149             ;
+;  Delay:DL2|div_clk                                    ; -75.942   ; 0.000  ; N/A      ; N/A     ; -40.149             ;
+;  Delay:DL3|div_clk                                    ; -74.621   ; 0.000  ; N/A      ; N/A     ; -40.149             ;
+;  Delay:DL4|div_clk                                    ; -80.978   ; 0.000  ; N/A      ; N/A     ; -40.149             ;
+;  Delay:DL5|div_clk                                    ; -61.172   ; 0.000  ; N/A      ; N/A     ; -40.786             ;
+;  Delay:DL6|div_clk                                    ; -92.230   ; 0.000  ; N/A      ; N/A     ; -40.149             ;
+;  Delay:DL7|div_clk                                    ; -77.749   ; 0.000  ; N/A      ; N/A     ; -40.149             ;
+;  Delay:DL8|div_clk                                    ; -85.502   ; 0.000  ; N/A      ; N/A     ; -40.149             ;
+;  Pulse:PL1|div_clk                                    ; -58.299   ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  Pulse:PL2|div_clk                                    ; -99.057   ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  Pulse:PL3|div_clk                                    ; -91.796   ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  Pulse:PL4|div_clk                                    ; -103.209  ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  Pulse:PL5|div_clk                                    ; -80.197   ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  Pulse:PL6|div_clk                                    ; -66.705   ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  Pulse:PL7|div_clk                                    ; -99.118   ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  Pulse:PL8|div_clk                                    ; -76.596   ; 0.000  ; N/A      ; N/A     ; -41.636             ;
+;  UART_Rx:comb_12|UART_clk                             ; -22.252   ; 0.000  ; N/A      ; N/A     ; -31.227             ;
+;  clk                                                  ; -838.873  ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  pll_inst|altpll_component|auto_generated|pll1|clk[0] ; -142.589  ; -7.914 ; N/A      ; N/A     ; 0.000               ;
++-------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -629,30 +629,30 @@ No synchronizer chains to report.
 ; Delay:DL8|div_clk                                    ; clk                                                  ; 1        ; 0        ; 0        ; 0        ;
 ; UART_Rx:comb_12|UART_clk                             ; clk                                                  ; 3787     ; 1        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL1|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL2|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL3|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL4|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL5|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL6|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL7|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL8|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 35       ; 0        ; 0        ; 0        ;
-; clk                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 608      ; 0        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 26       ; 0        ; 0        ; 0        ;
+; clk                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 464      ; 0        ; 0        ; 0        ;
 ; Delay:DL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
@@ -661,7 +661,7 @@ No synchronizer chains to report.
 ; Delay:DL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 42336    ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 37719    ; 0        ; 0        ; 0        ;
 ; Pulse:PL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
@@ -670,29 +670,29 @@ No synchronizer chains to report.
 ; Pulse:PL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL1|div_clk                                    ; 369      ; 0        ; 0        ; 0        ;
-; Pulse:PL1|div_clk                                    ; Pulse:PL1|div_clk                                    ; 702      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL2|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL1|div_clk                                    ; Pulse:PL2|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL2|div_clk                                    ; Pulse:PL2|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL3|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL2|div_clk                                    ; Pulse:PL3|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL3|div_clk                                    ; Pulse:PL3|div_clk                                    ; 703      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL4|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL3|div_clk                                    ; Pulse:PL4|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL4|div_clk                                    ; Pulse:PL4|div_clk                                    ; 703      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL5|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL4|div_clk                                    ; Pulse:PL5|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL5|div_clk                                    ; Pulse:PL5|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL6|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
-; Delay:DL5|div_clk                                    ; Pulse:PL6|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL6|div_clk                                    ; Pulse:PL6|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL7|div_clk                                    ; 385      ; 0        ; 0        ; 0        ;
-; Delay:DL6|div_clk                                    ; Pulse:PL7|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL7|div_clk                                    ; Pulse:PL7|div_clk                                    ; 738      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL8|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL7|div_clk                                    ; Pulse:PL8|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL8|div_clk                                    ; Pulse:PL8|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL1|div_clk                                    ; 284      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Pulse:PL1|div_clk                                    ; 406      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL2|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Pulse:PL2|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Pulse:PL2|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL3|div_clk                                    ; 314      ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Pulse:PL3|div_clk                                    ; 29       ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Pulse:PL3|div_clk                                    ; 405      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL4|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Pulse:PL4|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Pulse:PL4|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL5|div_clk                                    ; 314      ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Pulse:PL5|div_clk                                    ; 29       ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Pulse:PL5|div_clk                                    ; 405      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL6|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Pulse:PL6|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Pulse:PL6|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL7|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Pulse:PL7|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Pulse:PL7|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL8|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Pulse:PL8|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Pulse:PL8|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
 ; UART_Rx:comb_12|UART_clk                             ; UART_Rx:comb_12|UART_clk                             ; 176      ; 0        ; 0        ; 0        ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -707,30 +707,30 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; Delay:DL8|div_clk                                    ; clk                                                  ; 1        ; 0        ; 0        ; 0        ;
 ; UART_Rx:comb_12|UART_clk                             ; clk                                                  ; 3787     ; 1        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL1|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Delay:DL1|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL2|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Delay:DL2|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL3|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Delay:DL3|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL4|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Delay:DL4|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL5|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Delay:DL5|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL6|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Delay:DL6|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL7|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 36       ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Delay:DL7|div_clk                                    ; 27       ; 0        ; 0        ; 0        ;
 ; clk                                                  ; Delay:DL8|div_clk                                    ; 16       ; 0        ; 0        ; 0        ;
-; Delay:DL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 666      ; 0        ; 0        ; 0        ;
-; Pulse:PL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 35       ; 0        ; 0        ; 0        ;
-; clk                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 608      ; 0        ; 0        ; 0        ;
+; Delay:DL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 378      ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Delay:DL8|div_clk                                    ; 26       ; 0        ; 0        ; 0        ;
+; clk                                                  ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 464      ; 0        ; 0        ; 0        ;
 ; Delay:DL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
@@ -739,7 +739,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; Delay:DL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Delay:DL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
-; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 42336    ; 0        ; 0        ; 0        ;
+; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 37719    ; 0        ; 0        ; 0        ;
 ; Pulse:PL1|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL2|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL3|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
@@ -748,29 +748,29 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; Pulse:PL6|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL7|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
 ; Pulse:PL8|div_clk                                    ; pll_inst|altpll_component|auto_generated|pll1|clk[0] ; 1        ; 1        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL1|div_clk                                    ; 369      ; 0        ; 0        ; 0        ;
-; Pulse:PL1|div_clk                                    ; Pulse:PL1|div_clk                                    ; 702      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL2|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL1|div_clk                                    ; Pulse:PL2|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL2|div_clk                                    ; Pulse:PL2|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL3|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL2|div_clk                                    ; Pulse:PL3|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL3|div_clk                                    ; Pulse:PL3|div_clk                                    ; 703      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL4|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL3|div_clk                                    ; Pulse:PL4|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL4|div_clk                                    ; Pulse:PL4|div_clk                                    ; 703      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL5|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL4|div_clk                                    ; Pulse:PL5|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL5|div_clk                                    ; Pulse:PL5|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL6|div_clk                                    ; 397      ; 0        ; 0        ; 0        ;
-; Delay:DL5|div_clk                                    ; Pulse:PL6|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL6|div_clk                                    ; Pulse:PL6|div_clk                                    ; 733      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL7|div_clk                                    ; 385      ; 0        ; 0        ; 0        ;
-; Delay:DL6|div_clk                                    ; Pulse:PL7|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL7|div_clk                                    ; Pulse:PL7|div_clk                                    ; 738      ; 0        ; 0        ; 0        ;
-; clk                                                  ; Pulse:PL8|div_clk                                    ; 377      ; 0        ; 0        ; 0        ;
-; Delay:DL7|div_clk                                    ; Pulse:PL8|div_clk                                    ; 37       ; 0        ; 0        ; 0        ;
-; Pulse:PL8|div_clk                                    ; Pulse:PL8|div_clk                                    ; 704      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL1|div_clk                                    ; 284      ; 0        ; 0        ; 0        ;
+; Pulse:PL1|div_clk                                    ; Pulse:PL1|div_clk                                    ; 406      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL2|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL1|div_clk                                    ; Pulse:PL2|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL2|div_clk                                    ; Pulse:PL2|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL3|div_clk                                    ; 314      ; 0        ; 0        ; 0        ;
+; Delay:DL2|div_clk                                    ; Pulse:PL3|div_clk                                    ; 29       ; 0        ; 0        ; 0        ;
+; Pulse:PL3|div_clk                                    ; Pulse:PL3|div_clk                                    ; 405      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL4|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL3|div_clk                                    ; Pulse:PL4|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL4|div_clk                                    ; Pulse:PL4|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL5|div_clk                                    ; 314      ; 0        ; 0        ; 0        ;
+; Delay:DL4|div_clk                                    ; Pulse:PL5|div_clk                                    ; 29       ; 0        ; 0        ; 0        ;
+; Pulse:PL5|div_clk                                    ; Pulse:PL5|div_clk                                    ; 405      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL6|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL5|div_clk                                    ; Pulse:PL6|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL6|div_clk                                    ; Pulse:PL6|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL7|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL6|div_clk                                    ; Pulse:PL7|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL7|div_clk                                    ; Pulse:PL7|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
+; clk                                                  ; Pulse:PL8|div_clk                                    ; 328      ; 0        ; 0        ; 0        ;
+; Delay:DL7|div_clk                                    ; Pulse:PL8|div_clk                                    ; 28       ; 0        ; 0        ; 0        ;
+; Pulse:PL8|div_clk                                    ; Pulse:PL8|div_clk                                    ; 458      ; 0        ; 0        ; 0        ;
 ; UART_Rx:comb_12|UART_clk                             ; UART_Rx:comb_12|UART_clk                             ; 176      ; 0        ; 0        ; 0        ;
 +------------------------------------------------------+------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -889,7 +889,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 26 16:19:13 2021
+    Info: Processing started: Thu Jan 28 11:47:23 2021
 Info: Command: quartus_sta main -c main
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -926,223 +926,223 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.468
+Info (332146): Worst-case setup slack is -5.459
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.468            -133.816 Pulse:PL7|div_clk 
-    Info (332119):    -5.407            -132.412 Pulse:PL6|div_clk 
-    Info (332119):    -5.142            -123.041 Pulse:PL8|div_clk 
-    Info (332119):    -4.928            -107.348 Pulse:PL5|div_clk 
-    Info (332119):    -4.742            -118.112 Delay:DL1|div_clk 
-    Info (332119):    -4.446            -120.615 Pulse:PL2|div_clk 
-    Info (332119):    -4.445            -121.330 Delay:DL4|div_clk 
-    Info (332119):    -4.279             -80.168 Delay:DL6|div_clk 
-    Info (332119):    -4.143            -116.343 Delay:DL2|div_clk 
-    Info (332119):    -4.109            -112.119 Delay:DL8|div_clk 
-    Info (332119):    -4.027             -83.980 Pulse:PL1|div_clk 
-    Info (332119):    -3.896            -120.125 Pulse:PL3|div_clk 
-    Info (332119):    -3.881            -128.082 Delay:DL5|div_clk 
-    Info (332119):    -3.744            -109.105 Delay:DL7|div_clk 
-    Info (332119):    -3.611            -112.386 Pulse:PL4|div_clk 
-    Info (332119):    -3.480            -113.805 Delay:DL3|div_clk 
-    Info (332119):    -2.681            -754.742 clk 
-    Info (332119):    -2.494             -29.084 UART_Rx:comb_12|UART_clk 
-    Info (332119):    -1.193            -178.367 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is -0.518
+    Info (332119):    -5.459             -99.057 Pulse:PL2|div_clk 
+    Info (332119):    -5.180            -103.209 Pulse:PL4|div_clk 
+    Info (332119):    -5.060             -76.596 Pulse:PL8|div_clk 
+    Info (332119):    -5.039             -99.118 Pulse:PL7|div_clk 
+    Info (332119):    -4.637             -75.942 Delay:DL2|div_clk 
+    Info (332119):    -4.490             -66.705 Pulse:PL6|div_clk 
+    Info (332119):    -4.392             -74.621 Delay:DL3|div_clk 
+    Info (332119):    -4.343             -85.502 Delay:DL8|div_clk 
+    Info (332119):    -4.330             -84.124 Delay:DL1|div_clk 
+    Info (332119):    -4.291             -80.978 Delay:DL4|div_clk 
+    Info (332119):    -4.143             -77.749 Delay:DL7|div_clk 
+    Info (332119):    -3.856             -92.230 Delay:DL6|div_clk 
+    Info (332119):    -3.673             -91.796 Pulse:PL3|div_clk 
+    Info (332119):    -3.570             -58.299 Pulse:PL1|div_clk 
+    Info (332119):    -3.395             -80.197 Pulse:PL5|div_clk 
+    Info (332119):    -3.299             -61.172 Delay:DL5|div_clk 
+    Info (332119):    -2.678            -838.873 clk 
+    Info (332119):    -2.228             -22.252 UART_Rx:comb_12|UART_clk 
+    Info (332119):    -1.183            -142.589 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.515
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.518              -7.794 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):    -0.515              -7.371 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
     Info (332119):     0.360               0.000 Pulse:PL1|div_clk 
     Info (332119):     0.360               0.000 Pulse:PL2|div_clk 
-    Info (332119):     0.360               0.000 Pulse:PL4|div_clk 
-    Info (332119):     0.360               0.000 Pulse:PL5|div_clk 
-    Info (332119):     0.360               0.000 Pulse:PL7|div_clk 
+    Info (332119):     0.360               0.000 Pulse:PL6|div_clk 
     Info (332119):     0.360               0.000 Pulse:PL8|div_clk 
-    Info (332119):     0.361               0.000 clk 
-    Info (332119):     0.362               0.000 Pulse:PL3|div_clk 
-    Info (332119):     0.362               0.000 Pulse:PL6|div_clk 
-    Info (332119):     0.377               0.000 Delay:DL3|div_clk 
+    Info (332119):     0.360               0.000 clk 
+    Info (332119):     0.362               0.000 Pulse:PL4|div_clk 
+    Info (332119):     0.362               0.000 Pulse:PL7|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL1|div_clk 
     Info (332119):     0.394               0.000 Delay:DL2|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL3|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL4|div_clk 
+    Info (332119):     0.394               0.000 Delay:DL5|div_clk 
     Info (332119):     0.394               0.000 Delay:DL6|div_clk 
     Info (332119):     0.394               0.000 Delay:DL7|div_clk 
     Info (332119):     0.394               0.000 UART_Rx:comb_12|UART_clk 
     Info (332119):     0.412               0.000 Delay:DL8|div_clk 
-    Info (332119):     0.480               0.000 Delay:DL5|div_clk 
-    Info (332119):     0.485               0.000 Delay:DL4|div_clk 
-    Info (332119):     0.497               0.000 Delay:DL1|div_clk 
+    Info (332119):     0.461               0.000 Pulse:PL5|div_clk 
+    Info (332119):     0.462               0.000 Pulse:PL3|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.487             -55.019 Pulse:PL1|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL2|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL3|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL4|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL5|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL6|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL7|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL8|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL1|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL2|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL3|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL4|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL5|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL6|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL7|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL8|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL1|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL2|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL3|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL4|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL5|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL6|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL7|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL8|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL1|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL2|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL3|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL4|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL5|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL6|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL7|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL8|div_clk 
     Info (332119):    -1.487             -31.227 UART_Rx:comb_12|UART_clk 
-    Info (332119):     2.210               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     4.744               0.000 clk 
+    Info (332119):     2.213               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.743               0.000 clk 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.961
+Info (332146): Worst-case setup slack is -5.065
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.961            -125.070 Pulse:PL7|div_clk 
-    Info (332119):    -4.925            -123.313 Pulse:PL6|div_clk 
-    Info (332119):    -4.712            -116.227 Pulse:PL8|div_clk 
-    Info (332119):    -4.610             -98.169 Pulse:PL5|div_clk 
-    Info (332119):    -4.307            -106.463 Delay:DL1|div_clk 
-    Info (332119):    -4.038            -112.984 Pulse:PL2|div_clk 
-    Info (332119):    -4.021            -109.318 Delay:DL4|div_clk 
-    Info (332119):    -3.843             -69.397 Delay:DL6|div_clk 
-    Info (332119):    -3.740            -104.062 Delay:DL2|div_clk 
-    Info (332119):    -3.669            -101.373 Delay:DL8|div_clk 
-    Info (332119):    -3.656             -72.615 Pulse:PL1|div_clk 
-    Info (332119):    -3.537            -115.862 Delay:DL5|div_clk 
-    Info (332119):    -3.532            -110.636 Pulse:PL3|div_clk 
-    Info (332119):    -3.322             -97.061 Delay:DL7|div_clk 
-    Info (332119):    -3.282            -104.494 Pulse:PL4|div_clk 
-    Info (332119):    -3.151            -102.760 Delay:DL3|div_clk 
-    Info (332119):    -2.594            -727.163 clk 
-    Info (332119):    -2.272             -26.525 UART_Rx:comb_12|UART_clk 
-    Info (332119):    -0.914             -41.720 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is -0.549
+    Info (332119):    -5.065             -92.038 Pulse:PL2|div_clk 
+    Info (332119):    -4.759             -97.637 Pulse:PL4|div_clk 
+    Info (332119):    -4.650             -92.724 Pulse:PL7|div_clk 
+    Info (332119):    -4.632             -70.630 Pulse:PL8|div_clk 
+    Info (332119):    -4.270             -68.061 Delay:DL2|div_clk 
+    Info (332119):    -4.057             -60.788 Pulse:PL6|div_clk 
+    Info (332119):    -3.958             -66.280 Delay:DL3|div_clk 
+    Info (332119):    -3.912             -76.907 Delay:DL8|div_clk 
+    Info (332119):    -3.892             -75.418 Delay:DL1|div_clk 
+    Info (332119):    -3.858             -72.238 Delay:DL4|div_clk 
+    Info (332119):    -3.709             -68.800 Delay:DL7|div_clk 
+    Info (332119):    -3.449             -82.827 Delay:DL6|div_clk 
+    Info (332119):    -3.346             -85.632 Pulse:PL3|div_clk 
+    Info (332119):    -3.189             -51.045 Pulse:PL1|div_clk 
+    Info (332119):    -3.041             -73.741 Pulse:PL5|div_clk 
+    Info (332119):    -2.914             -53.071 Delay:DL5|div_clk 
+    Info (332119):    -2.602            -815.563 clk 
+    Info (332119):    -2.032             -19.670 UART_Rx:comb_12|UART_clk 
+    Info (332119):    -0.959             -52.142 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.547
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.549              -8.303 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.304               0.000 Delay:DL3|div_clk 
-    Info (332119):     0.322               0.000 Pulse:PL7|div_clk 
+    Info (332119):    -0.547              -7.914 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.322               0.000 Pulse:PL6|div_clk 
     Info (332119):     0.322               0.000 Pulse:PL8|div_clk 
     Info (332119):     0.323               0.000 Pulse:PL1|div_clk 
     Info (332119):     0.323               0.000 Pulse:PL2|div_clk 
-    Info (332119):     0.323               0.000 Pulse:PL4|div_clk 
-    Info (332119):     0.323               0.000 Pulse:PL5|div_clk 
     Info (332119):     0.323               0.000 clk 
-    Info (332119):     0.324               0.000 Pulse:PL3|div_clk 
-    Info (332119):     0.324               0.000 Pulse:PL6|div_clk 
+    Info (332119):     0.325               0.000 Pulse:PL4|div_clk 
+    Info (332119):     0.325               0.000 Pulse:PL7|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL1|div_clk 
     Info (332119):     0.352               0.000 Delay:DL2|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL3|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL4|div_clk 
+    Info (332119):     0.352               0.000 Delay:DL5|div_clk 
     Info (332119):     0.352               0.000 Delay:DL6|div_clk 
     Info (332119):     0.352               0.000 Delay:DL7|div_clk 
     Info (332119):     0.352               0.000 UART_Rx:comb_12|UART_clk 
     Info (332119):     0.368               0.000 Delay:DL8|div_clk 
-    Info (332119):     0.398               0.000 Delay:DL5|div_clk 
-    Info (332119):     0.409               0.000 Delay:DL4|div_clk 
-    Info (332119):     0.467               0.000 Delay:DL1|div_clk 
+    Info (332119):     0.437               0.000 Pulse:PL5|div_clk 
+    Info (332119):     0.438               0.000 Pulse:PL3|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.487             -55.232 Pulse:PL1|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL2|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL3|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL4|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL5|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL6|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL7|div_clk 
-    Info (332119):    -1.487             -55.019 Pulse:PL8|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL1|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL2|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL3|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL4|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL5|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL6|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL7|div_clk 
-    Info (332119):    -1.487             -53.532 Delay:DL8|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL1|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL2|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL3|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL4|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL5|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL6|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL7|div_clk 
+    Info (332119):    -1.487             -41.636 Pulse:PL8|div_clk 
+    Info (332119):    -1.487             -40.786 Delay:DL5|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL1|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL2|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL3|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL4|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL6|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL7|div_clk 
+    Info (332119):    -1.487             -40.149 Delay:DL8|div_clk 
     Info (332119):    -1.487             -31.227 UART_Rx:comb_12|UART_clk 
-    Info (332119):     2.187               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     4.761               0.000 clk 
+    Info (332119):     2.183               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.760               0.000 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.475
+Info (332146): Worst-case setup slack is -1.411
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.475             -31.727 Pulse:PL7|div_clk 
-    Info (332119):    -1.411             -29.782 Pulse:PL6|div_clk 
-    Info (332119):    -1.345             -28.108 Pulse:PL8|div_clk 
-    Info (332119):    -1.315             -29.850 Delay:DL1|div_clk 
-    Info (332119):    -1.313             -21.827 Pulse:PL5|div_clk 
-    Info (332119):    -1.134             -10.206 Delay:DL6|div_clk 
-    Info (332119):    -1.125             -31.963 Delay:DL4|div_clk 
-    Info (332119):    -1.112             -26.314 Pulse:PL2|div_clk 
-    Info (332119):    -1.068             -34.839 Delay:DL5|div_clk 
-    Info (332119):    -1.063             -27.314 Delay:DL8|div_clk 
-    Info (332119):    -1.043             -29.805 Delay:DL2|div_clk 
-    Info (332119):    -0.947             -29.089 Pulse:PL3|div_clk 
-    Info (332119):    -0.936              -9.671 Pulse:PL1|div_clk 
-    Info (332119):    -0.918             -27.177 Delay:DL7|div_clk 
-    Info (332119):    -0.913             -28.129 Delay:DL3|div_clk 
-    Info (332119):    -0.740             -22.097 Pulse:PL4|div_clk 
-    Info (332119):    -0.365             -31.077 clk 
-    Info (332119):    -0.309              -1.889 UART_Rx:comb_12|UART_clk 
-    Info (332119):     0.131               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-Info (332146): Worst-case hold slack is -0.320
+    Info (332119):    -1.411             -23.422 Pulse:PL2|div_clk 
+    Info (332119):    -1.336             -24.535 Pulse:PL4|div_clk 
+    Info (332119):    -1.272             -16.651 Delay:DL2|div_clk 
+    Info (332119):    -1.263             -13.388 Pulse:PL8|div_clk 
+    Info (332119):    -1.241             -21.843 Pulse:PL7|div_clk 
+    Info (332119):    -1.200             -21.376 Delay:DL8|div_clk 
+    Info (332119):    -1.158             -21.217 Delay:DL1|div_clk 
+    Info (332119):    -1.145             -19.527 Delay:DL4|div_clk 
+    Info (332119):    -1.132             -16.849 Delay:DL3|div_clk 
+    Info (332119):    -1.053             -10.374 Pulse:PL6|div_clk 
+    Info (332119):    -1.043             -18.827 Delay:DL7|div_clk 
+    Info (332119):    -0.999             -24.178 Delay:DL6|div_clk 
+    Info (332119):    -0.805             -19.908 Pulse:PL3|div_clk 
+    Info (332119):    -0.710             -11.786 Delay:DL5|div_clk 
+    Info (332119):    -0.707              -5.969 Pulse:PL1|div_clk 
+    Info (332119):    -0.680             -15.032 Pulse:PL5|div_clk 
+    Info (332119):    -0.381             -56.211 clk 
+    Info (332119):    -0.163              -1.006 UART_Rx:comb_12|UART_clk 
+    Info (332119):     0.130               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is -0.317
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.320              -4.676 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     0.140               0.000 Delay:DL3|div_clk 
+    Info (332119):    -0.317              -4.471 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     0.150               0.000 Pulse:PL8|div_clk 
     Info (332119):     0.151               0.000 Pulse:PL1|div_clk 
     Info (332119):     0.151               0.000 Pulse:PL2|div_clk 
     Info (332119):     0.151               0.000 Pulse:PL4|div_clk 
-    Info (332119):     0.151               0.000 Pulse:PL5|div_clk 
     Info (332119):     0.151               0.000 Pulse:PL6|div_clk 
-    Info (332119):     0.151               0.000 Pulse:PL7|div_clk 
-    Info (332119):     0.151               0.000 Pulse:PL8|div_clk 
-    Info (332119):     0.152               0.000 Pulse:PL3|div_clk 
-    Info (332119):     0.152               0.000 clk 
+    Info (332119):     0.151               0.000 clk 
+    Info (332119):     0.153               0.000 Pulse:PL7|div_clk 
+    Info (332119):     0.165               0.000 Pulse:PL5|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL1|div_clk 
     Info (332119):     0.166               0.000 Delay:DL2|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL3|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL4|div_clk 
+    Info (332119):     0.166               0.000 Delay:DL5|div_clk 
     Info (332119):     0.166               0.000 Delay:DL6|div_clk 
     Info (332119):     0.166               0.000 Delay:DL7|div_clk 
     Info (332119):     0.166               0.000 UART_Rx:comb_12|UART_clk 
+    Info (332119):     0.167               0.000 Pulse:PL3|div_clk 
     Info (332119):     0.170               0.000 Delay:DL8|div_clk 
-    Info (332119):     0.174               0.000 Delay:DL4|div_clk 
-    Info (332119):     0.176               0.000 Delay:DL5|div_clk 
-    Info (332119):     0.181               0.000 Delay:DL1|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.000             -37.000 Pulse:PL1|div_clk 
-    Info (332119):    -1.000             -37.000 Pulse:PL2|div_clk 
-    Info (332119):    -1.000             -37.000 Pulse:PL3|div_clk 
-    Info (332119):    -1.000             -37.000 Pulse:PL4|div_clk 
-    Info (332119):    -1.000             -37.000 Pulse:PL5|div_clk 
-    Info (332119):    -1.000             -37.000 Pulse:PL6|div_clk 
-    Info (332119):    -1.000             -37.000 Pulse:PL7|div_clk 
-    Info (332119):    -1.000             -37.000 Pulse:PL8|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL1|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL2|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL3|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL4|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL5|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL6|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL7|div_clk 
-    Info (332119):    -1.000             -36.000 Delay:DL8|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL1|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL2|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL3|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL4|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL5|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL6|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL7|div_clk 
+    Info (332119):    -1.000             -28.000 Pulse:PL8|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL1|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL2|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL3|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL4|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL5|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL6|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL7|div_clk 
+    Info (332119):    -1.000             -27.000 Delay:DL8|div_clk 
     Info (332119):    -1.000             -21.000 UART_Rx:comb_12|UART_clk 
-    Info (332119):     2.256               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
-    Info (332119):     4.464               0.000 clk 
+    Info (332119):     2.255               0.000 pll_inst|altpll_component|auto_generated|pll1|clk[0] 
+    Info (332119):     4.463               0.000 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Tue Jan 26 16:19:16 2021
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Thu Jan 28 11:47:26 2021
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
