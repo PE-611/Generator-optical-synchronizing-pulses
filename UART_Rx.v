@@ -21,7 +21,7 @@ parameter Fuart = 100000;						// recomended 230400, 115200, 57600, 38400, 33600
 parameter divider	= (Fclk / (Fuart *2)) - 1; 		
 
 initial wr <= 1'b1;
-initial wr_addr <= 8'd112;          ///////////////
+initial wr_addr <= 8'd113;          ///////////////
 					 
 initial data_out <= 8'b00000000;
 initial UART_clk <= 1'b0;	
@@ -70,7 +70,7 @@ initial g = 1'b0;
 		end
 		
 		if (wr_addr == 8'd0) begin			// quantity bytes = 112;
-			wr_addr <= 8'd112;
+			wr_addr <= 8'd113;
 			wr <= 1'b1;							// prohibition on write
 			
 		end

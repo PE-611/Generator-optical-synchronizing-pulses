@@ -173,8 +173,8 @@ assign d_src = {d[0], d[1], d[2], d[3], d[4], d[5], d[6], d[7]}; //for inversion
 
 PLL pll_inst (.inclk0(clk), .c0(CLK));	
 
-Start (.st_clk(clk), .st_button(button), .st_o(o), .end_flg(END_FLG), .PC_start(PC_START)); //.ready_to_start(READY_TO_START),
-
+Start (.st_clk(CLK), .st_button(button), .st_o(o), .end_flg(END_FLG), .PC_start(PC_START)); //.ready_to_start(READY_TO_START),
+				   ///
 
 UART_Rx (.clk_Rx(clk), .Rx_in(Rx), .data_out(d), .UART_clk(control_UART_clk), .wr(WRITE), .wr_addr(WR_ADDR));//, .PC_start(PC_START));
 

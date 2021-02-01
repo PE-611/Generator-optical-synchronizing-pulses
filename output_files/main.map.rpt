@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Thu Jan 28 11:47:02 2021
+Mon Feb 01 10:29:18 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -69,13 +69,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 28 11:47:02 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 01 10:29:18 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2,225                                       ;
-;     Total combinational functions  ; 1,849                                       ;
+; Total logic elements               ; 2,226                                       ;
+;     Total combinational functions  ; 1,850                                       ;
 ;     Dedicated logic registers      ; 1,373                                       ;
 ; Total registers                    ; 1373                                        ;
 ; Total pins                         ; 12                                          ;
@@ -220,16 +220,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                           ;
 +---------------------------------------------+---------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,225                                                                           ;
+; Estimated Total logic elements              ; 2,226                                                                           ;
 ;                                             ;                                                                                 ;
-; Total combinational functions               ; 1849                                                                            ;
+; Total combinational functions               ; 1850                                                                            ;
 ; Logic element usage by number of LUT inputs ;                                                                                 ;
-;     -- 4 input functions                    ; 438                                                                             ;
-;     -- 3 input functions                    ; 466                                                                             ;
-;     -- <=2 input functions                  ; 945                                                                             ;
+;     -- 4 input functions                    ; 469                                                                             ;
+;     -- 3 input functions                    ; 441                                                                             ;
+;     -- <=2 input functions                  ; 940                                                                             ;
 ;                                             ;                                                                                 ;
 ; Logic elements by mode                      ;                                                                                 ;
-;     -- normal mode                          ; 753                                                                             ;
+;     -- normal mode                          ; 754                                                                             ;
 ;     -- arithmetic mode                      ; 1096                                                                            ;
 ;                                             ;                                                                                 ;
 ; Total registers                             ; 1373                                                                            ;
@@ -244,9 +244,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                               ;
 ;                                             ;                                                                                 ;
 ; Maximum fan-out node                        ; PLL:pll_inst|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 481                                                                             ;
-; Total fan-out                               ; 9280                                                                            ;
-; Average fan-out                             ; 2.86                                                                            ;
+; Maximum fan-out                             ; 482                                                                             ;
+; Total fan-out                               ; 9319                                                                            ;
+; Average fan-out                             ; 2.87                                                                            ;
 +---------------------------------------------+---------------------------------------------------------------------------------+
 
 
@@ -255,22 +255,22 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                  ; Entity Name ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-------------+--------------+
-; |main                                ; 1849 (0)            ; 1373 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |main                                                                ; main        ; work         ;
-;    |DLST:ST1|                        ; 48 (48)             ; 37 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|DLST:ST1                                                       ; DLST        ; work         ;
+; |main                                ; 1850 (0)            ; 1373 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |main                                                                ; main        ; work         ;
+;    |DLST:ST1|                        ; 49 (49)             ; 37 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|DLST:ST1                                                       ; DLST        ; work         ;
 ;    |Delay:DL1|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL1                                                      ; Delay       ; work         ;
 ;    |Delay:DL2|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL2                                                      ; Delay       ; work         ;
-;    |Delay:DL3|                       ; 100 (100)           ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL3                                                      ; Delay       ; work         ;
+;    |Delay:DL3|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL3                                                      ; Delay       ; work         ;
 ;    |Delay:DL4|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL4                                                      ; Delay       ; work         ;
 ;    |Delay:DL5|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL5                                                      ; Delay       ; work         ;
 ;    |Delay:DL6|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL6                                                      ; Delay       ; work         ;
-;    |Delay:DL7|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL7                                                      ; Delay       ; work         ;
+;    |Delay:DL7|                       ; 100 (100)           ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL7                                                      ; Delay       ; work         ;
 ;    |Delay:DL8|                       ; 99 (99)             ; 57 (57)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Delay:DL8                                                      ; Delay       ; work         ;
 ;    |PLL:pll_inst|                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PLL:pll_inst                                                   ; PLL         ; work         ;
 ;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PLL:pll_inst|altpll:altpll_component                           ; altpll      ; work         ;
 ;          |PLL_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PLL:pll_inst|altpll:altpll_component|PLL_altpll:auto_generated ; PLL_altpll  ; work         ;
-;    |Pulse:PL1|                       ; 104 (104)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL1                                                      ; Pulse       ; work         ;
-;    |Pulse:PL2|                       ; 106 (106)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL2                                                      ; Pulse       ; work         ;
-;    |Pulse:PL3|                       ; 110 (110)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL3                                                      ; Pulse       ; work         ;
+;    |Pulse:PL1|                       ; 103 (103)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL1                                                      ; Pulse       ; work         ;
+;    |Pulse:PL2|                       ; 107 (107)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL2                                                      ; Pulse       ; work         ;
+;    |Pulse:PL3|                       ; 109 (109)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL3                                                      ; Pulse       ; work         ;
 ;    |Pulse:PL4|                       ; 109 (109)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL4                                                      ; Pulse       ; work         ;
 ;    |Pulse:PL5|                       ; 110 (110)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL5                                                      ; Pulse       ; work         ;
 ;    |Pulse:PL6|                       ; 109 (109)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL6                                                      ; Pulse       ; work         ;
@@ -278,7 +278,7 @@ refer to the applicable agreement for further details.
 ;    |Pulse:PL8|                       ; 109 (109)           ; 58 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Pulse:PL8                                                      ; Pulse       ; work         ;
 ;    |RAM:comb_13|                     ; 87 (87)             ; 377 (377)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|RAM:comb_13                                                    ; RAM         ; work         ;
 ;    |Start:comb_11|                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Start:comb_11                                                  ; Start       ; work         ;
-;    |UART_Rx:comb_12|                 ; 54 (54)             ; 38 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|UART_Rx:comb_12                                                ; UART_Rx     ; work         ;
+;    |UART_Rx:comb_12|                 ; 55 (55)             ; 38 (38)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|UART_Rx:comb_12                                                ; UART_Rx     ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -297,22 +297,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+----------------------------------------+
 ; Register name                           ; Reason for Removal                     ;
 +-----------------------------------------+----------------------------------------+
-; RAM:comb_13|PL1_drt[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|DL1_del[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|PL2_drt[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|DL2_del[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|PL3_drt[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|DL3_del[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|PL4_drt[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|DL4_del[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|PL5_drt[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|DL5_del[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|PL6_drt[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|DL6_del[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|PL7_drt[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|DL7_del[16]                 ; Stuck at GND due to stuck port data_in ;
-; RAM:comb_13|PL8_drt[16]                 ; Stuck at GND due to stuck port data_in ;
 ; RAM:comb_13|DL8_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL8_drt[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|DL7_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL7_drt[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|DL6_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL6_drt[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|DL5_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL5_drt[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|DL4_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL4_drt[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|DL3_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL3_drt[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|DL2_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL2_drt[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|DL1_del[16]                 ; Stuck at GND due to stuck port data_in ;
+; RAM:comb_13|PL1_drt[16]                 ; Stuck at GND due to stuck port data_in ;
 ; Delay:DL8|divider[1]                    ; Merged with Delay:DL8|divider[0]       ;
 ; Delay:DL8|divider[4,16]                 ; Merged with Delay:DL8|divider[2]       ;
 ; Delay:DL8|divider[7,9,15]               ; Merged with Delay:DL8|divider[3]       ;
@@ -467,374 +467,374 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Delay:DL1|divider[6]                    ; Merged with Delay:DL1|divider[5]       ;
 ; Delay:DL1|divider[13]                   ; Merged with Delay:DL1|divider[8]       ;
 ; Pulse:PL1|divider[3]                    ; Merged with Pulse:PL1|divider[2]       ;
-; RAM:comb_13|ch1_type_start[1]           ; Merged with RAM:comb_13|DATA[105][1]   ;
-; RAM:comb_13|ch1_type_start[3]           ; Merged with RAM:comb_13|DATA[105][3]   ;
-; RAM:comb_13|ch1_type_start[2]           ; Merged with RAM:comb_13|DATA[105][2]   ;
-; RAM:comb_13|ch1_type_start[0]           ; Merged with RAM:comb_13|DATA[105][0]   ;
-; RAM:comb_13|PL1_drt[15]                 ; Merged with RAM:comb_13|DATA[110][7]   ;
-; RAM:comb_13|PL1_drt[14]                 ; Merged with RAM:comb_13|DATA[110][6]   ;
-; RAM:comb_13|PL1_drt[13]                 ; Merged with RAM:comb_13|DATA[110][5]   ;
-; RAM:comb_13|PL1_drt[12]                 ; Merged with RAM:comb_13|DATA[110][4]   ;
-; RAM:comb_13|PL1_drt[11]                 ; Merged with RAM:comb_13|DATA[110][3]   ;
-; RAM:comb_13|PL1_drt[10]                 ; Merged with RAM:comb_13|DATA[110][2]   ;
-; RAM:comb_13|PL1_drt[9]                  ; Merged with RAM:comb_13|DATA[110][1]   ;
-; RAM:comb_13|PL1_drt[8]                  ; Merged with RAM:comb_13|DATA[110][0]   ;
-; RAM:comb_13|PL1_drt[7]                  ; Merged with RAM:comb_13|DATA[111][7]   ;
-; RAM:comb_13|PL1_drt[6]                  ; Merged with RAM:comb_13|DATA[111][6]   ;
-; RAM:comb_13|PL1_drt[5]                  ; Merged with RAM:comb_13|DATA[111][5]   ;
-; RAM:comb_13|PL1_drt[4]                  ; Merged with RAM:comb_13|DATA[111][4]   ;
-; RAM:comb_13|PL1_drt[3]                  ; Merged with RAM:comb_13|DATA[111][3]   ;
-; RAM:comb_13|PL1_drt[2]                  ; Merged with RAM:comb_13|DATA[111][2]   ;
-; RAM:comb_13|PL1_drt[1]                  ; Merged with RAM:comb_13|DATA[111][1]   ;
-; RAM:comb_13|PL1_drt[0]                  ; Merged with RAM:comb_13|DATA[111][0]   ;
-; RAM:comb_13|PL2_drt[15]                 ; Merged with RAM:comb_13|DATA[103][7]   ;
-; RAM:comb_13|PL2_drt[14]                 ; Merged with RAM:comb_13|DATA[103][6]   ;
-; RAM:comb_13|PL2_drt[13]                 ; Merged with RAM:comb_13|DATA[103][5]   ;
-; RAM:comb_13|PL2_drt[12]                 ; Merged with RAM:comb_13|DATA[103][4]   ;
-; RAM:comb_13|PL2_drt[11]                 ; Merged with RAM:comb_13|DATA[103][3]   ;
-; RAM:comb_13|PL2_drt[10]                 ; Merged with RAM:comb_13|DATA[103][2]   ;
-; RAM:comb_13|PL2_drt[9]                  ; Merged with RAM:comb_13|DATA[103][1]   ;
-; RAM:comb_13|PL2_drt[8]                  ; Merged with RAM:comb_13|DATA[103][0]   ;
-; RAM:comb_13|PL2_drt[7]                  ; Merged with RAM:comb_13|DATA[104][7]   ;
-; RAM:comb_13|PL2_drt[6]                  ; Merged with RAM:comb_13|DATA[104][6]   ;
-; RAM:comb_13|PL2_drt[5]                  ; Merged with RAM:comb_13|DATA[104][5]   ;
-; RAM:comb_13|PL2_drt[4]                  ; Merged with RAM:comb_13|DATA[104][4]   ;
-; RAM:comb_13|PL2_drt[3]                  ; Merged with RAM:comb_13|DATA[104][3]   ;
-; RAM:comb_13|PL2_drt[2]                  ; Merged with RAM:comb_13|DATA[104][2]   ;
-; RAM:comb_13|PL2_drt[1]                  ; Merged with RAM:comb_13|DATA[104][1]   ;
-; RAM:comb_13|PL2_drt[0]                  ; Merged with RAM:comb_13|DATA[104][0]   ;
-; RAM:comb_13|ch2_type_start[1]           ; Merged with RAM:comb_13|DATA[98][1]    ;
-; RAM:comb_13|ch2_type_start[3]           ; Merged with RAM:comb_13|DATA[98][3]    ;
-; RAM:comb_13|ch2_type_start[2]           ; Merged with RAM:comb_13|DATA[98][2]    ;
-; RAM:comb_13|ch2_type_start[0]           ; Merged with RAM:comb_13|DATA[98][0]    ;
-; RAM:comb_13|PL3_drt[15]                 ; Merged with RAM:comb_13|DATA[96][7]    ;
-; RAM:comb_13|PL3_drt[14]                 ; Merged with RAM:comb_13|DATA[96][6]    ;
-; RAM:comb_13|PL3_drt[13]                 ; Merged with RAM:comb_13|DATA[96][5]    ;
-; RAM:comb_13|PL3_drt[12]                 ; Merged with RAM:comb_13|DATA[96][4]    ;
-; RAM:comb_13|PL3_drt[11]                 ; Merged with RAM:comb_13|DATA[96][3]    ;
-; RAM:comb_13|PL3_drt[10]                 ; Merged with RAM:comb_13|DATA[96][2]    ;
-; RAM:comb_13|PL3_drt[9]                  ; Merged with RAM:comb_13|DATA[96][1]    ;
-; RAM:comb_13|PL3_drt[8]                  ; Merged with RAM:comb_13|DATA[96][0]    ;
-; RAM:comb_13|PL3_drt[7]                  ; Merged with RAM:comb_13|DATA[97][7]    ;
-; RAM:comb_13|PL3_drt[6]                  ; Merged with RAM:comb_13|DATA[97][6]    ;
-; RAM:comb_13|PL3_drt[5]                  ; Merged with RAM:comb_13|DATA[97][5]    ;
-; RAM:comb_13|PL3_drt[4]                  ; Merged with RAM:comb_13|DATA[97][4]    ;
-; RAM:comb_13|PL3_drt[3]                  ; Merged with RAM:comb_13|DATA[97][3]    ;
-; RAM:comb_13|PL3_drt[2]                  ; Merged with RAM:comb_13|DATA[97][2]    ;
-; RAM:comb_13|PL3_drt[1]                  ; Merged with RAM:comb_13|DATA[97][1]    ;
-; RAM:comb_13|PL3_drt[0]                  ; Merged with RAM:comb_13|DATA[97][0]    ;
-; RAM:comb_13|ch3_type_start[1]           ; Merged with RAM:comb_13|DATA[91][1]    ;
-; RAM:comb_13|ch3_type_start[3]           ; Merged with RAM:comb_13|DATA[91][3]    ;
-; RAM:comb_13|ch3_type_start[2]           ; Merged with RAM:comb_13|DATA[91][2]    ;
-; RAM:comb_13|ch3_type_start[0]           ; Merged with RAM:comb_13|DATA[91][0]    ;
-; RAM:comb_13|PL4_drt[15]                 ; Merged with RAM:comb_13|DATA[89][7]    ;
-; RAM:comb_13|PL4_drt[14]                 ; Merged with RAM:comb_13|DATA[89][6]    ;
-; RAM:comb_13|PL4_drt[13]                 ; Merged with RAM:comb_13|DATA[89][5]    ;
-; RAM:comb_13|PL4_drt[12]                 ; Merged with RAM:comb_13|DATA[89][4]    ;
-; RAM:comb_13|PL4_drt[11]                 ; Merged with RAM:comb_13|DATA[89][3]    ;
-; RAM:comb_13|PL4_drt[10]                 ; Merged with RAM:comb_13|DATA[89][2]    ;
-; RAM:comb_13|PL4_drt[9]                  ; Merged with RAM:comb_13|DATA[89][1]    ;
-; RAM:comb_13|PL4_drt[8]                  ; Merged with RAM:comb_13|DATA[89][0]    ;
-; RAM:comb_13|PL4_drt[7]                  ; Merged with RAM:comb_13|DATA[90][7]    ;
-; RAM:comb_13|PL4_drt[6]                  ; Merged with RAM:comb_13|DATA[90][6]    ;
-; RAM:comb_13|PL4_drt[5]                  ; Merged with RAM:comb_13|DATA[90][5]    ;
-; RAM:comb_13|PL4_drt[4]                  ; Merged with RAM:comb_13|DATA[90][4]    ;
-; RAM:comb_13|PL4_drt[3]                  ; Merged with RAM:comb_13|DATA[90][3]    ;
-; RAM:comb_13|PL4_drt[2]                  ; Merged with RAM:comb_13|DATA[90][2]    ;
-; RAM:comb_13|PL4_drt[1]                  ; Merged with RAM:comb_13|DATA[90][1]    ;
-; RAM:comb_13|PL4_drt[0]                  ; Merged with RAM:comb_13|DATA[90][0]    ;
-; RAM:comb_13|ch4_type_start[1]           ; Merged with RAM:comb_13|DATA[84][1]    ;
-; RAM:comb_13|ch4_type_start[3]           ; Merged with RAM:comb_13|DATA[84][3]    ;
-; RAM:comb_13|ch4_type_start[2]           ; Merged with RAM:comb_13|DATA[84][2]    ;
-; RAM:comb_13|ch4_type_start[0]           ; Merged with RAM:comb_13|DATA[84][0]    ;
-; RAM:comb_13|PL5_drt[15]                 ; Merged with RAM:comb_13|DATA[82][7]    ;
-; RAM:comb_13|PL5_drt[14]                 ; Merged with RAM:comb_13|DATA[82][6]    ;
-; RAM:comb_13|PL5_drt[13]                 ; Merged with RAM:comb_13|DATA[82][5]    ;
-; RAM:comb_13|PL5_drt[12]                 ; Merged with RAM:comb_13|DATA[82][4]    ;
-; RAM:comb_13|PL5_drt[11]                 ; Merged with RAM:comb_13|DATA[82][3]    ;
-; RAM:comb_13|PL5_drt[10]                 ; Merged with RAM:comb_13|DATA[82][2]    ;
-; RAM:comb_13|PL5_drt[9]                  ; Merged with RAM:comb_13|DATA[82][1]    ;
-; RAM:comb_13|PL5_drt[8]                  ; Merged with RAM:comb_13|DATA[82][0]    ;
-; RAM:comb_13|PL5_drt[7]                  ; Merged with RAM:comb_13|DATA[83][7]    ;
-; RAM:comb_13|PL5_drt[6]                  ; Merged with RAM:comb_13|DATA[83][6]    ;
-; RAM:comb_13|PL5_drt[5]                  ; Merged with RAM:comb_13|DATA[83][5]    ;
-; RAM:comb_13|PL5_drt[4]                  ; Merged with RAM:comb_13|DATA[83][4]    ;
-; RAM:comb_13|PL5_drt[3]                  ; Merged with RAM:comb_13|DATA[83][3]    ;
-; RAM:comb_13|PL5_drt[2]                  ; Merged with RAM:comb_13|DATA[83][2]    ;
-; RAM:comb_13|PL5_drt[1]                  ; Merged with RAM:comb_13|DATA[83][1]    ;
-; RAM:comb_13|PL5_drt[0]                  ; Merged with RAM:comb_13|DATA[83][0]    ;
-; RAM:comb_13|ch5_type_start[1]           ; Merged with RAM:comb_13|DATA[77][1]    ;
-; RAM:comb_13|ch5_type_start[3]           ; Merged with RAM:comb_13|DATA[77][3]    ;
-; RAM:comb_13|ch5_type_start[2]           ; Merged with RAM:comb_13|DATA[77][2]    ;
-; RAM:comb_13|ch5_type_start[0]           ; Merged with RAM:comb_13|DATA[77][0]    ;
-; RAM:comb_13|PL6_drt[15]                 ; Merged with RAM:comb_13|DATA[75][7]    ;
-; RAM:comb_13|PL6_drt[14]                 ; Merged with RAM:comb_13|DATA[75][6]    ;
-; RAM:comb_13|PL6_drt[13]                 ; Merged with RAM:comb_13|DATA[75][5]    ;
-; RAM:comb_13|PL6_drt[12]                 ; Merged with RAM:comb_13|DATA[75][4]    ;
-; RAM:comb_13|PL6_drt[11]                 ; Merged with RAM:comb_13|DATA[75][3]    ;
-; RAM:comb_13|PL6_drt[10]                 ; Merged with RAM:comb_13|DATA[75][2]    ;
-; RAM:comb_13|PL6_drt[9]                  ; Merged with RAM:comb_13|DATA[75][1]    ;
-; RAM:comb_13|PL6_drt[8]                  ; Merged with RAM:comb_13|DATA[75][0]    ;
-; RAM:comb_13|PL6_drt[7]                  ; Merged with RAM:comb_13|DATA[76][7]    ;
-; RAM:comb_13|PL6_drt[6]                  ; Merged with RAM:comb_13|DATA[76][6]    ;
-; RAM:comb_13|PL6_drt[5]                  ; Merged with RAM:comb_13|DATA[76][5]    ;
-; RAM:comb_13|PL6_drt[4]                  ; Merged with RAM:comb_13|DATA[76][4]    ;
-; RAM:comb_13|PL6_drt[3]                  ; Merged with RAM:comb_13|DATA[76][3]    ;
-; RAM:comb_13|PL6_drt[2]                  ; Merged with RAM:comb_13|DATA[76][2]    ;
-; RAM:comb_13|PL6_drt[1]                  ; Merged with RAM:comb_13|DATA[76][1]    ;
-; RAM:comb_13|PL6_drt[0]                  ; Merged with RAM:comb_13|DATA[76][0]    ;
-; RAM:comb_13|ch6_type_start[1]           ; Merged with RAM:comb_13|DATA[70][1]    ;
-; RAM:comb_13|ch6_type_start[3]           ; Merged with RAM:comb_13|DATA[70][3]    ;
-; RAM:comb_13|ch6_type_start[2]           ; Merged with RAM:comb_13|DATA[70][2]    ;
-; RAM:comb_13|ch6_type_start[0]           ; Merged with RAM:comb_13|DATA[70][0]    ;
-; RAM:comb_13|PL7_drt[15]                 ; Merged with RAM:comb_13|DATA[68][7]    ;
-; RAM:comb_13|PL7_drt[14]                 ; Merged with RAM:comb_13|DATA[68][6]    ;
-; RAM:comb_13|PL7_drt[13]                 ; Merged with RAM:comb_13|DATA[68][5]    ;
-; RAM:comb_13|PL7_drt[12]                 ; Merged with RAM:comb_13|DATA[68][4]    ;
-; RAM:comb_13|PL7_drt[11]                 ; Merged with RAM:comb_13|DATA[68][3]    ;
-; RAM:comb_13|PL7_drt[10]                 ; Merged with RAM:comb_13|DATA[68][2]    ;
-; RAM:comb_13|PL7_drt[9]                  ; Merged with RAM:comb_13|DATA[68][1]    ;
-; RAM:comb_13|PL7_drt[8]                  ; Merged with RAM:comb_13|DATA[68][0]    ;
-; RAM:comb_13|PL7_drt[7]                  ; Merged with RAM:comb_13|DATA[69][7]    ;
-; RAM:comb_13|PL7_drt[6]                  ; Merged with RAM:comb_13|DATA[69][6]    ;
-; RAM:comb_13|PL7_drt[5]                  ; Merged with RAM:comb_13|DATA[69][5]    ;
-; RAM:comb_13|PL7_drt[4]                  ; Merged with RAM:comb_13|DATA[69][4]    ;
-; RAM:comb_13|PL7_drt[3]                  ; Merged with RAM:comb_13|DATA[69][3]    ;
-; RAM:comb_13|PL7_drt[2]                  ; Merged with RAM:comb_13|DATA[69][2]    ;
-; RAM:comb_13|PL7_drt[1]                  ; Merged with RAM:comb_13|DATA[69][1]    ;
-; RAM:comb_13|PL7_drt[0]                  ; Merged with RAM:comb_13|DATA[69][0]    ;
-; RAM:comb_13|ch7_type_start[1]           ; Merged with RAM:comb_13|DATA[63][1]    ;
-; RAM:comb_13|ch7_type_start[3]           ; Merged with RAM:comb_13|DATA[63][3]    ;
-; RAM:comb_13|ch7_type_start[2]           ; Merged with RAM:comb_13|DATA[63][2]    ;
-; RAM:comb_13|ch7_type_start[0]           ; Merged with RAM:comb_13|DATA[63][0]    ;
-; RAM:comb_13|PL8_drt[15]                 ; Merged with RAM:comb_13|DATA[61][7]    ;
-; RAM:comb_13|PL8_drt[14]                 ; Merged with RAM:comb_13|DATA[61][6]    ;
-; RAM:comb_13|PL8_drt[13]                 ; Merged with RAM:comb_13|DATA[61][5]    ;
-; RAM:comb_13|PL8_drt[12]                 ; Merged with RAM:comb_13|DATA[61][4]    ;
-; RAM:comb_13|PL8_drt[11]                 ; Merged with RAM:comb_13|DATA[61][3]    ;
-; RAM:comb_13|PL8_drt[10]                 ; Merged with RAM:comb_13|DATA[61][2]    ;
-; RAM:comb_13|PL8_drt[9]                  ; Merged with RAM:comb_13|DATA[61][1]    ;
-; RAM:comb_13|PL8_drt[8]                  ; Merged with RAM:comb_13|DATA[61][0]    ;
-; RAM:comb_13|PL8_drt[7]                  ; Merged with RAM:comb_13|DATA[62][7]    ;
-; RAM:comb_13|PL8_drt[6]                  ; Merged with RAM:comb_13|DATA[62][6]    ;
-; RAM:comb_13|PL8_drt[5]                  ; Merged with RAM:comb_13|DATA[62][5]    ;
-; RAM:comb_13|PL8_drt[4]                  ; Merged with RAM:comb_13|DATA[62][4]    ;
-; RAM:comb_13|PL8_drt[3]                  ; Merged with RAM:comb_13|DATA[62][3]    ;
-; RAM:comb_13|PL8_drt[2]                  ; Merged with RAM:comb_13|DATA[62][2]    ;
-; RAM:comb_13|PL8_drt[1]                  ; Merged with RAM:comb_13|DATA[62][1]    ;
-; RAM:comb_13|PL8_drt[0]                  ; Merged with RAM:comb_13|DATA[62][0]    ;
-; RAM:comb_13|ch8_type_start[1]           ; Merged with RAM:comb_13|DATA[56][1]    ;
-; RAM:comb_13|ch8_type_start[3]           ; Merged with RAM:comb_13|DATA[56][3]    ;
-; RAM:comb_13|ch8_type_start[2]           ; Merged with RAM:comb_13|DATA[56][2]    ;
-; RAM:comb_13|ch8_type_start[0]           ; Merged with RAM:comb_13|DATA[56][0]    ;
-; RAM:comb_13|DL1_del[15]                 ; Merged with RAM:comb_13|DATA[107][7]   ;
-; RAM:comb_13|DL1_del[14]                 ; Merged with RAM:comb_13|DATA[107][6]   ;
-; RAM:comb_13|DL1_del[13]                 ; Merged with RAM:comb_13|DATA[107][5]   ;
-; RAM:comb_13|DL1_del[12]                 ; Merged with RAM:comb_13|DATA[107][4]   ;
-; RAM:comb_13|DL1_del[11]                 ; Merged with RAM:comb_13|DATA[107][3]   ;
-; RAM:comb_13|DL1_del[10]                 ; Merged with RAM:comb_13|DATA[107][2]   ;
-; RAM:comb_13|DL1_del[9]                  ; Merged with RAM:comb_13|DATA[107][1]   ;
-; RAM:comb_13|DL1_del[8]                  ; Merged with RAM:comb_13|DATA[107][0]   ;
-; RAM:comb_13|DL1_del[7]                  ; Merged with RAM:comb_13|DATA[108][7]   ;
-; RAM:comb_13|DL1_del[6]                  ; Merged with RAM:comb_13|DATA[108][6]   ;
-; RAM:comb_13|DL1_del[5]                  ; Merged with RAM:comb_13|DATA[108][5]   ;
-; RAM:comb_13|DL1_del[4]                  ; Merged with RAM:comb_13|DATA[108][4]   ;
-; RAM:comb_13|DL1_del[3]                  ; Merged with RAM:comb_13|DATA[108][3]   ;
-; RAM:comb_13|DL1_del[2]                  ; Merged with RAM:comb_13|DATA[108][2]   ;
-; RAM:comb_13|DL1_del[1]                  ; Merged with RAM:comb_13|DATA[108][1]   ;
-; RAM:comb_13|DL1_del[0]                  ; Merged with RAM:comb_13|DATA[108][0]   ;
-; RAM:comb_13|DL2_del[15]                 ; Merged with RAM:comb_13|DATA[100][7]   ;
-; RAM:comb_13|DL2_del[14]                 ; Merged with RAM:comb_13|DATA[100][6]   ;
-; RAM:comb_13|DL2_del[13]                 ; Merged with RAM:comb_13|DATA[100][5]   ;
-; RAM:comb_13|DL2_del[12]                 ; Merged with RAM:comb_13|DATA[100][4]   ;
-; RAM:comb_13|DL2_del[11]                 ; Merged with RAM:comb_13|DATA[100][3]   ;
-; RAM:comb_13|DL2_del[10]                 ; Merged with RAM:comb_13|DATA[100][2]   ;
-; RAM:comb_13|DL2_del[9]                  ; Merged with RAM:comb_13|DATA[100][1]   ;
-; RAM:comb_13|DL2_del[8]                  ; Merged with RAM:comb_13|DATA[100][0]   ;
-; RAM:comb_13|DL2_del[7]                  ; Merged with RAM:comb_13|DATA[101][7]   ;
-; RAM:comb_13|DL2_del[6]                  ; Merged with RAM:comb_13|DATA[101][6]   ;
-; RAM:comb_13|DL2_del[5]                  ; Merged with RAM:comb_13|DATA[101][5]   ;
-; RAM:comb_13|DL2_del[4]                  ; Merged with RAM:comb_13|DATA[101][4]   ;
-; RAM:comb_13|DL2_del[3]                  ; Merged with RAM:comb_13|DATA[101][3]   ;
-; RAM:comb_13|DL2_del[2]                  ; Merged with RAM:comb_13|DATA[101][2]   ;
-; RAM:comb_13|DL2_del[1]                  ; Merged with RAM:comb_13|DATA[101][1]   ;
-; RAM:comb_13|DL2_del[0]                  ; Merged with RAM:comb_13|DATA[101][0]   ;
-; RAM:comb_13|DL3_del[15]                 ; Merged with RAM:comb_13|DATA[93][7]    ;
-; RAM:comb_13|DL3_del[14]                 ; Merged with RAM:comb_13|DATA[93][6]    ;
-; RAM:comb_13|DL3_del[13]                 ; Merged with RAM:comb_13|DATA[93][5]    ;
-; RAM:comb_13|DL3_del[12]                 ; Merged with RAM:comb_13|DATA[93][4]    ;
-; RAM:comb_13|DL3_del[11]                 ; Merged with RAM:comb_13|DATA[93][3]    ;
-; RAM:comb_13|DL3_del[10]                 ; Merged with RAM:comb_13|DATA[93][2]    ;
-; RAM:comb_13|DL3_del[9]                  ; Merged with RAM:comb_13|DATA[93][1]    ;
-; RAM:comb_13|DL3_del[8]                  ; Merged with RAM:comb_13|DATA[93][0]    ;
-; RAM:comb_13|DL3_del[7]                  ; Merged with RAM:comb_13|DATA[94][7]    ;
-; RAM:comb_13|DL3_del[6]                  ; Merged with RAM:comb_13|DATA[94][6]    ;
-; RAM:comb_13|DL3_del[5]                  ; Merged with RAM:comb_13|DATA[94][5]    ;
-; RAM:comb_13|DL3_del[4]                  ; Merged with RAM:comb_13|DATA[94][4]    ;
-; RAM:comb_13|DL3_del[3]                  ; Merged with RAM:comb_13|DATA[94][3]    ;
-; RAM:comb_13|DL3_del[2]                  ; Merged with RAM:comb_13|DATA[94][2]    ;
-; RAM:comb_13|DL3_del[1]                  ; Merged with RAM:comb_13|DATA[94][1]    ;
-; RAM:comb_13|DL3_del[0]                  ; Merged with RAM:comb_13|DATA[94][0]    ;
-; RAM:comb_13|DL4_del[15]                 ; Merged with RAM:comb_13|DATA[86][7]    ;
-; RAM:comb_13|DL4_del[14]                 ; Merged with RAM:comb_13|DATA[86][6]    ;
-; RAM:comb_13|DL4_del[13]                 ; Merged with RAM:comb_13|DATA[86][5]    ;
-; RAM:comb_13|DL4_del[12]                 ; Merged with RAM:comb_13|DATA[86][4]    ;
-; RAM:comb_13|DL4_del[11]                 ; Merged with RAM:comb_13|DATA[86][3]    ;
-; RAM:comb_13|DL4_del[10]                 ; Merged with RAM:comb_13|DATA[86][2]    ;
-; RAM:comb_13|DL4_del[9]                  ; Merged with RAM:comb_13|DATA[86][1]    ;
-; RAM:comb_13|DL4_del[8]                  ; Merged with RAM:comb_13|DATA[86][0]    ;
-; RAM:comb_13|DL4_del[7]                  ; Merged with RAM:comb_13|DATA[87][7]    ;
-; RAM:comb_13|DL4_del[6]                  ; Merged with RAM:comb_13|DATA[87][6]    ;
-; RAM:comb_13|DL4_del[5]                  ; Merged with RAM:comb_13|DATA[87][5]    ;
-; RAM:comb_13|DL4_del[4]                  ; Merged with RAM:comb_13|DATA[87][4]    ;
-; RAM:comb_13|DL4_del[3]                  ; Merged with RAM:comb_13|DATA[87][3]    ;
-; RAM:comb_13|DL4_del[2]                  ; Merged with RAM:comb_13|DATA[87][2]    ;
-; RAM:comb_13|DL4_del[1]                  ; Merged with RAM:comb_13|DATA[87][1]    ;
-; RAM:comb_13|DL4_del[0]                  ; Merged with RAM:comb_13|DATA[87][0]    ;
-; RAM:comb_13|DL5_del[15]                 ; Merged with RAM:comb_13|DATA[79][7]    ;
-; RAM:comb_13|DL5_del[14]                 ; Merged with RAM:comb_13|DATA[79][6]    ;
-; RAM:comb_13|DL5_del[13]                 ; Merged with RAM:comb_13|DATA[79][5]    ;
-; RAM:comb_13|DL5_del[12]                 ; Merged with RAM:comb_13|DATA[79][4]    ;
-; RAM:comb_13|DL5_del[11]                 ; Merged with RAM:comb_13|DATA[79][3]    ;
-; RAM:comb_13|DL5_del[10]                 ; Merged with RAM:comb_13|DATA[79][2]    ;
-; RAM:comb_13|DL5_del[9]                  ; Merged with RAM:comb_13|DATA[79][1]    ;
-; RAM:comb_13|DL5_del[8]                  ; Merged with RAM:comb_13|DATA[79][0]    ;
-; RAM:comb_13|DL5_del[7]                  ; Merged with RAM:comb_13|DATA[80][7]    ;
-; RAM:comb_13|DL5_del[6]                  ; Merged with RAM:comb_13|DATA[80][6]    ;
-; RAM:comb_13|DL5_del[5]                  ; Merged with RAM:comb_13|DATA[80][5]    ;
-; RAM:comb_13|DL5_del[4]                  ; Merged with RAM:comb_13|DATA[80][4]    ;
-; RAM:comb_13|DL5_del[3]                  ; Merged with RAM:comb_13|DATA[80][3]    ;
-; RAM:comb_13|DL5_del[2]                  ; Merged with RAM:comb_13|DATA[80][2]    ;
-; RAM:comb_13|DL5_del[1]                  ; Merged with RAM:comb_13|DATA[80][1]    ;
-; RAM:comb_13|DL5_del[0]                  ; Merged with RAM:comb_13|DATA[80][0]    ;
-; RAM:comb_13|DL6_del[15]                 ; Merged with RAM:comb_13|DATA[72][7]    ;
-; RAM:comb_13|DL6_del[14]                 ; Merged with RAM:comb_13|DATA[72][6]    ;
-; RAM:comb_13|DL6_del[13]                 ; Merged with RAM:comb_13|DATA[72][5]    ;
-; RAM:comb_13|DL6_del[12]                 ; Merged with RAM:comb_13|DATA[72][4]    ;
-; RAM:comb_13|DL6_del[11]                 ; Merged with RAM:comb_13|DATA[72][3]    ;
-; RAM:comb_13|DL6_del[10]                 ; Merged with RAM:comb_13|DATA[72][2]    ;
-; RAM:comb_13|DL6_del[9]                  ; Merged with RAM:comb_13|DATA[72][1]    ;
-; RAM:comb_13|DL6_del[8]                  ; Merged with RAM:comb_13|DATA[72][0]    ;
-; RAM:comb_13|DL6_del[7]                  ; Merged with RAM:comb_13|DATA[73][7]    ;
-; RAM:comb_13|DL6_del[6]                  ; Merged with RAM:comb_13|DATA[73][6]    ;
-; RAM:comb_13|DL6_del[5]                  ; Merged with RAM:comb_13|DATA[73][5]    ;
-; RAM:comb_13|DL6_del[4]                  ; Merged with RAM:comb_13|DATA[73][4]    ;
-; RAM:comb_13|DL6_del[3]                  ; Merged with RAM:comb_13|DATA[73][3]    ;
-; RAM:comb_13|DL6_del[2]                  ; Merged with RAM:comb_13|DATA[73][2]    ;
-; RAM:comb_13|DL6_del[1]                  ; Merged with RAM:comb_13|DATA[73][1]    ;
-; RAM:comb_13|DL6_del[0]                  ; Merged with RAM:comb_13|DATA[73][0]    ;
-; RAM:comb_13|DL7_del[15]                 ; Merged with RAM:comb_13|DATA[65][7]    ;
-; RAM:comb_13|DL7_del[14]                 ; Merged with RAM:comb_13|DATA[65][6]    ;
-; RAM:comb_13|DL7_del[13]                 ; Merged with RAM:comb_13|DATA[65][5]    ;
-; RAM:comb_13|DL7_del[12]                 ; Merged with RAM:comb_13|DATA[65][4]    ;
-; RAM:comb_13|DL7_del[11]                 ; Merged with RAM:comb_13|DATA[65][3]    ;
-; RAM:comb_13|DL7_del[10]                 ; Merged with RAM:comb_13|DATA[65][2]    ;
-; RAM:comb_13|DL7_del[9]                  ; Merged with RAM:comb_13|DATA[65][1]    ;
-; RAM:comb_13|DL7_del[8]                  ; Merged with RAM:comb_13|DATA[65][0]    ;
-; RAM:comb_13|DL7_del[7]                  ; Merged with RAM:comb_13|DATA[66][7]    ;
-; RAM:comb_13|DL7_del[6]                  ; Merged with RAM:comb_13|DATA[66][6]    ;
-; RAM:comb_13|DL7_del[5]                  ; Merged with RAM:comb_13|DATA[66][5]    ;
-; RAM:comb_13|DL7_del[4]                  ; Merged with RAM:comb_13|DATA[66][4]    ;
-; RAM:comb_13|DL7_del[3]                  ; Merged with RAM:comb_13|DATA[66][3]    ;
-; RAM:comb_13|DL7_del[2]                  ; Merged with RAM:comb_13|DATA[66][2]    ;
-; RAM:comb_13|DL7_del[1]                  ; Merged with RAM:comb_13|DATA[66][1]    ;
-; RAM:comb_13|DL7_del[0]                  ; Merged with RAM:comb_13|DATA[66][0]    ;
-; RAM:comb_13|Mult_PL1[0]                 ; Merged with RAM:comb_13|DATA[109][0]   ;
-; RAM:comb_13|Mult_PL1[4]                 ; Merged with RAM:comb_13|DATA[109][4]   ;
-; RAM:comb_13|Mult_PL1[3]                 ; Merged with RAM:comb_13|DATA[109][3]   ;
-; RAM:comb_13|Mult_PL1[2]                 ; Merged with RAM:comb_13|DATA[109][2]   ;
-; RAM:comb_13|Mult_PL1[1]                 ; Merged with RAM:comb_13|DATA[109][1]   ;
-; RAM:comb_13|Mult_PL2[0]                 ; Merged with RAM:comb_13|DATA[102][0]   ;
-; RAM:comb_13|Mult_PL2[4]                 ; Merged with RAM:comb_13|DATA[102][4]   ;
-; RAM:comb_13|Mult_PL2[3]                 ; Merged with RAM:comb_13|DATA[102][3]   ;
-; RAM:comb_13|Mult_PL2[2]                 ; Merged with RAM:comb_13|DATA[102][2]   ;
-; RAM:comb_13|Mult_PL2[1]                 ; Merged with RAM:comb_13|DATA[102][1]   ;
-; RAM:comb_13|Mult_PL3[0]                 ; Merged with RAM:comb_13|DATA[95][0]    ;
-; RAM:comb_13|Mult_PL3[4]                 ; Merged with RAM:comb_13|DATA[95][4]    ;
-; RAM:comb_13|Mult_PL3[3]                 ; Merged with RAM:comb_13|DATA[95][3]    ;
-; RAM:comb_13|Mult_PL3[2]                 ; Merged with RAM:comb_13|DATA[95][2]    ;
-; RAM:comb_13|Mult_PL3[1]                 ; Merged with RAM:comb_13|DATA[95][1]    ;
-; RAM:comb_13|Mult_PL4[0]                 ; Merged with RAM:comb_13|DATA[88][0]    ;
-; RAM:comb_13|Mult_PL4[4]                 ; Merged with RAM:comb_13|DATA[88][4]    ;
-; RAM:comb_13|Mult_PL4[3]                 ; Merged with RAM:comb_13|DATA[88][3]    ;
-; RAM:comb_13|Mult_PL4[2]                 ; Merged with RAM:comb_13|DATA[88][2]    ;
-; RAM:comb_13|Mult_PL4[1]                 ; Merged with RAM:comb_13|DATA[88][1]    ;
-; RAM:comb_13|Mult_PL5[0]                 ; Merged with RAM:comb_13|DATA[81][0]    ;
-; RAM:comb_13|Mult_PL5[4]                 ; Merged with RAM:comb_13|DATA[81][4]    ;
-; RAM:comb_13|Mult_PL5[3]                 ; Merged with RAM:comb_13|DATA[81][3]    ;
-; RAM:comb_13|Mult_PL5[2]                 ; Merged with RAM:comb_13|DATA[81][2]    ;
-; RAM:comb_13|Mult_PL5[1]                 ; Merged with RAM:comb_13|DATA[81][1]    ;
-; RAM:comb_13|Mult_PL6[0]                 ; Merged with RAM:comb_13|DATA[74][0]    ;
-; RAM:comb_13|Mult_PL6[4]                 ; Merged with RAM:comb_13|DATA[74][4]    ;
-; RAM:comb_13|Mult_PL6[3]                 ; Merged with RAM:comb_13|DATA[74][3]    ;
-; RAM:comb_13|Mult_PL6[2]                 ; Merged with RAM:comb_13|DATA[74][2]    ;
-; RAM:comb_13|Mult_PL6[1]                 ; Merged with RAM:comb_13|DATA[74][1]    ;
-; RAM:comb_13|Mult_PL7[0]                 ; Merged with RAM:comb_13|DATA[67][0]    ;
-; RAM:comb_13|Mult_PL7[4]                 ; Merged with RAM:comb_13|DATA[67][4]    ;
-; RAM:comb_13|Mult_PL7[3]                 ; Merged with RAM:comb_13|DATA[67][3]    ;
-; RAM:comb_13|Mult_PL7[2]                 ; Merged with RAM:comb_13|DATA[67][2]    ;
-; RAM:comb_13|Mult_PL7[1]                 ; Merged with RAM:comb_13|DATA[67][1]    ;
-; RAM:comb_13|Mult_PL8[0]                 ; Merged with RAM:comb_13|DATA[60][0]    ;
-; RAM:comb_13|Mult_PL8[4]                 ; Merged with RAM:comb_13|DATA[60][4]    ;
-; RAM:comb_13|Mult_PL8[3]                 ; Merged with RAM:comb_13|DATA[60][3]    ;
-; RAM:comb_13|Mult_PL8[2]                 ; Merged with RAM:comb_13|DATA[60][2]    ;
-; RAM:comb_13|Mult_PL8[1]                 ; Merged with RAM:comb_13|DATA[60][1]    ;
-; RAM:comb_13|Mult_DL1[0]                 ; Merged with RAM:comb_13|DATA[106][0]   ;
-; RAM:comb_13|Mult_DL1[4]                 ; Merged with RAM:comb_13|DATA[106][4]   ;
-; RAM:comb_13|Mult_DL1[3]                 ; Merged with RAM:comb_13|DATA[106][3]   ;
-; RAM:comb_13|Mult_DL1[2]                 ; Merged with RAM:comb_13|DATA[106][2]   ;
-; RAM:comb_13|Mult_DL1[1]                 ; Merged with RAM:comb_13|DATA[106][1]   ;
-; RAM:comb_13|Mult_DL2[0]                 ; Merged with RAM:comb_13|DATA[99][0]    ;
-; RAM:comb_13|Mult_DL2[4]                 ; Merged with RAM:comb_13|DATA[99][4]    ;
-; RAM:comb_13|Mult_DL2[3]                 ; Merged with RAM:comb_13|DATA[99][3]    ;
-; RAM:comb_13|Mult_DL2[2]                 ; Merged with RAM:comb_13|DATA[99][2]    ;
-; RAM:comb_13|Mult_DL2[1]                 ; Merged with RAM:comb_13|DATA[99][1]    ;
-; RAM:comb_13|Mult_DL3[0]                 ; Merged with RAM:comb_13|DATA[92][0]    ;
-; RAM:comb_13|Mult_DL3[4]                 ; Merged with RAM:comb_13|DATA[92][4]    ;
-; RAM:comb_13|Mult_DL3[3]                 ; Merged with RAM:comb_13|DATA[92][3]    ;
-; RAM:comb_13|Mult_DL3[2]                 ; Merged with RAM:comb_13|DATA[92][2]    ;
-; RAM:comb_13|Mult_DL3[1]                 ; Merged with RAM:comb_13|DATA[92][1]    ;
-; RAM:comb_13|Mult_DL4[0]                 ; Merged with RAM:comb_13|DATA[85][0]    ;
-; RAM:comb_13|Mult_DL4[4]                 ; Merged with RAM:comb_13|DATA[85][4]    ;
-; RAM:comb_13|Mult_DL4[3]                 ; Merged with RAM:comb_13|DATA[85][3]    ;
-; RAM:comb_13|Mult_DL4[2]                 ; Merged with RAM:comb_13|DATA[85][2]    ;
-; RAM:comb_13|Mult_DL4[1]                 ; Merged with RAM:comb_13|DATA[85][1]    ;
-; RAM:comb_13|Mult_DL5[0]                 ; Merged with RAM:comb_13|DATA[78][0]    ;
-; RAM:comb_13|Mult_DL5[4]                 ; Merged with RAM:comb_13|DATA[78][4]    ;
-; RAM:comb_13|Mult_DL5[3]                 ; Merged with RAM:comb_13|DATA[78][3]    ;
-; RAM:comb_13|Mult_DL5[2]                 ; Merged with RAM:comb_13|DATA[78][2]    ;
-; RAM:comb_13|Mult_DL5[1]                 ; Merged with RAM:comb_13|DATA[78][1]    ;
-; RAM:comb_13|Mult_DL6[0]                 ; Merged with RAM:comb_13|DATA[71][0]    ;
-; RAM:comb_13|Mult_DL6[4]                 ; Merged with RAM:comb_13|DATA[71][4]    ;
-; RAM:comb_13|Mult_DL6[3]                 ; Merged with RAM:comb_13|DATA[71][3]    ;
-; RAM:comb_13|Mult_DL6[2]                 ; Merged with RAM:comb_13|DATA[71][2]    ;
-; RAM:comb_13|Mult_DL6[1]                 ; Merged with RAM:comb_13|DATA[71][1]    ;
-; RAM:comb_13|Mult_DL7[0]                 ; Merged with RAM:comb_13|DATA[64][0]    ;
-; RAM:comb_13|Mult_DL7[4]                 ; Merged with RAM:comb_13|DATA[64][4]    ;
-; RAM:comb_13|Mult_DL7[3]                 ; Merged with RAM:comb_13|DATA[64][3]    ;
-; RAM:comb_13|Mult_DL7[2]                 ; Merged with RAM:comb_13|DATA[64][2]    ;
-; RAM:comb_13|Mult_DL7[1]                 ; Merged with RAM:comb_13|DATA[64][1]    ;
-; RAM:comb_13|DL8_del[15]                 ; Merged with RAM:comb_13|DATA[58][7]    ;
-; RAM:comb_13|DL8_del[14]                 ; Merged with RAM:comb_13|DATA[58][6]    ;
-; RAM:comb_13|DL8_del[13]                 ; Merged with RAM:comb_13|DATA[58][5]    ;
-; RAM:comb_13|DL8_del[12]                 ; Merged with RAM:comb_13|DATA[58][4]    ;
-; RAM:comb_13|DL8_del[11]                 ; Merged with RAM:comb_13|DATA[58][3]    ;
-; RAM:comb_13|DL8_del[10]                 ; Merged with RAM:comb_13|DATA[58][2]    ;
-; RAM:comb_13|DL8_del[9]                  ; Merged with RAM:comb_13|DATA[58][1]    ;
-; RAM:comb_13|DL8_del[8]                  ; Merged with RAM:comb_13|DATA[58][0]    ;
-; RAM:comb_13|DL8_del[7]                  ; Merged with RAM:comb_13|DATA[59][7]    ;
-; RAM:comb_13|DL8_del[6]                  ; Merged with RAM:comb_13|DATA[59][6]    ;
-; RAM:comb_13|DL8_del[5]                  ; Merged with RAM:comb_13|DATA[59][5]    ;
-; RAM:comb_13|DL8_del[4]                  ; Merged with RAM:comb_13|DATA[59][4]    ;
-; RAM:comb_13|DL8_del[3]                  ; Merged with RAM:comb_13|DATA[59][3]    ;
-; RAM:comb_13|DL8_del[2]                  ; Merged with RAM:comb_13|DATA[59][2]    ;
-; RAM:comb_13|DL8_del[1]                  ; Merged with RAM:comb_13|DATA[59][1]    ;
-; RAM:comb_13|DL8_del[0]                  ; Merged with RAM:comb_13|DATA[59][0]    ;
-; RAM:comb_13|Mult_DL8[0]                 ; Merged with RAM:comb_13|DATA[57][0]    ;
-; RAM:comb_13|Mult_DL8[4]                 ; Merged with RAM:comb_13|DATA[57][4]    ;
-; RAM:comb_13|Mult_DL8[3]                 ; Merged with RAM:comb_13|DATA[57][3]    ;
-; RAM:comb_13|Mult_DL8[2]                 ; Merged with RAM:comb_13|DATA[57][2]    ;
-; RAM:comb_13|Mult_DL8[1]                 ; Merged with RAM:comb_13|DATA[57][1]    ;
+; RAM:comb_13|ch1_type_start[1]           ; Merged with RAM:comb_13|DATA[106][1]   ;
+; RAM:comb_13|ch1_type_start[3]           ; Merged with RAM:comb_13|DATA[106][3]   ;
+; RAM:comb_13|ch1_type_start[2]           ; Merged with RAM:comb_13|DATA[106][2]   ;
+; RAM:comb_13|ch1_type_start[0]           ; Merged with RAM:comb_13|DATA[106][0]   ;
+; RAM:comb_13|PL1_drt[15]                 ; Merged with RAM:comb_13|DATA[111][7]   ;
+; RAM:comb_13|PL1_drt[14]                 ; Merged with RAM:comb_13|DATA[111][6]   ;
+; RAM:comb_13|PL1_drt[13]                 ; Merged with RAM:comb_13|DATA[111][5]   ;
+; RAM:comb_13|PL1_drt[12]                 ; Merged with RAM:comb_13|DATA[111][4]   ;
+; RAM:comb_13|PL1_drt[11]                 ; Merged with RAM:comb_13|DATA[111][3]   ;
+; RAM:comb_13|PL1_drt[10]                 ; Merged with RAM:comb_13|DATA[111][2]   ;
+; RAM:comb_13|PL1_drt[9]                  ; Merged with RAM:comb_13|DATA[111][1]   ;
+; RAM:comb_13|PL1_drt[8]                  ; Merged with RAM:comb_13|DATA[111][0]   ;
+; RAM:comb_13|PL1_drt[7]                  ; Merged with RAM:comb_13|DATA[112][7]   ;
+; RAM:comb_13|PL1_drt[6]                  ; Merged with RAM:comb_13|DATA[112][6]   ;
+; RAM:comb_13|PL1_drt[5]                  ; Merged with RAM:comb_13|DATA[112][5]   ;
+; RAM:comb_13|PL1_drt[4]                  ; Merged with RAM:comb_13|DATA[112][4]   ;
+; RAM:comb_13|PL1_drt[3]                  ; Merged with RAM:comb_13|DATA[112][3]   ;
+; RAM:comb_13|PL1_drt[2]                  ; Merged with RAM:comb_13|DATA[112][2]   ;
+; RAM:comb_13|PL1_drt[1]                  ; Merged with RAM:comb_13|DATA[112][1]   ;
+; RAM:comb_13|PL1_drt[0]                  ; Merged with RAM:comb_13|DATA[112][0]   ;
+; RAM:comb_13|PL2_drt[15]                 ; Merged with RAM:comb_13|DATA[104][7]   ;
+; RAM:comb_13|PL2_drt[14]                 ; Merged with RAM:comb_13|DATA[104][6]   ;
+; RAM:comb_13|PL2_drt[13]                 ; Merged with RAM:comb_13|DATA[104][5]   ;
+; RAM:comb_13|PL2_drt[12]                 ; Merged with RAM:comb_13|DATA[104][4]   ;
+; RAM:comb_13|PL2_drt[11]                 ; Merged with RAM:comb_13|DATA[104][3]   ;
+; RAM:comb_13|PL2_drt[10]                 ; Merged with RAM:comb_13|DATA[104][2]   ;
+; RAM:comb_13|PL2_drt[9]                  ; Merged with RAM:comb_13|DATA[104][1]   ;
+; RAM:comb_13|PL2_drt[8]                  ; Merged with RAM:comb_13|DATA[104][0]   ;
+; RAM:comb_13|PL2_drt[7]                  ; Merged with RAM:comb_13|DATA[105][7]   ;
+; RAM:comb_13|PL2_drt[6]                  ; Merged with RAM:comb_13|DATA[105][6]   ;
+; RAM:comb_13|PL2_drt[5]                  ; Merged with RAM:comb_13|DATA[105][5]   ;
+; RAM:comb_13|PL2_drt[4]                  ; Merged with RAM:comb_13|DATA[105][4]   ;
+; RAM:comb_13|PL2_drt[3]                  ; Merged with RAM:comb_13|DATA[105][3]   ;
+; RAM:comb_13|PL2_drt[2]                  ; Merged with RAM:comb_13|DATA[105][2]   ;
+; RAM:comb_13|PL2_drt[1]                  ; Merged with RAM:comb_13|DATA[105][1]   ;
+; RAM:comb_13|PL2_drt[0]                  ; Merged with RAM:comb_13|DATA[105][0]   ;
+; RAM:comb_13|ch2_type_start[1]           ; Merged with RAM:comb_13|DATA[99][1]    ;
+; RAM:comb_13|ch2_type_start[3]           ; Merged with RAM:comb_13|DATA[99][3]    ;
+; RAM:comb_13|ch2_type_start[2]           ; Merged with RAM:comb_13|DATA[99][2]    ;
+; RAM:comb_13|ch2_type_start[0]           ; Merged with RAM:comb_13|DATA[99][0]    ;
+; RAM:comb_13|PL3_drt[15]                 ; Merged with RAM:comb_13|DATA[97][7]    ;
+; RAM:comb_13|PL3_drt[14]                 ; Merged with RAM:comb_13|DATA[97][6]    ;
+; RAM:comb_13|PL3_drt[13]                 ; Merged with RAM:comb_13|DATA[97][5]    ;
+; RAM:comb_13|PL3_drt[12]                 ; Merged with RAM:comb_13|DATA[97][4]    ;
+; RAM:comb_13|PL3_drt[11]                 ; Merged with RAM:comb_13|DATA[97][3]    ;
+; RAM:comb_13|PL3_drt[10]                 ; Merged with RAM:comb_13|DATA[97][2]    ;
+; RAM:comb_13|PL3_drt[9]                  ; Merged with RAM:comb_13|DATA[97][1]    ;
+; RAM:comb_13|PL3_drt[8]                  ; Merged with RAM:comb_13|DATA[97][0]    ;
+; RAM:comb_13|PL3_drt[7]                  ; Merged with RAM:comb_13|DATA[98][7]    ;
+; RAM:comb_13|PL3_drt[6]                  ; Merged with RAM:comb_13|DATA[98][6]    ;
+; RAM:comb_13|PL3_drt[5]                  ; Merged with RAM:comb_13|DATA[98][5]    ;
+; RAM:comb_13|PL3_drt[4]                  ; Merged with RAM:comb_13|DATA[98][4]    ;
+; RAM:comb_13|PL3_drt[3]                  ; Merged with RAM:comb_13|DATA[98][3]    ;
+; RAM:comb_13|PL3_drt[2]                  ; Merged with RAM:comb_13|DATA[98][2]    ;
+; RAM:comb_13|PL3_drt[1]                  ; Merged with RAM:comb_13|DATA[98][1]    ;
+; RAM:comb_13|PL3_drt[0]                  ; Merged with RAM:comb_13|DATA[98][0]    ;
+; RAM:comb_13|ch3_type_start[1]           ; Merged with RAM:comb_13|DATA[92][1]    ;
+; RAM:comb_13|ch3_type_start[3]           ; Merged with RAM:comb_13|DATA[92][3]    ;
+; RAM:comb_13|ch3_type_start[2]           ; Merged with RAM:comb_13|DATA[92][2]    ;
+; RAM:comb_13|ch3_type_start[0]           ; Merged with RAM:comb_13|DATA[92][0]    ;
+; RAM:comb_13|PL4_drt[15]                 ; Merged with RAM:comb_13|DATA[90][7]    ;
+; RAM:comb_13|PL4_drt[14]                 ; Merged with RAM:comb_13|DATA[90][6]    ;
+; RAM:comb_13|PL4_drt[13]                 ; Merged with RAM:comb_13|DATA[90][5]    ;
+; RAM:comb_13|PL4_drt[12]                 ; Merged with RAM:comb_13|DATA[90][4]    ;
+; RAM:comb_13|PL4_drt[11]                 ; Merged with RAM:comb_13|DATA[90][3]    ;
+; RAM:comb_13|PL4_drt[10]                 ; Merged with RAM:comb_13|DATA[90][2]    ;
+; RAM:comb_13|PL4_drt[9]                  ; Merged with RAM:comb_13|DATA[90][1]    ;
+; RAM:comb_13|PL4_drt[8]                  ; Merged with RAM:comb_13|DATA[90][0]    ;
+; RAM:comb_13|PL4_drt[7]                  ; Merged with RAM:comb_13|DATA[91][7]    ;
+; RAM:comb_13|PL4_drt[6]                  ; Merged with RAM:comb_13|DATA[91][6]    ;
+; RAM:comb_13|PL4_drt[5]                  ; Merged with RAM:comb_13|DATA[91][5]    ;
+; RAM:comb_13|PL4_drt[4]                  ; Merged with RAM:comb_13|DATA[91][4]    ;
+; RAM:comb_13|PL4_drt[3]                  ; Merged with RAM:comb_13|DATA[91][3]    ;
+; RAM:comb_13|PL4_drt[2]                  ; Merged with RAM:comb_13|DATA[91][2]    ;
+; RAM:comb_13|PL4_drt[1]                  ; Merged with RAM:comb_13|DATA[91][1]    ;
+; RAM:comb_13|PL4_drt[0]                  ; Merged with RAM:comb_13|DATA[91][0]    ;
+; RAM:comb_13|ch4_type_start[1]           ; Merged with RAM:comb_13|DATA[85][1]    ;
+; RAM:comb_13|ch4_type_start[3]           ; Merged with RAM:comb_13|DATA[85][3]    ;
+; RAM:comb_13|ch4_type_start[2]           ; Merged with RAM:comb_13|DATA[85][2]    ;
+; RAM:comb_13|ch4_type_start[0]           ; Merged with RAM:comb_13|DATA[85][0]    ;
+; RAM:comb_13|PL5_drt[15]                 ; Merged with RAM:comb_13|DATA[83][7]    ;
+; RAM:comb_13|PL5_drt[14]                 ; Merged with RAM:comb_13|DATA[83][6]    ;
+; RAM:comb_13|PL5_drt[13]                 ; Merged with RAM:comb_13|DATA[83][5]    ;
+; RAM:comb_13|PL5_drt[12]                 ; Merged with RAM:comb_13|DATA[83][4]    ;
+; RAM:comb_13|PL5_drt[11]                 ; Merged with RAM:comb_13|DATA[83][3]    ;
+; RAM:comb_13|PL5_drt[10]                 ; Merged with RAM:comb_13|DATA[83][2]    ;
+; RAM:comb_13|PL5_drt[9]                  ; Merged with RAM:comb_13|DATA[83][1]    ;
+; RAM:comb_13|PL5_drt[8]                  ; Merged with RAM:comb_13|DATA[83][0]    ;
+; RAM:comb_13|PL5_drt[7]                  ; Merged with RAM:comb_13|DATA[84][7]    ;
+; RAM:comb_13|PL5_drt[6]                  ; Merged with RAM:comb_13|DATA[84][6]    ;
+; RAM:comb_13|PL5_drt[5]                  ; Merged with RAM:comb_13|DATA[84][5]    ;
+; RAM:comb_13|PL5_drt[4]                  ; Merged with RAM:comb_13|DATA[84][4]    ;
+; RAM:comb_13|PL5_drt[3]                  ; Merged with RAM:comb_13|DATA[84][3]    ;
+; RAM:comb_13|PL5_drt[2]                  ; Merged with RAM:comb_13|DATA[84][2]    ;
+; RAM:comb_13|PL5_drt[1]                  ; Merged with RAM:comb_13|DATA[84][1]    ;
+; RAM:comb_13|PL5_drt[0]                  ; Merged with RAM:comb_13|DATA[84][0]    ;
+; RAM:comb_13|ch5_type_start[1]           ; Merged with RAM:comb_13|DATA[78][1]    ;
+; RAM:comb_13|ch5_type_start[3]           ; Merged with RAM:comb_13|DATA[78][3]    ;
+; RAM:comb_13|ch5_type_start[2]           ; Merged with RAM:comb_13|DATA[78][2]    ;
+; RAM:comb_13|ch5_type_start[0]           ; Merged with RAM:comb_13|DATA[78][0]    ;
+; RAM:comb_13|PL6_drt[15]                 ; Merged with RAM:comb_13|DATA[76][7]    ;
+; RAM:comb_13|PL6_drt[14]                 ; Merged with RAM:comb_13|DATA[76][6]    ;
+; RAM:comb_13|PL6_drt[13]                 ; Merged with RAM:comb_13|DATA[76][5]    ;
+; RAM:comb_13|PL6_drt[12]                 ; Merged with RAM:comb_13|DATA[76][4]    ;
+; RAM:comb_13|PL6_drt[11]                 ; Merged with RAM:comb_13|DATA[76][3]    ;
+; RAM:comb_13|PL6_drt[10]                 ; Merged with RAM:comb_13|DATA[76][2]    ;
+; RAM:comb_13|PL6_drt[9]                  ; Merged with RAM:comb_13|DATA[76][1]    ;
+; RAM:comb_13|PL6_drt[8]                  ; Merged with RAM:comb_13|DATA[76][0]    ;
+; RAM:comb_13|PL6_drt[7]                  ; Merged with RAM:comb_13|DATA[77][7]    ;
+; RAM:comb_13|PL6_drt[6]                  ; Merged with RAM:comb_13|DATA[77][6]    ;
+; RAM:comb_13|PL6_drt[5]                  ; Merged with RAM:comb_13|DATA[77][5]    ;
+; RAM:comb_13|PL6_drt[4]                  ; Merged with RAM:comb_13|DATA[77][4]    ;
+; RAM:comb_13|PL6_drt[3]                  ; Merged with RAM:comb_13|DATA[77][3]    ;
+; RAM:comb_13|PL6_drt[2]                  ; Merged with RAM:comb_13|DATA[77][2]    ;
+; RAM:comb_13|PL6_drt[1]                  ; Merged with RAM:comb_13|DATA[77][1]    ;
+; RAM:comb_13|PL6_drt[0]                  ; Merged with RAM:comb_13|DATA[77][0]    ;
+; RAM:comb_13|ch6_type_start[1]           ; Merged with RAM:comb_13|DATA[71][1]    ;
+; RAM:comb_13|ch6_type_start[3]           ; Merged with RAM:comb_13|DATA[71][3]    ;
+; RAM:comb_13|ch6_type_start[2]           ; Merged with RAM:comb_13|DATA[71][2]    ;
+; RAM:comb_13|ch6_type_start[0]           ; Merged with RAM:comb_13|DATA[71][0]    ;
+; RAM:comb_13|PL7_drt[15]                 ; Merged with RAM:comb_13|DATA[69][7]    ;
+; RAM:comb_13|PL7_drt[14]                 ; Merged with RAM:comb_13|DATA[69][6]    ;
+; RAM:comb_13|PL7_drt[13]                 ; Merged with RAM:comb_13|DATA[69][5]    ;
+; RAM:comb_13|PL7_drt[12]                 ; Merged with RAM:comb_13|DATA[69][4]    ;
+; RAM:comb_13|PL7_drt[11]                 ; Merged with RAM:comb_13|DATA[69][3]    ;
+; RAM:comb_13|PL7_drt[10]                 ; Merged with RAM:comb_13|DATA[69][2]    ;
+; RAM:comb_13|PL7_drt[9]                  ; Merged with RAM:comb_13|DATA[69][1]    ;
+; RAM:comb_13|PL7_drt[8]                  ; Merged with RAM:comb_13|DATA[69][0]    ;
+; RAM:comb_13|PL7_drt[7]                  ; Merged with RAM:comb_13|DATA[70][7]    ;
+; RAM:comb_13|PL7_drt[6]                  ; Merged with RAM:comb_13|DATA[70][6]    ;
+; RAM:comb_13|PL7_drt[5]                  ; Merged with RAM:comb_13|DATA[70][5]    ;
+; RAM:comb_13|PL7_drt[4]                  ; Merged with RAM:comb_13|DATA[70][4]    ;
+; RAM:comb_13|PL7_drt[3]                  ; Merged with RAM:comb_13|DATA[70][3]    ;
+; RAM:comb_13|PL7_drt[2]                  ; Merged with RAM:comb_13|DATA[70][2]    ;
+; RAM:comb_13|PL7_drt[1]                  ; Merged with RAM:comb_13|DATA[70][1]    ;
+; RAM:comb_13|PL7_drt[0]                  ; Merged with RAM:comb_13|DATA[70][0]    ;
+; RAM:comb_13|ch7_type_start[1]           ; Merged with RAM:comb_13|DATA[64][1]    ;
+; RAM:comb_13|ch7_type_start[3]           ; Merged with RAM:comb_13|DATA[64][3]    ;
+; RAM:comb_13|ch7_type_start[2]           ; Merged with RAM:comb_13|DATA[64][2]    ;
+; RAM:comb_13|ch7_type_start[0]           ; Merged with RAM:comb_13|DATA[64][0]    ;
+; RAM:comb_13|PL8_drt[15]                 ; Merged with RAM:comb_13|DATA[62][7]    ;
+; RAM:comb_13|PL8_drt[14]                 ; Merged with RAM:comb_13|DATA[62][6]    ;
+; RAM:comb_13|PL8_drt[13]                 ; Merged with RAM:comb_13|DATA[62][5]    ;
+; RAM:comb_13|PL8_drt[12]                 ; Merged with RAM:comb_13|DATA[62][4]    ;
+; RAM:comb_13|PL8_drt[11]                 ; Merged with RAM:comb_13|DATA[62][3]    ;
+; RAM:comb_13|PL8_drt[10]                 ; Merged with RAM:comb_13|DATA[62][2]    ;
+; RAM:comb_13|PL8_drt[9]                  ; Merged with RAM:comb_13|DATA[62][1]    ;
+; RAM:comb_13|PL8_drt[8]                  ; Merged with RAM:comb_13|DATA[62][0]    ;
+; RAM:comb_13|PL8_drt[7]                  ; Merged with RAM:comb_13|DATA[63][7]    ;
+; RAM:comb_13|PL8_drt[6]                  ; Merged with RAM:comb_13|DATA[63][6]    ;
+; RAM:comb_13|PL8_drt[5]                  ; Merged with RAM:comb_13|DATA[63][5]    ;
+; RAM:comb_13|PL8_drt[4]                  ; Merged with RAM:comb_13|DATA[63][4]    ;
+; RAM:comb_13|PL8_drt[3]                  ; Merged with RAM:comb_13|DATA[63][3]    ;
+; RAM:comb_13|PL8_drt[2]                  ; Merged with RAM:comb_13|DATA[63][2]    ;
+; RAM:comb_13|PL8_drt[1]                  ; Merged with RAM:comb_13|DATA[63][1]    ;
+; RAM:comb_13|PL8_drt[0]                  ; Merged with RAM:comb_13|DATA[63][0]    ;
+; RAM:comb_13|ch8_type_start[1]           ; Merged with RAM:comb_13|DATA[57][1]    ;
+; RAM:comb_13|ch8_type_start[3]           ; Merged with RAM:comb_13|DATA[57][3]    ;
+; RAM:comb_13|ch8_type_start[2]           ; Merged with RAM:comb_13|DATA[57][2]    ;
+; RAM:comb_13|ch8_type_start[0]           ; Merged with RAM:comb_13|DATA[57][0]    ;
+; RAM:comb_13|DL1_del[15]                 ; Merged with RAM:comb_13|DATA[108][7]   ;
+; RAM:comb_13|DL1_del[14]                 ; Merged with RAM:comb_13|DATA[108][6]   ;
+; RAM:comb_13|DL1_del[13]                 ; Merged with RAM:comb_13|DATA[108][5]   ;
+; RAM:comb_13|DL1_del[12]                 ; Merged with RAM:comb_13|DATA[108][4]   ;
+; RAM:comb_13|DL1_del[11]                 ; Merged with RAM:comb_13|DATA[108][3]   ;
+; RAM:comb_13|DL1_del[10]                 ; Merged with RAM:comb_13|DATA[108][2]   ;
+; RAM:comb_13|DL1_del[9]                  ; Merged with RAM:comb_13|DATA[108][1]   ;
+; RAM:comb_13|DL1_del[8]                  ; Merged with RAM:comb_13|DATA[108][0]   ;
+; RAM:comb_13|DL1_del[7]                  ; Merged with RAM:comb_13|DATA[109][7]   ;
+; RAM:comb_13|DL1_del[6]                  ; Merged with RAM:comb_13|DATA[109][6]   ;
+; RAM:comb_13|DL1_del[5]                  ; Merged with RAM:comb_13|DATA[109][5]   ;
+; RAM:comb_13|DL1_del[4]                  ; Merged with RAM:comb_13|DATA[109][4]   ;
+; RAM:comb_13|DL1_del[3]                  ; Merged with RAM:comb_13|DATA[109][3]   ;
+; RAM:comb_13|DL1_del[2]                  ; Merged with RAM:comb_13|DATA[109][2]   ;
+; RAM:comb_13|DL1_del[1]                  ; Merged with RAM:comb_13|DATA[109][1]   ;
+; RAM:comb_13|DL1_del[0]                  ; Merged with RAM:comb_13|DATA[109][0]   ;
+; RAM:comb_13|DL2_del[15]                 ; Merged with RAM:comb_13|DATA[101][7]   ;
+; RAM:comb_13|DL2_del[14]                 ; Merged with RAM:comb_13|DATA[101][6]   ;
+; RAM:comb_13|DL2_del[13]                 ; Merged with RAM:comb_13|DATA[101][5]   ;
+; RAM:comb_13|DL2_del[12]                 ; Merged with RAM:comb_13|DATA[101][4]   ;
+; RAM:comb_13|DL2_del[11]                 ; Merged with RAM:comb_13|DATA[101][3]   ;
+; RAM:comb_13|DL2_del[10]                 ; Merged with RAM:comb_13|DATA[101][2]   ;
+; RAM:comb_13|DL2_del[9]                  ; Merged with RAM:comb_13|DATA[101][1]   ;
+; RAM:comb_13|DL2_del[8]                  ; Merged with RAM:comb_13|DATA[101][0]   ;
+; RAM:comb_13|DL2_del[7]                  ; Merged with RAM:comb_13|DATA[102][7]   ;
+; RAM:comb_13|DL2_del[6]                  ; Merged with RAM:comb_13|DATA[102][6]   ;
+; RAM:comb_13|DL2_del[5]                  ; Merged with RAM:comb_13|DATA[102][5]   ;
+; RAM:comb_13|DL2_del[4]                  ; Merged with RAM:comb_13|DATA[102][4]   ;
+; RAM:comb_13|DL2_del[3]                  ; Merged with RAM:comb_13|DATA[102][3]   ;
+; RAM:comb_13|DL2_del[2]                  ; Merged with RAM:comb_13|DATA[102][2]   ;
+; RAM:comb_13|DL2_del[1]                  ; Merged with RAM:comb_13|DATA[102][1]   ;
+; RAM:comb_13|DL2_del[0]                  ; Merged with RAM:comb_13|DATA[102][0]   ;
+; RAM:comb_13|DL3_del[15]                 ; Merged with RAM:comb_13|DATA[94][7]    ;
+; RAM:comb_13|DL3_del[14]                 ; Merged with RAM:comb_13|DATA[94][6]    ;
+; RAM:comb_13|DL3_del[13]                 ; Merged with RAM:comb_13|DATA[94][5]    ;
+; RAM:comb_13|DL3_del[12]                 ; Merged with RAM:comb_13|DATA[94][4]    ;
+; RAM:comb_13|DL3_del[11]                 ; Merged with RAM:comb_13|DATA[94][3]    ;
+; RAM:comb_13|DL3_del[10]                 ; Merged with RAM:comb_13|DATA[94][2]    ;
+; RAM:comb_13|DL3_del[9]                  ; Merged with RAM:comb_13|DATA[94][1]    ;
+; RAM:comb_13|DL3_del[8]                  ; Merged with RAM:comb_13|DATA[94][0]    ;
+; RAM:comb_13|DL3_del[7]                  ; Merged with RAM:comb_13|DATA[95][7]    ;
+; RAM:comb_13|DL3_del[6]                  ; Merged with RAM:comb_13|DATA[95][6]    ;
+; RAM:comb_13|DL3_del[5]                  ; Merged with RAM:comb_13|DATA[95][5]    ;
+; RAM:comb_13|DL3_del[4]                  ; Merged with RAM:comb_13|DATA[95][4]    ;
+; RAM:comb_13|DL3_del[3]                  ; Merged with RAM:comb_13|DATA[95][3]    ;
+; RAM:comb_13|DL3_del[2]                  ; Merged with RAM:comb_13|DATA[95][2]    ;
+; RAM:comb_13|DL3_del[1]                  ; Merged with RAM:comb_13|DATA[95][1]    ;
+; RAM:comb_13|DL3_del[0]                  ; Merged with RAM:comb_13|DATA[95][0]    ;
+; RAM:comb_13|DL4_del[15]                 ; Merged with RAM:comb_13|DATA[87][7]    ;
+; RAM:comb_13|DL4_del[14]                 ; Merged with RAM:comb_13|DATA[87][6]    ;
+; RAM:comb_13|DL4_del[13]                 ; Merged with RAM:comb_13|DATA[87][5]    ;
+; RAM:comb_13|DL4_del[12]                 ; Merged with RAM:comb_13|DATA[87][4]    ;
+; RAM:comb_13|DL4_del[11]                 ; Merged with RAM:comb_13|DATA[87][3]    ;
+; RAM:comb_13|DL4_del[10]                 ; Merged with RAM:comb_13|DATA[87][2]    ;
+; RAM:comb_13|DL4_del[9]                  ; Merged with RAM:comb_13|DATA[87][1]    ;
+; RAM:comb_13|DL4_del[8]                  ; Merged with RAM:comb_13|DATA[87][0]    ;
+; RAM:comb_13|DL4_del[7]                  ; Merged with RAM:comb_13|DATA[88][7]    ;
+; RAM:comb_13|DL4_del[6]                  ; Merged with RAM:comb_13|DATA[88][6]    ;
+; RAM:comb_13|DL4_del[5]                  ; Merged with RAM:comb_13|DATA[88][5]    ;
+; RAM:comb_13|DL4_del[4]                  ; Merged with RAM:comb_13|DATA[88][4]    ;
+; RAM:comb_13|DL4_del[3]                  ; Merged with RAM:comb_13|DATA[88][3]    ;
+; RAM:comb_13|DL4_del[2]                  ; Merged with RAM:comb_13|DATA[88][2]    ;
+; RAM:comb_13|DL4_del[1]                  ; Merged with RAM:comb_13|DATA[88][1]    ;
+; RAM:comb_13|DL4_del[0]                  ; Merged with RAM:comb_13|DATA[88][0]    ;
+; RAM:comb_13|DL5_del[15]                 ; Merged with RAM:comb_13|DATA[80][7]    ;
+; RAM:comb_13|DL5_del[14]                 ; Merged with RAM:comb_13|DATA[80][6]    ;
+; RAM:comb_13|DL5_del[13]                 ; Merged with RAM:comb_13|DATA[80][5]    ;
+; RAM:comb_13|DL5_del[12]                 ; Merged with RAM:comb_13|DATA[80][4]    ;
+; RAM:comb_13|DL5_del[11]                 ; Merged with RAM:comb_13|DATA[80][3]    ;
+; RAM:comb_13|DL5_del[10]                 ; Merged with RAM:comb_13|DATA[80][2]    ;
+; RAM:comb_13|DL5_del[9]                  ; Merged with RAM:comb_13|DATA[80][1]    ;
+; RAM:comb_13|DL5_del[8]                  ; Merged with RAM:comb_13|DATA[80][0]    ;
+; RAM:comb_13|DL5_del[7]                  ; Merged with RAM:comb_13|DATA[81][7]    ;
+; RAM:comb_13|DL5_del[6]                  ; Merged with RAM:comb_13|DATA[81][6]    ;
+; RAM:comb_13|DL5_del[5]                  ; Merged with RAM:comb_13|DATA[81][5]    ;
+; RAM:comb_13|DL5_del[4]                  ; Merged with RAM:comb_13|DATA[81][4]    ;
+; RAM:comb_13|DL5_del[3]                  ; Merged with RAM:comb_13|DATA[81][3]    ;
+; RAM:comb_13|DL5_del[2]                  ; Merged with RAM:comb_13|DATA[81][2]    ;
+; RAM:comb_13|DL5_del[1]                  ; Merged with RAM:comb_13|DATA[81][1]    ;
+; RAM:comb_13|DL5_del[0]                  ; Merged with RAM:comb_13|DATA[81][0]    ;
+; RAM:comb_13|DL6_del[15]                 ; Merged with RAM:comb_13|DATA[73][7]    ;
+; RAM:comb_13|DL6_del[14]                 ; Merged with RAM:comb_13|DATA[73][6]    ;
+; RAM:comb_13|DL6_del[13]                 ; Merged with RAM:comb_13|DATA[73][5]    ;
+; RAM:comb_13|DL6_del[12]                 ; Merged with RAM:comb_13|DATA[73][4]    ;
+; RAM:comb_13|DL6_del[11]                 ; Merged with RAM:comb_13|DATA[73][3]    ;
+; RAM:comb_13|DL6_del[10]                 ; Merged with RAM:comb_13|DATA[73][2]    ;
+; RAM:comb_13|DL6_del[9]                  ; Merged with RAM:comb_13|DATA[73][1]    ;
+; RAM:comb_13|DL6_del[8]                  ; Merged with RAM:comb_13|DATA[73][0]    ;
+; RAM:comb_13|DL6_del[7]                  ; Merged with RAM:comb_13|DATA[74][7]    ;
+; RAM:comb_13|DL6_del[6]                  ; Merged with RAM:comb_13|DATA[74][6]    ;
+; RAM:comb_13|DL6_del[5]                  ; Merged with RAM:comb_13|DATA[74][5]    ;
+; RAM:comb_13|DL6_del[4]                  ; Merged with RAM:comb_13|DATA[74][4]    ;
+; RAM:comb_13|DL6_del[3]                  ; Merged with RAM:comb_13|DATA[74][3]    ;
+; RAM:comb_13|DL6_del[2]                  ; Merged with RAM:comb_13|DATA[74][2]    ;
+; RAM:comb_13|DL6_del[1]                  ; Merged with RAM:comb_13|DATA[74][1]    ;
+; RAM:comb_13|DL6_del[0]                  ; Merged with RAM:comb_13|DATA[74][0]    ;
+; RAM:comb_13|DL7_del[15]                 ; Merged with RAM:comb_13|DATA[66][7]    ;
+; RAM:comb_13|DL7_del[14]                 ; Merged with RAM:comb_13|DATA[66][6]    ;
+; RAM:comb_13|DL7_del[13]                 ; Merged with RAM:comb_13|DATA[66][5]    ;
+; RAM:comb_13|DL7_del[12]                 ; Merged with RAM:comb_13|DATA[66][4]    ;
+; RAM:comb_13|DL7_del[11]                 ; Merged with RAM:comb_13|DATA[66][3]    ;
+; RAM:comb_13|DL7_del[10]                 ; Merged with RAM:comb_13|DATA[66][2]    ;
+; RAM:comb_13|DL7_del[9]                  ; Merged with RAM:comb_13|DATA[66][1]    ;
+; RAM:comb_13|DL7_del[8]                  ; Merged with RAM:comb_13|DATA[66][0]    ;
+; RAM:comb_13|DL7_del[7]                  ; Merged with RAM:comb_13|DATA[67][7]    ;
+; RAM:comb_13|DL7_del[6]                  ; Merged with RAM:comb_13|DATA[67][6]    ;
+; RAM:comb_13|DL7_del[5]                  ; Merged with RAM:comb_13|DATA[67][5]    ;
+; RAM:comb_13|DL7_del[4]                  ; Merged with RAM:comb_13|DATA[67][4]    ;
+; RAM:comb_13|DL7_del[3]                  ; Merged with RAM:comb_13|DATA[67][3]    ;
+; RAM:comb_13|DL7_del[2]                  ; Merged with RAM:comb_13|DATA[67][2]    ;
+; RAM:comb_13|DL7_del[1]                  ; Merged with RAM:comb_13|DATA[67][1]    ;
+; RAM:comb_13|DL7_del[0]                  ; Merged with RAM:comb_13|DATA[67][0]    ;
+; RAM:comb_13|Mult_PL1[0]                 ; Merged with RAM:comb_13|DATA[110][0]   ;
+; RAM:comb_13|Mult_PL1[4]                 ; Merged with RAM:comb_13|DATA[110][4]   ;
+; RAM:comb_13|Mult_PL1[3]                 ; Merged with RAM:comb_13|DATA[110][3]   ;
+; RAM:comb_13|Mult_PL1[2]                 ; Merged with RAM:comb_13|DATA[110][2]   ;
+; RAM:comb_13|Mult_PL1[1]                 ; Merged with RAM:comb_13|DATA[110][1]   ;
+; RAM:comb_13|Mult_PL2[0]                 ; Merged with RAM:comb_13|DATA[103][0]   ;
+; RAM:comb_13|Mult_PL2[4]                 ; Merged with RAM:comb_13|DATA[103][4]   ;
+; RAM:comb_13|Mult_PL2[3]                 ; Merged with RAM:comb_13|DATA[103][3]   ;
+; RAM:comb_13|Mult_PL2[2]                 ; Merged with RAM:comb_13|DATA[103][2]   ;
+; RAM:comb_13|Mult_PL2[1]                 ; Merged with RAM:comb_13|DATA[103][1]   ;
+; RAM:comb_13|Mult_PL3[0]                 ; Merged with RAM:comb_13|DATA[96][0]    ;
+; RAM:comb_13|Mult_PL3[4]                 ; Merged with RAM:comb_13|DATA[96][4]    ;
+; RAM:comb_13|Mult_PL3[3]                 ; Merged with RAM:comb_13|DATA[96][3]    ;
+; RAM:comb_13|Mult_PL3[2]                 ; Merged with RAM:comb_13|DATA[96][2]    ;
+; RAM:comb_13|Mult_PL3[1]                 ; Merged with RAM:comb_13|DATA[96][1]    ;
+; RAM:comb_13|Mult_PL4[0]                 ; Merged with RAM:comb_13|DATA[89][0]    ;
+; RAM:comb_13|Mult_PL4[4]                 ; Merged with RAM:comb_13|DATA[89][4]    ;
+; RAM:comb_13|Mult_PL4[3]                 ; Merged with RAM:comb_13|DATA[89][3]    ;
+; RAM:comb_13|Mult_PL4[2]                 ; Merged with RAM:comb_13|DATA[89][2]    ;
+; RAM:comb_13|Mult_PL4[1]                 ; Merged with RAM:comb_13|DATA[89][1]    ;
+; RAM:comb_13|Mult_PL5[0]                 ; Merged with RAM:comb_13|DATA[82][0]    ;
+; RAM:comb_13|Mult_PL5[4]                 ; Merged with RAM:comb_13|DATA[82][4]    ;
+; RAM:comb_13|Mult_PL5[3]                 ; Merged with RAM:comb_13|DATA[82][3]    ;
+; RAM:comb_13|Mult_PL5[2]                 ; Merged with RAM:comb_13|DATA[82][2]    ;
+; RAM:comb_13|Mult_PL5[1]                 ; Merged with RAM:comb_13|DATA[82][1]    ;
+; RAM:comb_13|Mult_PL6[0]                 ; Merged with RAM:comb_13|DATA[75][0]    ;
+; RAM:comb_13|Mult_PL6[4]                 ; Merged with RAM:comb_13|DATA[75][4]    ;
+; RAM:comb_13|Mult_PL6[3]                 ; Merged with RAM:comb_13|DATA[75][3]    ;
+; RAM:comb_13|Mult_PL6[2]                 ; Merged with RAM:comb_13|DATA[75][2]    ;
+; RAM:comb_13|Mult_PL6[1]                 ; Merged with RAM:comb_13|DATA[75][1]    ;
+; RAM:comb_13|Mult_PL7[0]                 ; Merged with RAM:comb_13|DATA[68][0]    ;
+; RAM:comb_13|Mult_PL7[4]                 ; Merged with RAM:comb_13|DATA[68][4]    ;
+; RAM:comb_13|Mult_PL7[3]                 ; Merged with RAM:comb_13|DATA[68][3]    ;
+; RAM:comb_13|Mult_PL7[2]                 ; Merged with RAM:comb_13|DATA[68][2]    ;
+; RAM:comb_13|Mult_PL7[1]                 ; Merged with RAM:comb_13|DATA[68][1]    ;
+; RAM:comb_13|Mult_PL8[0]                 ; Merged with RAM:comb_13|DATA[61][0]    ;
+; RAM:comb_13|Mult_PL8[4]                 ; Merged with RAM:comb_13|DATA[61][4]    ;
+; RAM:comb_13|Mult_PL8[3]                 ; Merged with RAM:comb_13|DATA[61][3]    ;
+; RAM:comb_13|Mult_PL8[2]                 ; Merged with RAM:comb_13|DATA[61][2]    ;
+; RAM:comb_13|Mult_PL8[1]                 ; Merged with RAM:comb_13|DATA[61][1]    ;
+; RAM:comb_13|Mult_DL1[0]                 ; Merged with RAM:comb_13|DATA[107][0]   ;
+; RAM:comb_13|Mult_DL1[4]                 ; Merged with RAM:comb_13|DATA[107][4]   ;
+; RAM:comb_13|Mult_DL1[3]                 ; Merged with RAM:comb_13|DATA[107][3]   ;
+; RAM:comb_13|Mult_DL1[2]                 ; Merged with RAM:comb_13|DATA[107][2]   ;
+; RAM:comb_13|Mult_DL1[1]                 ; Merged with RAM:comb_13|DATA[107][1]   ;
+; RAM:comb_13|Mult_DL2[0]                 ; Merged with RAM:comb_13|DATA[100][0]   ;
+; RAM:comb_13|Mult_DL2[4]                 ; Merged with RAM:comb_13|DATA[100][4]   ;
+; RAM:comb_13|Mult_DL2[3]                 ; Merged with RAM:comb_13|DATA[100][3]   ;
+; RAM:comb_13|Mult_DL2[2]                 ; Merged with RAM:comb_13|DATA[100][2]   ;
+; RAM:comb_13|Mult_DL2[1]                 ; Merged with RAM:comb_13|DATA[100][1]   ;
+; RAM:comb_13|Mult_DL3[0]                 ; Merged with RAM:comb_13|DATA[93][0]    ;
+; RAM:comb_13|Mult_DL3[4]                 ; Merged with RAM:comb_13|DATA[93][4]    ;
+; RAM:comb_13|Mult_DL3[3]                 ; Merged with RAM:comb_13|DATA[93][3]    ;
+; RAM:comb_13|Mult_DL3[2]                 ; Merged with RAM:comb_13|DATA[93][2]    ;
+; RAM:comb_13|Mult_DL3[1]                 ; Merged with RAM:comb_13|DATA[93][1]    ;
+; RAM:comb_13|Mult_DL4[0]                 ; Merged with RAM:comb_13|DATA[86][0]    ;
+; RAM:comb_13|Mult_DL4[4]                 ; Merged with RAM:comb_13|DATA[86][4]    ;
+; RAM:comb_13|Mult_DL4[3]                 ; Merged with RAM:comb_13|DATA[86][3]    ;
+; RAM:comb_13|Mult_DL4[2]                 ; Merged with RAM:comb_13|DATA[86][2]    ;
+; RAM:comb_13|Mult_DL4[1]                 ; Merged with RAM:comb_13|DATA[86][1]    ;
+; RAM:comb_13|Mult_DL5[0]                 ; Merged with RAM:comb_13|DATA[79][0]    ;
+; RAM:comb_13|Mult_DL5[4]                 ; Merged with RAM:comb_13|DATA[79][4]    ;
+; RAM:comb_13|Mult_DL5[3]                 ; Merged with RAM:comb_13|DATA[79][3]    ;
+; RAM:comb_13|Mult_DL5[2]                 ; Merged with RAM:comb_13|DATA[79][2]    ;
+; RAM:comb_13|Mult_DL5[1]                 ; Merged with RAM:comb_13|DATA[79][1]    ;
+; RAM:comb_13|Mult_DL6[0]                 ; Merged with RAM:comb_13|DATA[72][0]    ;
+; RAM:comb_13|Mult_DL6[4]                 ; Merged with RAM:comb_13|DATA[72][4]    ;
+; RAM:comb_13|Mult_DL6[3]                 ; Merged with RAM:comb_13|DATA[72][3]    ;
+; RAM:comb_13|Mult_DL6[2]                 ; Merged with RAM:comb_13|DATA[72][2]    ;
+; RAM:comb_13|Mult_DL6[1]                 ; Merged with RAM:comb_13|DATA[72][1]    ;
+; RAM:comb_13|Mult_DL7[0]                 ; Merged with RAM:comb_13|DATA[65][0]    ;
+; RAM:comb_13|Mult_DL7[4]                 ; Merged with RAM:comb_13|DATA[65][4]    ;
+; RAM:comb_13|Mult_DL7[3]                 ; Merged with RAM:comb_13|DATA[65][3]    ;
+; RAM:comb_13|Mult_DL7[2]                 ; Merged with RAM:comb_13|DATA[65][2]    ;
+; RAM:comb_13|Mult_DL7[1]                 ; Merged with RAM:comb_13|DATA[65][1]    ;
+; RAM:comb_13|DL8_del[15]                 ; Merged with RAM:comb_13|DATA[59][7]    ;
+; RAM:comb_13|DL8_del[14]                 ; Merged with RAM:comb_13|DATA[59][6]    ;
+; RAM:comb_13|DL8_del[13]                 ; Merged with RAM:comb_13|DATA[59][5]    ;
+; RAM:comb_13|DL8_del[12]                 ; Merged with RAM:comb_13|DATA[59][4]    ;
+; RAM:comb_13|DL8_del[11]                 ; Merged with RAM:comb_13|DATA[59][3]    ;
+; RAM:comb_13|DL8_del[10]                 ; Merged with RAM:comb_13|DATA[59][2]    ;
+; RAM:comb_13|DL8_del[9]                  ; Merged with RAM:comb_13|DATA[59][1]    ;
+; RAM:comb_13|DL8_del[8]                  ; Merged with RAM:comb_13|DATA[59][0]    ;
+; RAM:comb_13|DL8_del[7]                  ; Merged with RAM:comb_13|DATA[60][7]    ;
+; RAM:comb_13|DL8_del[6]                  ; Merged with RAM:comb_13|DATA[60][6]    ;
+; RAM:comb_13|DL8_del[5]                  ; Merged with RAM:comb_13|DATA[60][5]    ;
+; RAM:comb_13|DL8_del[4]                  ; Merged with RAM:comb_13|DATA[60][4]    ;
+; RAM:comb_13|DL8_del[3]                  ; Merged with RAM:comb_13|DATA[60][3]    ;
+; RAM:comb_13|DL8_del[2]                  ; Merged with RAM:comb_13|DATA[60][2]    ;
+; RAM:comb_13|DL8_del[1]                  ; Merged with RAM:comb_13|DATA[60][1]    ;
+; RAM:comb_13|DL8_del[0]                  ; Merged with RAM:comb_13|DATA[60][0]    ;
+; RAM:comb_13|Mult_DL8[0]                 ; Merged with RAM:comb_13|DATA[58][0]    ;
+; RAM:comb_13|Mult_DL8[4]                 ; Merged with RAM:comb_13|DATA[58][4]    ;
+; RAM:comb_13|Mult_DL8[3]                 ; Merged with RAM:comb_13|DATA[58][3]    ;
+; RAM:comb_13|Mult_DL8[2]                 ; Merged with RAM:comb_13|DATA[58][2]    ;
+; RAM:comb_13|Mult_DL8[1]                 ; Merged with RAM:comb_13|DATA[58][1]    ;
 ; Delay:DL8|divider[8]                    ; Stuck at GND due to stuck port data_in ;
 ; Pulse:PL8|divider[8]                    ; Stuck at GND due to stuck port data_in ;
 ; Delay:DL7|divider[8]                    ; Stuck at GND due to stuck port data_in ;
@@ -876,10 +876,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; UART_Rx:comb_12|wr                     ; 5       ;
-; UART_Rx:comb_12|wr_addr[4]             ; 7       ;
-; UART_Rx:comb_12|wr_addr[5]             ; 16      ;
+; UART_Rx:comb_12|wr_addr[5]             ; 45      ;
+; UART_Rx:comb_12|wr_addr[0]             ; 52      ;
+; UART_Rx:comb_12|wr_addr[4]             ; 6       ;
 ; UART_Rx:comb_12|wr_addr[6]             ; 7       ;
-; Total number of inverted registers = 4 ;         ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -888,32 +889,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |main|UART_Rx:comb_12|wr_addr[3] ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |main|Pulse:PL1|cnt1[8]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|RAM:comb_13|DATA[0][5]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|UART_Rx:comb_12|wr_addr[3] ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |main|Pulse:PL1|cnt1[16]         ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL1|divider[2]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL2|divider[2]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL3|divider[2]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL4|divider[2]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL5|divider[5]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL6|divider[5]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL4|divider[5]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL5|divider[0]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL6|divider[2]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL7|divider[0]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Pulse:PL8|divider[0]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL1|divider[2]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL1|divider[0]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL2|divider[0]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL3|divider[2]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL4|divider[2]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL5|divider[5]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL4|divider[0]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL5|divider[0]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL6|divider[0]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL7|divider[0]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL8|divider[5]       ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL2|cnt1[2]          ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL3|cnt1[0]          ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL4|cnt1[23]         ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL5|cnt1[5]          ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL6|cnt1[13]         ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL7|cnt1[7]          ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL8|cnt1[5]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |main|UART_Rx:comb_12|wr_addr[5] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|Delay:DL8|divider[0]       ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL2|cnt1[0]          ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL3|cnt1[17]         ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL4|cnt1[17]         ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL5|cnt1[15]         ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL6|cnt1[12]         ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL7|cnt1[8]          ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 26 LEs               ; 52 LEs                 ; Yes        ; |main|Pulse:PL8|cnt1[4]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|UART_Rx:comb_12|wr_addr[5] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
@@ -1475,54 +1477,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RAM:comb_13"                                                                                                                                                                     ;
-+-----------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                                                                                                               ;
-+-----------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; PL1_drt[17]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
-; ch2_type_start  ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND. ;
-; PL9_drt         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL9_del         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch9_type_start  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL9        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL9        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; PL10_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL10_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch10_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL10       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL10       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; PL11_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL11_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch11_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL11       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL11       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; PL12_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL12_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch12_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL12       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL12       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; PL13_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL13_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch13_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL13       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL13       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; PL14_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL14_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch14_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL14       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL14       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; PL15_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL15_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch15_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL15       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL15       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; PL16_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; DL16_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; ch16_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_PL16       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-; Mult_DL16       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                              ;
-+-----------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RAM:comb_13"                                                                                                                                                                       ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                                                                                 ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; PL1_drt         ; Output ; Warning  ; Output or bidir port (17 bits) is smaller than the port expression (18 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
+; ch2_type_start  ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (8 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND.   ;
+; PL9_drt         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL9_del         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch9_type_start  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL9        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL9        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; PL10_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL10_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch10_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL10       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL10       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; PL11_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL11_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch11_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL11       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL11       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; PL12_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL12_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch12_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL12       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL12       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; PL13_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL13_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch13_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL13       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL13       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; PL14_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL14_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch14_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL14       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL14       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; PL15_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL15_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch15_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL15       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL15       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; PL16_drt        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; DL16_del        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; ch16_type_start ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_PL16       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
+; Mult_DL16       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -1555,19 +1557,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 208                         ;
 ;     SCLR              ; 666                         ;
 ;     plain             ; 75                          ;
-; cycloneiii_lcell_comb ; 1849                        ;
+; cycloneiii_lcell_comb ; 1850                        ;
 ;     arith             ; 1096                        ;
 ;         2 data inputs ; 855                         ;
 ;         3 data inputs ; 241                         ;
-;     normal            ; 753                         ;
+;     normal            ; 754                         ;
 ;         1 data inputs ; 35                          ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 225                         ;
-;         4 data inputs ; 438                         ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 200                         ;
+;         4 data inputs ; 469                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.50                        ;
-; Average LUT depth     ; 3.41                        ;
+; Average LUT depth     ; 3.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1586,7 +1588,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 28 11:46:50 2021
+    Info: Processing started: Mon Feb 01 10:29:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1699,7 +1701,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/pll_
     Info (12023): Found entity 1: PLL_altpll File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/db/pll_altpll.v Line: 30
 Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:pll_inst|altpll:altpll_component|PLL_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "Start" for hierarchy "Start:comb_11" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 176
-Warning (10036): Verilog HDL or VHDL warning at Start.v(7): object "cnt" assigned a value but never read File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Start.v Line: 7
 Info (12128): Elaborating entity "UART_Rx" for hierarchy "UART_Rx:comb_12" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 179
 Warning (10230): Verilog HDL assignment warning at UART_Rx.v(40): truncated value with size 32 to match size of target (16) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 40
 Warning (10230): Verilog HDL assignment warning at UART_Rx.v(60): truncated value with size 9 to match size of target (8) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/UART_Rx.v Line: 60
@@ -1730,46 +1731,31 @@ Warning (10230): Verilog HDL assignment warning at ram.v(179): truncated value w
 Warning (10230): Verilog HDL assignment warning at ram.v(182): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 182
 Warning (10230): Verilog HDL assignment warning at ram.v(184): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 184
 Warning (10230): Verilog HDL assignment warning at ram.v(185): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 185
-Warning (10034): Output port "PL9_drt" at ram.v(60) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 60
-Warning (10034): Output port "DL9_del" at ram.v(61) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 61
-Warning (10034): Output port "ch9_type_start" at ram.v(62) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 62
-Warning (10034): Output port "Mult_PL9" at ram.v(63) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 63
-Warning (10034): Output port "Mult_DL9" at ram.v(64) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 64
-Warning (10034): Output port "PL10_drt" at ram.v(66) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 66
-Warning (10034): Output port "DL10_del" at ram.v(67) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 67
-Warning (10034): Output port "ch10_type_start" at ram.v(68) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 68
-Warning (10034): Output port "Mult_PL10" at ram.v(69) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 69
-Warning (10034): Output port "Mult_DL10" at ram.v(70) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 70
-Warning (10034): Output port "PL11_drt" at ram.v(72) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 72
-Warning (10034): Output port "DL11_del" at ram.v(73) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 73
-Warning (10034): Output port "ch11_type_start" at ram.v(74) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 74
-Warning (10034): Output port "Mult_PL11" at ram.v(75) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 75
-Warning (10034): Output port "Mult_DL11" at ram.v(76) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 76
-Warning (10034): Output port "PL12_drt" at ram.v(78) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 78
-Warning (10034): Output port "DL12_del" at ram.v(79) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 79
-Warning (10034): Output port "ch12_type_start" at ram.v(80) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 80
-Warning (10034): Output port "Mult_PL12" at ram.v(81) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 81
-Warning (10034): Output port "Mult_DL12" at ram.v(82) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 82
-Warning (10034): Output port "PL13_drt" at ram.v(84) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 84
-Warning (10034): Output port "DL13_del" at ram.v(85) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 85
-Warning (10034): Output port "ch13_type_start" at ram.v(86) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 86
-Warning (10034): Output port "Mult_PL13" at ram.v(87) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 87
-Warning (10034): Output port "Mult_DL13" at ram.v(88) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 88
-Warning (10034): Output port "PL14_drt" at ram.v(90) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 90
-Warning (10034): Output port "DL14_del" at ram.v(91) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 91
-Warning (10034): Output port "ch14_type_start" at ram.v(92) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 92
-Warning (10034): Output port "Mult_PL14" at ram.v(93) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 93
-Warning (10034): Output port "Mult_DL14" at ram.v(94) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 94
-Warning (10034): Output port "PL15_drt" at ram.v(96) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 96
-Warning (10034): Output port "DL15_del" at ram.v(97) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 97
-Warning (10034): Output port "ch15_type_start" at ram.v(98) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 98
-Warning (10034): Output port "Mult_PL15" at ram.v(99) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 99
-Warning (10034): Output port "Mult_DL15" at ram.v(100) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 100
-Warning (10034): Output port "PL16_drt" at ram.v(102) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 102
-Warning (10034): Output port "DL16_del" at ram.v(103) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 103
-Warning (10034): Output port "ch16_type_start" at ram.v(104) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 104
+Warning (10230): Verilog HDL assignment warning at ram.v(188): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 188
+Warning (10230): Verilog HDL assignment warning at ram.v(190): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 190
+Warning (10230): Verilog HDL assignment warning at ram.v(191): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 191
+Warning (10230): Verilog HDL assignment warning at ram.v(194): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 194
+Warning (10230): Verilog HDL assignment warning at ram.v(196): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 196
+Warning (10230): Verilog HDL assignment warning at ram.v(197): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 197
+Warning (10230): Verilog HDL assignment warning at ram.v(200): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 200
+Warning (10230): Verilog HDL assignment warning at ram.v(202): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 202
+Warning (10230): Verilog HDL assignment warning at ram.v(203): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 203
+Warning (10230): Verilog HDL assignment warning at ram.v(206): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 206
+Warning (10230): Verilog HDL assignment warning at ram.v(208): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 208
+Warning (10230): Verilog HDL assignment warning at ram.v(209): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 209
+Warning (10230): Verilog HDL assignment warning at ram.v(212): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 212
+Warning (10230): Verilog HDL assignment warning at ram.v(214): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 214
+Warning (10230): Verilog HDL assignment warning at ram.v(215): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 215
+Warning (10230): Verilog HDL assignment warning at ram.v(218): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 218
+Warning (10230): Verilog HDL assignment warning at ram.v(220): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 220
+Warning (10230): Verilog HDL assignment warning at ram.v(221): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 221
+Warning (10230): Verilog HDL assignment warning at ram.v(224): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 224
+Warning (10230): Verilog HDL assignment warning at ram.v(226): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 226
+Warning (10230): Verilog HDL assignment warning at ram.v(227): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 227
+Warning (10230): Verilog HDL assignment warning at ram.v(230): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 230
+Warning (10230): Verilog HDL assignment warning at ram.v(232): truncated value with size 8 to match size of target (5) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 232
+Warning (10230): Verilog HDL assignment warning at ram.v(233): truncated value with size 8 to match size of target (4) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 233
 Warning (10034): Output port "Mult_PL16" at ram.v(105) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 105
-Warning (10034): Output port "Mult_DL16" at ram.v(106) has no driver File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/ram.v Line: 106
 Info (12128): Elaborating entity "Pulse" for hierarchy "Pulse:PL1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 202
 Warning (10230): Verilog HDL assignment warning at Pulse.v(38): truncated value with size 32 to match size of target (26) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse.v Line: 38
 Warning (10230): Verilog HDL assignment warning at Pulse.v(42): truncated value with size 32 to match size of target (26) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Pulse.v Line: 42
@@ -1779,21 +1765,25 @@ Warning (10230): Verilog HDL assignment warning at Delay.v(40): truncated value 
 Warning (10230): Verilog HDL assignment warning at Delay.v(44): truncated value with size 32 to match size of target (26) File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/Delay.v Line: 44
 Info (12128): Elaborating entity "DLST" for hierarchy "DLST:ST1" File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 239
 Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "PL1_DRT[17]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 37
     Warning (12110): Net "CH2TS[7]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[6]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[5]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[4]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
 Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "PL1_DRT[17]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 37
     Warning (12110): Net "CH2TS[7]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[6]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[5]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[4]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
 Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "PL1_DRT[17]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 37
     Warning (12110): Net "CH2TS[7]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[6]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[5]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[4]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
 Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "PL1_DRT[17]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 37
     Warning (12110): Net "CH2TS[7]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[6]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
     Warning (12110): Net "CH2TS[5]" is missing source, defaulting to GND File: C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/main.v Line: 49
@@ -1803,16 +1793,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Projects/Optic_Synchro_generator/output_files/main.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2238 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2239 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 2225 logic cells
+    Info (21061): Implemented 2226 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 126 warnings
-    Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Thu Jan 28 11:47:02 2021
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 114 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Mon Feb 01 10:29:18 2021
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

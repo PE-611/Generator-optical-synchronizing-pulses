@@ -20,7 +20,7 @@ always @(posedge clk_dlst) begin
 			cnt1 <= cnt1 + 1'b1;
 		end
 		
-		if (cnt1 >= 24'd100000000) begin
+		if (cnt1 >= 24'd200000000) begin
 			cnt1 <= 1'b0;
 			fld <= 1'b0;
 			dout <= 1'b1;
